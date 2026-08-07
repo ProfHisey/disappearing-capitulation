@@ -1,0 +1,42 @@
+FULL-PERIOD KM REPORT (1979-2023, ND Active Share + MFLINKS)
+============================================================
+mflink1 columns: crsp_fundno, wficn, cusip8, fund_name, ticker, ncusip, merge_fundno
+mflink1: 49,975 share-class links to 15,553 wficn funds
+  monthly returns: 10,331,215 rows, 75,894 share classes
+CRSP return rows matched to wficn: 7,856,564
+wficn-quarter returns (TNA-weighted across share classes): 862,595
+flags: 3,839 wficn funds flagged index/ETF (screened out); 9,718 flagged domestic equity
+AS panel: 12,598 funds before screen, 9,389 after index/ETF screen; 318,188 fund-quarters (1980Q1 to 2023Q3)
+
+AS staleness diagnostic (quarter-to-quarter changes in min-AS):
+  1980-94: frozen (|dAS|<1e-6) 0.5%; median |dAS| 0.0089  (n=25,124)
+  1995-2004: frozen (|dAS|<1e-6) 7.5%; median |dAS| 0.0096  (n=63,860)
+  2005-10: frozen (|dAS|<1e-6) 8.9%; median |dAS| 0.0074  (n=49,988)
+  2011-19 (TR suspect): frozen (|dAS|<1e-6) 10.8%; median |dAS| 0.0052  (n=112,680)
+  2020-23 (CRSP): frozen (|dAS|<1e-6) 15.9%; median |dAS| 0.0042  (n=57,147)
+  cpz factors: 1979-01 to 2014-01
+french 6-portfolios: 1926-07 to 2026-05 (small=['SMALL LoBM', 'ME1 BM2', 'SMALL HiBM'], big=['BIG LoBM', 'ME2 BM2', 'BIG HiBM'])
+  splice check corr(idx_s5,p_s5) over 421 overlap months: 0.9812
+  splice check corr(idx_r2,p_r2) over 421 overlap months: 0.9917
+  splice check corr(idx_rm,p_rm) over 421 overlap months: 0.9782
+benchmark core returns spliced at 2011Q1 (1979Q1 to 2026Q2)
+
+KM-usable: 292,538 fund-quarters, 9,171 funds (1980Q1 to 2023Q3)
+
+fine era split (sensor-staleness check on the era result):
+  1980-94: 1,099 spells, 71 events (6.5%)
+  1995-2009: 8,793 spells, 276 events (3.1%)
+  2010-19 (TR sensor): 11,377 spells, 95 events (0.8%)
+  2020-23 (CRSP sensor): 4,459 spells, 32 events (0.7%)
+spells: 25,728; events: 474 (1.8%); median dur 4q
+fund-relative >=20pt AS drops during spells (info): 1,017
+
+by era:
+  1980-94: 1,099 spells, 71 events (6.5%)
+  1995-2009: 8,793 spells, 276 events (3.1%)
+  2010-23: 15,836 spells, 127 events (0.8%)
+
+logrank across eras: p = 0.0000
+logrank across depth terciles: p = 0.0000
+
+FULL KM DONE - all outputs aggregate-only and shareable.

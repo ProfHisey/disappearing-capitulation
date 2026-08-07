@@ -1,0 +1,16 @@
+PANEL BUILD REPORT
+============================================================
+  TR Active Share - 1979m6 to 2019m12 - Generated 2 May 2024.csv: 831,289 fund-quarters, 57,980 funds, 22 benchmarks, 1979-06 to 2019-12
+  CRSP Active Share - 2020m3 to 2023m9 - Generated 2 May 2024.csv: 105,334 fund-quarters, 9,083 funds, 20 benchmarks, 2020-03 to 2023-09
+
+ND union: 936,623 fund-quarters, 12,598 wficn funds, 1979-06 to 2023-09
+  petajisto: loaded from activeshare.sas7bdat
+  petajisto: 81,158 rows, 2,740 funds, 1980-03 to 2009-09
+  monthly returns: 10,331,215 rows, 75,894 share classes
+
+Petajisto x CRSP quarterly-return match rate: 99.8% (81,027 of 81,158 fund-quarters)
+  cpz factors: 1979-01 to 2014-01
+
+KM-usable fund-quarters (AS + fund ret + bench ret): 81,027 across 2,739 funds
+
+BUILD DONE - output/build_report.txt is aggregate-only and shareable.

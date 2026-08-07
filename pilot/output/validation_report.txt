@@ -1,0 +1,105 @@
+VALIDATION BATTERY
+============================================================
+
+(A) FAMOUS-FUND TRACES
+
+  FMAGX: Fidelity Magellan (expect: huge TNA; low-AS/index-hugging era circa 1996-2005)
+    in panel 1991Q1 to 2023Q3 (105 quarters); AS first 0.61, min 0.33 (at 2001Q3), last 0.56
+    worst trailing 4q vs benchmark: -14.3% at 2011Q4
+    worst retail flow quarter: -9.7% at 2012Q1
+    spell 1992Q4 -> 1993Q1 (1q, depth -0.6%): recovered
+    spell 2006Q3 -> 2007Q4 (4q, depth -8.6%): recovered
+    spell 2008Q3 -> 2009Q3 (4q, depth -5.6%): recovered
+    spell 2010Q2 -> 2012Q3 (9q, depth -14.3%): CAPITULATED
+
+  LMVTX: Legg Mason Value Trust (expect: streak through 2005, deep spell 2007-08+)
+    in panel 1991Q1 to 2023Q3 (109 quarters); AS first 0.89, min 0.69 (at 2011Q3), last 0.90
+    worst trailing 4q vs benchmark: -32.2% at 2020Q2
+    worst retail flow quarter: -73.8% at 2009Q2
+    spell 1993Q1 -> 1993Q3 (1q, depth -0.5%): recovered
+    spell 1995Q1 -> 1995Q3 (2q, depth -4.6%): recovered
+    spell 2000Q2 -> 2000Q3 (1q, depth -3.4%): recovered
+    spell 2002Q1 -> 2003Q2 (3q, depth -9.4%): recovered
+    spell 2005Q2 -> 2005Q4 (1q, depth -0.6%): recovered
+    spell 2006Q1 -> 2011Q2 (14q, depth -22.8%): recovered
+
+  FAIRX: Fairholme (expect: deep spell + redemption run circa 2011)
+    wficn 240432 NOT IN PANEL - INVESTIGATE
+
+  SEQUX: Sequoia (expect: trouble after 2015, Valeant)
+    in panel 1991Q1 to 2023Q1 (110 quarters); AS first 0.94, min 0.81 (at 2018Q4), last 0.90
+    worst trailing 4q vs benchmark: -28.2% at 1999Q4
+    worst retail flow quarter: -15.4% at 2016Q4
+    spell 1993Q1 -> 1993Q2 (1q, depth -1.4%): recovered
+    spell 1995Q2 -> 1995Q4 (2q, depth -6.6%): recovered
+    spell 1997Q3 -> 1997Q4 (1q, depth -1.2%): recovered
+    spell 1999Q1 -> 2001Q1 (6q, depth -28.2%): recovered
+    spell 2002Q4 -> 2006Q1 (11q, depth -16.9%): recovered
+    spell 2006Q4 -> 2008Q1 (4q, depth -7.5%): recovered
+
+  CGMFX: CGM Focus (expect: extreme swings, deep spells post-2008)
+    in panel 1997Q4 to 2022Q2 (80 quarters); AS first 0.97, min 0.87 (at 2009Q1), last 0.94
+    worst trailing 4q vs benchmark: -50.1% at 2020Q3
+    worst retail flow quarter: -17.6% at 1998Q4
+    spell 1998Q4 -> 1999Q2 (1q, depth -18.3%): recovered
+    spell 1999Q3 -> 2000Q2 (1q, depth -16.9%): recovered
+    spell 2006Q3 -> 2007Q3 (3q, depth -16.2%): recovered
+    spell 2009Q2 -> 2013Q2 (14q, depth -30.5%): recovered
+    spell 2014Q1 -> 2016Q4 (8q, depth -15.5%): recovered
+    spell 2018Q2 -> 2021Q1 (11q, depth -50.1%): recovered
+
+  VFINX: Vanguard 500 NEGATIVE CONTROL (expect: ABSENT - passive screen)
+    wficn 103524 NOT IN PANEL (as expected)
+
+(B1) ERA DECLINE, five-year cohorts (spell capitulation / death rates):
+  1980-1984:    20 spells | capitulated  0.00% | died  0.00%
+  1985-1989:    38 spells | capitulated  0.00% | died  0.00%
+  1990-1994: 1,032 spells | capitulated  6.88% | died  7.66%
+  1995-1999: 1,841 spells | capitulated  7.77% | died  6.84%
+  2000-2004: 3,330 spells | capitulated  2.10% | died  9.94%
+  2005-2009: 3,472 spells | capitulated  1.67% | died  7.46%
+  2010-2014: 5,279 spells | capitulated  1.40% | died  8.13%
+  2015-2019: 5,823 spells | capitulated  0.98% | died  8.36%
+  2020-2024: 4,432 spells | capitulated  0.52% | died  4.31%
+
+(B2) MODE SELECTION, depth deciles (opposite gradients expected):
+  decile 0 (mean depth -40.8%, n=2,527): capitulated  1.86% | died 12.03%
+  decile 1 (mean depth -24.6%, n=2,527): capitulated  3.56% | died 13.02%
+  decile 2 (mean depth -18.6%, n=2,526): capitulated  3.21% | died 10.73%
+  decile 3 (mean depth -14.8%, n=2,527): capitulated  2.57% | died  9.73%
+  decile 4 (mean depth -11.7%, n=2,527): capitulated  2.77% | died  9.38%
+  decile 5 (mean depth -9.0%, n=2,526): capitulated  2.06% | died  7.96%
+  decile 6 (mean depth -6.7%, n=2,527): capitulated  1.58% | died  6.49%
+  decile 7 (mean depth -4.6%, n=2,526): capitulated  1.19% | died  3.92%
+  decile 8 (mean depth -2.7%, n=2,527): capitulated  0.71% | died  1.70%
+  decile 9 (mean depth -0.8%, n=2,527): capitulated  0.12% | died  0.32%
+  (decile 0 = deepest underperformance)
+
+(B3) FATIGUE, quarter-by-quarter empirical capitulation hazard:
+  q 1: at-risk 25,267  events  43  hazard  0.170%
+  q 2: at-risk 18,758  events  57  hazard  0.304%
+  q 3: at-risk 15,714  events  59  hazard  0.375%
+  q 4: at-risk 13,818  events  49  hazard  0.355%
+  q 5: at-risk 10,769  events  45  hazard  0.418%
+  q 6: at-risk  8,633  events  24  hazard  0.278%
+  q 7: at-risk  7,118  events  42  hazard  0.590%
+  q 8: at-risk  5,745  events  38  hazard  0.661%
+  q 9: at-risk  4,491  events  24  hazard  0.534%
+  q10: at-risk  3,585  events  23  hazard  0.642%
+  q11: at-risk  2,886  events  17  hazard  0.589%
+  q12: at-risk  2,313  events  18  hazard  0.778%
+  q13: at-risk  1,913  events   8  hazard  0.418%
+  q14: at-risk  1,603  events  12  hazard  0.749%
+  q15: at-risk  1,311  events   3  hazard  0.229%
+  q16: at-risk  1,099  events   3  hazard  0.273%
+
+(C) SPLIT-SAMPLE (odd vs even wficn), slim reduced form:
+  odd half, CAPITULATION [n=65,137, ev=241]  dur_5p: coef +1.04 (z 7.2)  depth: coef +2.90 (z 4.5)  era_1023: coef -1.69 (z -11.4)
+  odd half, DEATH [n=65,137, ev=942]  dur_5p: coef +0.32 (z 4.6)  depth: coef -1.14 (z -4.7)  era_1023: coef -0.32 (z -4.8)
+    -> depth sign flip between outcomes in odd half: YES
+  even half, CAPITULATION [n=64,854, ev=255]  dur_5p: coef +1.01 (z 7.4)  depth: coef +3.76 (z 5.5)  era_1023: coef -1.41 (z -10.8)
+  even half, DEATH [n=64,854, ev=960]  dur_5p: coef +0.05 (z 0.7)  depth: coef -1.30 (z -5.7)  era_1023: coef -0.24 (z -3.5)
+    -> depth sign flip between outcomes in even half: YES
+
+Reading guide: (A) any trace contradicting public history means a join/timing bug - stop and investigate before anything else. (B1) decline should be roughly monotone across 8 cohorts. (B2) capitulation share should FALL and death share RISE toward deeper deciles. (B3) hazard should rise roughly smoothly with t. (C) the flip and era signs must hold in both halves.
+VALIDATION BATTERY DONE - aggregates + brief fund traces, local only.

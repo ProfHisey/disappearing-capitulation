@@ -1,0 +1,34 @@
+CONFIDENCE UPGRADES 16b (fallback)
+============================================================
+
+(d1) SPELL-ORDER STRATIFICATION (frailty/composition check)
+
+  CAPITULATION, FIRST spells only [n=69,507, events=293]
+    dur_3_4    HR   1.764  z   2.56  p 0.0105
+    dur_5_8    HR   2.879  z   5.01  p 0.0000
+    dur_9_12   HR   4.536  z   6.79  p 0.0000
+    dur_13p    HR   4.958  z   7.05  p 0.0000
+    depth      HR 1019.331  z   9.50  p 0.0000
+    era_1023   HR   0.335  z  -8.71  p 0.0000
+
+  CAPITULATION, LATER spells only [n=101,195, events=400]
+    dur_3_4    HR   1.965  z   3.43  p 0.0006
+    dur_5_8    HR   2.857  z   5.75  p 0.0000
+    dur_9_12   HR   3.624  z   6.37  p 0.0000
+    dur_13p    HR   4.203  z   7.14  p 0.0000
+    depth      HR  90.542  z   7.59  p 0.0000
+    era_1023   HR   0.362  z  -9.81  p 0.0000
+  reading: the duration gradient rising in BOTH strata is the transparent answer to unobserved-heterogeneity sorting.
+
+(d2) RANDOM-INTERCEPT MIXED MODEL, 25% deterministic subsample (wficn % 4 == 0)
+  subsample: 43,217 spell-quarters, 1,873 funds, 186 events
+  converged; fund-effect SD (posterior mean of vcp): 0.930
+    dur_3_4    OR   1.980
+    dur_5_8    OR   2.345
+    dur_9_12   OR   4.011
+    dur_13p    OR   4.084
+    depth      OR 149.610
+    era_1023   OR   0.350
+  compare duration ORs to the stage-16 (c) HRs: still rising = fatigue survives fund-level unobserved heterogeneity.
+
+16b DONE - local only.

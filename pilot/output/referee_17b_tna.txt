@@ -1,0 +1,22 @@
+TNA-SCREEN REFINEMENT (battery I follow-up)
+============================================================
+  monthly returns: 10,331,215 rows, 75,894 share classes
+  refined hygiene: dropped 20,356 fund-months (v2 rule dropped far more early-sample months by treating missing TNA as zero)
+refined panel: 287,057 fund-quarters, 9,096 funds (V0 for comparison: 18,094 spells from the v2 panel)
+
+  REFINED TNA RULE (missing TNA passes): 18,186 spells | capitulated 3.82% | died 13.43%
+    1980-1994: n  1,094 | cap  6.58% | died  7.50%
+    1995-2009: n  7,906 | cap  5.02% | died 15.43%
+    2010-2023: n  9,186 | cap  2.45% | died 12.41%
+    capitulation [n=171,554, ev=694]  dur_5p HR 2.53 (z +9.6)  depth HR 108.88 (z +11.3)  era_1023 HR 0.37 (z -12.8)
+    death [n=171,554, ev=2,442]  dur_5p HR 1.03 (z +0.5)  depth HR 0.42 (z -7.1)  era_1023 HR 0.74 (z -7.2)
+
+V0 comparison values (battery I):
+  overall: 18,094 spells | cap 3.83% | died 13.46%
+  1980-94 cap 6.61% | 1995-2009 cap 5.04% | 2010-23 cap 2.46%
+  capitulation: dur_5p HR 2.60, depth HR 117.3, era_1023 HR 0.37
+  death:        dur_5p HR 1.03, depth HR 0.42,  era_1023 HR 0.75
+Reading: the row that matters most is 1980-94 — that is where the old rule
+was silently dropping ~half the fund-months.
+
+17b DONE - aggregates only.

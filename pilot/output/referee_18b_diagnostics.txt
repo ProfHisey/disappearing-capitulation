@@ -1,0 +1,67 @@
+BATTERY II FOLLOW-UP - FROZEN FORENSICS + R2 GAP
+============================================================
+
+(i) FROZEN-BENCHMARK FORENSICS
+  693 baseline capitulation crossings classified:
+    frozen_cross            116 (16.7%)
+    reassignment_cross      397 (57.3%)
+    untracked_at_crossing   180 (26.0%)
+    entry_missing             0 (0.0%)
+  by era (frozen / reassignment / untracked / entry-missing):
+    1980-1994: n  72 |  1.4% / 55.6% / 43.1% /  0.0%
+    1995-2009: n 397 | 12.3% / 56.7% / 31.0% /  0.0%
+    2010-2023: n 224 | 29.5% / 58.9% / 11.6% /  0.0%
+  reading: a large 'untracked' or 'entry_missing' share, concentrated early, means battery II's frozen row was a coverage artifact there, not reassignment.
+
+  spells with entry benchmark trackable: 18,094; well-tracked (>=80% of quarters observed): 13,505
+
+  FROZEN definition, WELL-TRACKED spells only: 13,505 spells | capitulated 1.83% | died 12.66%
+    1980-1994: n    648 | cap  0.15% | died  5.56%
+    1995-2009: n  4,595 | cap  2.29% | died 15.04%
+    2010-2023: n  8,262 | cap  1.71% | died 11.90%
+  compare to battery II's unrestricted frozen table: if the era decline reappears here, coverage was the culprit.
+
+(ii) R2/RM GAP: FILL SPLIT + FRENCH TRIANGULATION
+  cpz factors: 1979-01 to 2014-01
+
+  R2: 279 fill months (identical to CPZ), 142 genuinely reconstructed overlap months
+    reconstructed segment 2002-04..2014-01: mean diff +129.2 bps/m | TE 74.2 bps/m | corr 0.9917
+    triangulation vs French p_small: corr(ours, French) 0.9913 vs corr(CPZ, French) 0.9967 | mean(ours-French) +119.2 bps/m | mean(CPZ-French) -10.0 bps/m
+
+  RM: 279 fill months (identical to CPZ), 142 genuinely reconstructed overlap months
+    reconstructed segment 2002-04..2014-01: mean diff +71.3 bps/m | TE 51.6 bps/m | corr 0.9949
+
+  S5: 0 fill months (identical to CPZ), 421 genuinely reconstructed overlap months
+    reconstructed segment 1979-01..2014-01: mean diff +0.8 bps/m | TE 6.9 bps/m | corr 0.9999
+    triangulation vs French p_big: corr(ours, French) 0.9811 vs corr(CPZ, French) 0.9812 | mean(ours-French) -5.8 bps/m | mean(CPZ-French) -6.6 bps/m
+
+  reading: if ours-vs-French shows the same positive bias while CPZ-vs-French does not, the reconstruction is the outlier and needs replacing with official returns (see iii). Note CPZ's post-2011 extension is itself less authoritative.
+
+(iii) SCHEMA PROBE: official Russell return files?
+
+  ftse_russell_us.csv (17.3 MB)
+    columns: ['display_id', 'effective_date', 'display_level', 'index_name', 'security', 'daily_weight', 'daily_return', 'daily_contribution', 'mtd_avg_weight', 'mtd_return', 'mtd_contribution', 'qtd_avg_weight', 'qtd_return', 'qtd_contribution', 'ytd_avg_weight', 'ytd_return', 'ytd_contribution', 'oneyr_avg_weight', 'oneyr_return', 'oneyr_contribution', 'twoyr_avg_weight', 'twoyr_return', 'twoyr_contribution', 'thryr_avg_weight', 'thryr_return', 'thryr_contribution', 'fouryr_avg_weight', 'fouryr_return', 'fouryr_contribution', 'fiveyr_avg_weight', 'fiveyr_return', 'fiveyr_contribution', 'entity_id', 'level_code', 'classification_type', 'classification_layer_code', 'report_title', 'ind_code', 'ind_desc_2', 'supersector_code']
+    index_name top values: ['Russell 2000 Value', 'RUSSELL 3000', 'Russell 2000', 'Russell 1000 Value', 'Russell 2000 Growth', 'Russell 1000 Growth', 'Russell 3000 Growth', 'Russell 2500', 'Russell 2500 Growth', 'Russell 2500 Value', 'Russell Midcap', 'Russell 3000 Value']
+    level_code top values: ['20', '30']
+    classification_layer_code top values: ['1', '9']
+    daily_return: non-null 100%, range [-9.016, 14.29]
+    mtd_return: non-null 100%, range [-42.06, 36.47]
+    qtd_return: non-null 100%, range [-57.49, 57.45]
+    ytd_return: non-null 100%, range [-79.11, 81.42]
+    oneyr_return: non-null 96%, range [-79.29, 130.6]
+    twoyr_return: non-null 96%, range [-85.01, 45.87]
+    effective_date: 2008-08-29 00:00:00 .. 2020-12-31 00:00:00 (first 5k rows)
+
+  idx_holdings_us.csv (466.0 MB)
+    (holdings file, already characterized)
+
+  rgs_sw_us.csv (211.5 MB)
+    columns: ['entity_id', 'effective_date', 'display_level', 'index_name', 'tier_1_sector_description', 'tier_2_sub_sector_description', 'tier_3_industry_description', 'tier_4_description', 'classification_code', 'month_end_weight', 'classification_type', 'classification_layer_code', 'report_title', 'tier_1_code', 'tier_1_desc', 'tier_2_code', 'tier_2_desc', 'tier_3_code', 'tier_3_desc', 'tier_4_code', 'tier_4_desc', 'report_periodicity', 'num_of_layers']
+    index_name top values: ['Russell 2000', 'RUSSELL 3000', 'Russell 1000', 'Russell 2000 Value', 'Russell 2000 Growth', 'Russell 1000 Growth', 'Russell 1000 Value', 'Russell 3000 Growth', 'Russell 3000 Value', 'Russell Midcap', 'Russell Midcap Value']
+    classification_code top values: ['2', '6', '10', '11', '4', '3', '7', '1', '8', '840300', '330890', '310360']
+    classification_layer_code top values: ['3', '1']
+    effective_date: 1979-01-31 00:00:00 .. 2002-03-28 00:00:00 (first 5k rows)
+
+  reading: if an official monthly (or daily) total-return column exists per Russell index, benchmark series v4 uses it directly and the reconstruction question is retired.
+
+18b DONE - aggregates only.

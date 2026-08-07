@@ -1,0 +1,22 @@
+N-SAR VALIDATION
+============================================================
+headers: 29,626 class-rows, 573 filings, 428 series; rdate 2005-11 to 2018-05
+class rows with a ticker: 29,626 (100%)
+monthly_sales_repurchases: 42,618 rows, 566 filings
+month_of_period values: [1, 2, 3, 4, 5, 6]
+  shr_sold1: non-null 100%, median 13,632, negative share 0.0%
+  shr_sold2: non-null 100%, median 0, negative share 0.1%
+  shr_sold3: non-null 100%, median 0, negative share 0.0%
+  shr_sold4: non-null 100%, median 12,418, negative share 0.0%
+  total_shr_sold1: non-null 100%, median 96,166, negative share 0.0%
+  total_shr_sold2: non-null 100%, median 650, negative share 0.3%
+  total_shr_sold3: non-null 100%, median 0, negative share 0.0%
+  total_shr_sold4: non-null 100%, median 86,210, negative share 0.0%
+  total_sales_purchase: non-null 100%, median 0, negative share 0.0%
+
+single-ticker filings usable for validation: 11
+matched to a crsp_fundno via mflink1 ticker: 11
+matched N-SAR fund-months with CRSP imputed flow: 12
+TOO FEW matched fund-months - ticker match too thin; fallback: match via CUSIP in real build.
+
+NSAR VALIDATION DONE - aggregates only.

@@ -1,0 +1,18 @@
+MECHANISMS (a-d)
+============================================================
+
+(a) gamble-then-fold: 653 capitulator spells (dur>=2), 4,523 resister spells (dur>=12)
+    capitulators whose AS ROSE >2pts above start mid-spell before collapsing: 201 (30.8%)
+    mean dAS at t=1,2,3 (capitulators): -0.015, -0.030, -0.033
+
+(b) calibrated who-first (2000+, 12,847 spells with flows):
+    manager base rate 3.10% -> calibrated client threshold t* = -51.7% per quarter (vs -10% ad hoc in stage 05)
+    client first: 389 (50.0%), manager first: 389 (50.0%), tie first: 0 (0.0%)
+
+(c) pacify or panic (446 manager events with flows): mean retail flow (post-4q) minus (pre-4q) = -1.22%/q, t = -2.48
+    positive = flows improve after surrender (pacified); negative = exit accelerates (panic). Caveat: no control for the secular downtrend in active flows; matched controls in real build.
+
+(d) flows before death: 2,435 died spells vs 7,613 recovered spells
+    mean retail flow in final 4 quarters: died -4.60%/q vs recovered +0.19%/q
+
+MECHANISMS DONE - outputs aggregate-only and shareable.

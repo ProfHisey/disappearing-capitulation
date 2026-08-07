@@ -1,0 +1,75 @@
+CONFIDENCE UPGRADES 16c (sections a-c)
+============================================================
+
+(a) PIPELINE FUNNEL for the famous funds
+  FMAGX (wficn 101068): ND rows 144 | passive-flag False | returns Y | final panel Y
+  LMVTX (wficn 101854): ND rows 123 | passive-flag False | returns Y | final panel Y
+  FAIRX (wficn 240432): ND rows 0 | passive-flag False | returns Y | final panel N
+    -> absent from the ND Active Share data itself (coverage, not a screen)
+  SEQUX (wficn 103013): ND rows 160 | passive-flag False | returns Y | final panel Y
+  CGMFX (wficn 106441): ND rows 80 | passive-flag False | returns Y | final panel Y
+  VFINX (wficn 103524): ND rows 155 | passive-flag True | returns Y | final panel N
+
+(b) FULL SPELL TRACES (untruncated)
+  FMAGX:
+    1992Q4 -> 1993Q1 (1q, depth -0.6%): recovered
+    2006Q3 -> 2007Q4 (4q, depth -8.6%): recovered
+    2008Q3 -> 2009Q3 (4q, depth -5.6%): recovered
+    2010Q2 -> 2012Q3 (9q, depth -14.3%): CAPITULATED
+  LMVTX:
+    1993Q1 -> 1993Q3 (1q, depth -0.5%): recovered
+    1995Q1 -> 1995Q3 (2q, depth -4.6%): recovered
+    2000Q2 -> 2000Q3 (1q, depth -3.4%): recovered
+    2002Q1 -> 2003Q2 (3q, depth -9.4%): recovered
+    2005Q2 -> 2005Q4 (1q, depth -0.6%): recovered
+    2006Q1 -> 2011Q2 (14q, depth -22.8%): recovered
+    2012Q1 -> 2013Q3 (6q, depth -6.2%): recovered
+    2014Q3 -> 2016Q4 (9q, depth -11.0%): recovered
+    2017Q2 -> 2021Q3 (15q, depth -32.2%): recovered
+    2022Q1 -> 2022Q3 (2q, depth -4.7%): recovered
+  SEQUX:
+    1993Q1 -> 1993Q2 (1q, depth -1.4%): recovered
+    1995Q2 -> 1995Q4 (2q, depth -6.6%): recovered
+    1997Q3 -> 1997Q4 (1q, depth -1.2%): recovered
+    1999Q1 -> 2001Q1 (6q, depth -28.2%): recovered
+    2002Q4 -> 2006Q1 (11q, depth -16.9%): recovered
+    2006Q4 -> 2008Q1 (4q, depth -7.5%): recovered
+    2009Q3 -> 2010Q2 (2q, depth -9.2%): recovered
+    2013Q1 -> 2013Q2 (1q, depth -0.4%): recovered
+    2013Q4 -> 2014Q4 (3q, depth -1.6%): recovered
+    2015Q4 -> 2021Q1 (19q, depth -27.7%): recovered
+    2021Q4 -> 2023Q1 (5q, depth -14.0%): data_end
+  CGMFX:
+    1998Q4 -> 1999Q2 (1q, depth -18.3%): recovered
+    1999Q3 -> 2000Q2 (1q, depth -16.9%): recovered
+    2006Q3 -> 2007Q3 (3q, depth -16.2%): recovered
+    2009Q2 -> 2013Q2 (14q, depth -30.5%): recovered
+    2014Q1 -> 2016Q4 (8q, depth -15.5%): recovered
+    2018Q2 -> 2021Q1 (11q, depth -50.1%): recovered
+
+(c) DEPTH ENTERED FLEXIBLY (bins vs shallowest 0 to -5%)
+
+  CAPITULATION hazard [n=129,991, events=496]
+    dur_3_4    HR   1.815  z   3.93  p 0.0001
+    dur_5_8    HR   2.833  z   7.12  p 0.0000
+    dur_9_12   HR   4.206  z   8.33  p 0.0000
+    dur_13p    HR   4.456  z   7.92  p 0.0000
+    dep_5_15   HR   1.036  z   0.25  p 0.8022
+    dep_15_25  HR   0.706  z  -2.06  p 0.0396
+    dep_25_40  HR   0.363  z  -4.42  p 0.0000
+    dep_40p    HR   0.141  z  -3.76  p 0.0002
+    era_1023   HR   0.207  z -15.85  p 0.0000
+
+  DEATH hazard [n=129,991, events=1,902]
+    dur_3_4    HR   0.941  z  -0.87  p 0.3851
+    dur_5_8    HR   1.064  z   0.92  p 0.3595
+    dur_9_12   HR   1.151  z   1.69  p 0.0908
+    dur_13p    HR   0.998  z  -0.02  p 0.9812
+    dep_5_15   HR   1.630  z   6.29  p 0.0000
+    dep_15_25  HR   1.993  z   7.91  p 0.0000
+    dep_25_40  HR   2.075  z   7.36  p 0.0000
+    dep_40p    HR   2.066  z   5.42  p 0.0000
+    era_1023   HR   0.754  z  -5.97  p 0.0000
+  expected: capitulation HRs hump at dep_15_25; death HRs rise monotonically toward dep_40p.
+
+16c DONE - local only.

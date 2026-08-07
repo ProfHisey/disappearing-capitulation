@@ -1,0 +1,101 @@
+REFEREE BATTERY III - ERA / DEATHS / FLOWS
+============================================================
+
+(a) COVERAGE TABLE (critique 4iv)
+  5y bin: funds w/ AS | funds in panel | share AS>=70 | CRSP return funds
+    1980-1984:    479 |     17 |  94.1% |    713
+    1985-1989:    682 |     26 |  88.5% |  1,444
+    1990-1994:  1,566 |  1,362 |  94.1% |  2,871
+    1995-1999:  3,428 |  3,008 |  89.0% |  4,865
+    2000-2004:  4,644 |  3,894 |  83.8% |  6,265
+    2005-2009:  4,831 |  3,896 |  86.3% |  8,371
+    2010-2014:  5,525 |  4,199 |  90.9% |  9,384
+    2015-2019:  7,569 |  5,185 |  88.5% | 10,312
+    2020-2024:  7,076 |  4,585 |  83.9% |  9,758
+  reading: if panel coverage relative to the CRSP universe collapses late-sample, the era result needs the coverage caveat front and center.
+
+(b) LAUNCH-COHORT FIXED EFFECTS (critique 4i)
+    capitulation, NO cohort FE [n=129,991, ev=496]  dur_5p HR 2.79 (z +10.3)  depth HR 28.27 (z +7.1)  era_1023 HR 0.21 (z -15.8)
+    capitulation, WITH launch-cohort FE [n=129,991, ev=496]  dur_5p HR 2.63 (z +9.7)  depth HR 25.53 (z +6.7)  era_1023 HR 0.24 (z -12.8)
+  reading: era_1023 HR stable across the two rows = the decline is not a launch-cohort composition artifact. (Cohort dummy HRs suppressed from the log line for width.)
+
+(c) SEMIANNUAL DOWNSAMPLING (critique 4ii)
+
+  AS OBSERVED SEMIANNUALLY EVERYWHERE: 27,148 spells | capitulated 1.19% | died 7.21%
+    1980-1994: n  1,089 | cap  2.94% | died  6.89%
+    1995-2009: n  9,387 | cap  1.72% | died  7.63%
+    2010-2023: n 16,672 | cap  0.77% | died  7.00%
+
+  baseline (for comparison): 25,267 spells | capitulated 1.96% | died 7.53%
+    1980-1994: n  1,090 | cap  6.51% | died  7.25%
+    1995-2009: n  8,643 | cap  3.14% | died  8.28%
+    2010-2023: n 15,534 | cap  0.99% | died  7.13%
+  reading: detection frequency is now equal on both sides of 2004. If the era decline persists here, the reporting-frequency critique is answered.
+
+(d) LIQUIDATION vs MERGER (critique 5)
+  dead funds by delist type: merger 3,712, liquidation 2,453, other 1,802
+  mergers classified: distressed 1,666 (underwater at end or TNA halved over 2y), administrative 2,046
+
+  liquidation-only: died 609 spells
+
+  liquidation-only: 25,267 spells | capitulated 1.96% | died 2.41%
+    1980-1994: n  1,090 | cap  6.51% | died  1.28%
+    1995-2009: n  8,643 | cap  3.14% | died  2.56%
+    2010-2023: n 15,534 | cap  0.99% | died  2.41%
+    death hazard, liquidation-only [n=129,991, ev=609]  dur_5p HR 1.11 (z +1.2)  depth HR 0.19 (z -6.4)  era_1023 HR 0.83 (z -2.1)
+
+  liquidation + distressed mergers: died 1,387 spells
+
+  liquidation + distressed mergers: 25,267 spells | capitulated 1.96% | died 5.49%
+    1980-1994: n  1,090 | cap  6.51% | died  5.41%
+    1995-2009: n  8,643 | cap  3.14% | died  6.61%
+    2010-2023: n 15,534 | cap  0.99% | died  4.87%
+    death hazard, liquidation + distressed mergers [n=129,991, ev=1,387]  dur_5p HR 1.20 (z +3.3)  depth HR 0.20 (z -8.9)  era_1023 HR 0.64 (z -8.4)
+
+  all deaths (baseline): died 1,902 spells
+
+  all deaths (baseline): 25,267 spells | capitulated 1.96% | died 7.53%
+    1980-1994: n  1,090 | cap  6.51% | died  7.25%
+    1995-2009: n  8,643 | cap  3.14% | died  8.28%
+    2010-2023: n 15,534 | cap  0.99% | died  7.13%
+    death hazard, all deaths (baseline) [n=129,991, ev=1,902]  dur_5p HR 1.20 (z +3.7)  depth HR 0.29 (z -7.3)  era_1023 HR 0.76 (z -5.9)
+  reading: the depth gradient and the flat era pattern must hold for liquidation-only for finding 2/3's death half to survive as stated.
+
+(e) FLOW PURGE + WHO-FIRST (critique 6)
+  share-class event windows: 95,120 fund-quarter cells flagged
+  V0 retail flows, unpurged (baseline): manager base rate 1.96% -> calibrated client threshold t* = -47.0%/q
+    spells with both events: 11 | manager first 72.7% | client first 27.3% | same quarter 0.0%
+  extreme outflow quarters (<= -30%): 2,654 before purge, 2,232 after (16% removed)
+  V1 retail flows, PURGED near class events: manager base rate 1.96% -> calibrated client threshold t* = -44.9%/q
+    spells with both events: 7 | manager first 71.4% | client first 28.6% | same quarter 0.0%
+
+(e2) TOTAL FLOWS WHO-FIRST (critique 16)
+  V2 TOTAL fund flows (all share classes): manager base rate 1.96% -> calibrated client threshold t* = -45.7%/q
+    spells with both events: 12 | manager first 83.3% | client first 16.7% | same quarter 0.0%
+
+(f) RETAIL TNA SHARE BY ERA (critique 16)
+  retail share of TNA (what the retail-flow measure covers):
+    1980-1984: 90.8%
+    1985-1989: 88.0%
+    1990-1994: 86.5%
+    1995-1999: 85.2%
+    2000-2004: 78.9%
+    2005-2009: 73.1%
+    2010-2014: 63.4%
+    2015-2019: 59.3%
+    2020-2024: 58.4%
+
+(g) FLOWS BEFORE DEATH, LAGGED (critique 13)
+  mean retail flow/quarter: all fund-quarters +1.41% (n=240,759) | dying funds 3-8q before death -2.13% (n=14,761) | final 2q -5.08% (n=4,496)
+  reading: outflows already elevated at 3-8 quarters out sit outside any plausible liquidation-announcement window - the association is not just announcement-triggered redemptions. Causal language still comes out of the draft (critique 13).
+
+(h) TENURE vs FUND AGE (critique 15)
+  tenure missingness by era of spell start:
+    1980-1994: 67.2% missing
+    1995-2009: 27.7% missing
+    2010-2023: 33.4% missing
+    capitulation, fund AGE only [n=129,991, ev=496]  dur_5p HR 2.77 (z +10.2)  depth HR 25.66 (z +6.8)  era_1023 HR 0.21 (z -15.8)  age HR 1.01 (z +1.9)
+    capitulation, age + tenure + missing-indicator [n=129,991, ev=496]  dur_5p HR 2.67 (z +9.9)  depth HR 24.72 (z +6.7)  era_1023 HR 0.22 (z -15.4)  age HR 1.01 (z +3.2)  tenure0 HR 0.92 (z -3.8)  ten_miss HR 1.15 (z +1.1)
+  reading: if tenure's HR collapses once age is in, H3 is confounded and stays flagged preliminary until Morningstar manager histories arrive.
+
+BATTERY III DONE - aggregates only.

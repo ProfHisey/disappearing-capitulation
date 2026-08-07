@@ -1,0 +1,32 @@
+REFEREE BATTERY IV - H7 POWER + BERK-GREEN
+============================================================
+factors: 1926-07 to 2026-05
+
+formation: 496 capitulator entries, 5,707 resister entries (36m hold, EW, >=10 members)
+
+(a) H7 CALENDAR-TIME, NET AND GROSS, WITH MDE (critique 7)
+  NET capitulators : alpha -1.38%/yr (se 0.38%) over 369 months
+  NET resisters    : alpha -1.49%/yr (se 0.67%) over 389 months
+  NET SPREAD (resist - capit): -2.38%/yr (se 0.60%, t -3.99, n 369m) | 95% CI [-3.54%, -1.21%] | MDE(80% power) 1.67%/yr
+  GROSS capitulators : alpha -0.13%/yr (se 0.39%) over 369 months
+  GROSS resisters    : alpha -0.14%/yr (se 0.68%) over 389 months
+  GROSS SPREAD (resist - capit): -2.27%/yr (se 0.60%, t -3.80, n 369m) | 95% CI [-3.44%, -1.10%] | MDE(80% power) 1.67%/yr
+  reading: if the MDE is materially wider than any premium worth writing about (say 2%/yr), H7 is 'uninformative', not 'null' - and the paper says so. The GROSS leg removes the fee-arithmetic equalizer.
+
+(a2) H7 OWN-BENCHMARK RULER (critique 7)
+  OWN-BENCH capitulators : -3.02%/yr (se 0.66%) over 111 quarters
+  OWN-BENCH resisters    : -3.01%/yr (se 0.92%) over 119 quarters
+  OWN-BENCH SPREAD: -0.00%/yr (se 0.65%, t -0.01) | MDE(80%) 1.83%/yr
+  note: 12-quarter window vs each fund's own min-AS benchmark; caveat that post-capitulation the benchmark is nearly the portfolio, so this leg mostly prices the RESISTERS' live bets - exactly the object H7 cares about.
+
+(b) BERK-GREEN HORSE RACE + PER-10%-FLOW HRs (critiques 19, 14)
+    capitulation 2000-23, horse race [n=88,967, ev=206]  dur_5p HR 1.92 (z +4.1)  depth HR 47.58 (z +4.4)  inflow HR 0.74 (z -0.9)  outflow HR 1.00 (z -0.0)  g4 HR 0.52 (z -4.4)  ln_tna HR 1.05 (z +1.5)
+  reading (flows are PER 10% OF TNA per quarter - critique 14):
+    Berk-Green capacity story predicts: inflow HR > 1 and g4 HR > 1
+      (funds de-activate as money and size arrive).
+    Surrender story predicts: outflow HR < 1 (more outflow -> higher
+      hazard, since outflow is negative) and dur_5p HR > 1.
+    Both can be partly true; what matters for positioning (critique 19)
+    is which margin carries the era decline and the duration gradient.
+
+BATTERY IV DONE - aggregates only.

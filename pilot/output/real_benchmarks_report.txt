@@ -1,0 +1,26 @@
+REAL BENCHMARKS UPGRADE
+============================================================
+
+validation correlations (monthly, over overlap):
+  S5 vs CPZ S&P500: corr 0.9999 (421 months)
+  R2 vs CPZ R2000: corr 0.9917 (142 months)
+  RM vs CPZ RMid: corr 0.9949 (142 months)
+  S5 vs French BIG proxy: corr 0.9813 (1199 months)
+  R2 vs French SMALL proxy: corr 0.2484 (290 months)
+  S5 (VW universe) vs official composite total return: corr nan (0 months)
+
+S&P-family codes approximated by Russell series until Direct delivers them: {'S4': 'RM', 'S4G': 'RMG', 'S4V': 'RMV', 'S6': 'R2', 'S6G': 'R2G', 'S6V': 'R2V', 'S5G': 'R1G', 'S5V': 'R1V'}
+panel_full: 248,602 fund-quarters, 8,555 funds (cached)
+
+HEADLINE RE-RUN (real benchmarks) vs proxy era:
+  spells: 14,557 (was 25,728)
+  manager events: 516 (3.5%; was 474 / 1.8%)
+  era rates:
+    1980-94: 13.86% of 166 spells (was 6.5%)
+    1995-2009: 5.04% of 5,243 spells (was 3.1%)
+    2010-23: 2.50% of 9,148 spells (was 0.8%)
+  logrank eras p = 0.0000; depth terciles p = 0.0000
+  client events (2000+, flow<=-10%/q): 4,565 of 14,263 spells (32.0%; was 27.2%)
+
+Note: stages 06-08 will automatically use the v2 panel on their next run (panel cache rebuilt). Old proxy panel retained as panel_full.parquet for comparison.
+REAL BENCHMARKS DONE - outputs aggregate-only and shareable.

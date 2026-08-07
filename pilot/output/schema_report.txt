@@ -1,0 +1,66 @@
+SCHEMA PROBE
+============================================================
+
+--- CRSP Monthly Returns ---
+  path: Monthly Returns.csv  (457.6 MB)
+  columns (5): caldt, crsp_fundno, mtna, mret, mnav
+  date col 'caldt': format looks like ISO date (e.g. 1960-01-29)
+  key col present: crsp_fundno (dtype float64)
+
+--- CRSP Fund Summary ---
+  path: Fund Summary.csv  (1557.6 MB)
+  columns (73): summary_period2, crsp_fundno, caldt, nav_latest, nav_latest_dt, tna_latest, tna_latest_dt, yield, div_ytd, cap_gains_ytd, nav_52w_h, nav_52w_h_dt, nav_52w_l, nav_52w_l_dt, unrealized_app_dep, unrealized_app_dt, asset_dt, per_com, per_pref, per_conv, per_corp, per_muni, per_govt, per_oth, per_cash, per_bond, per_abs, per_mbs, per_eq_oth, per_fi_oth, maturity, maturity_dt, cusip8, crsp_cl_grp, fund_name, ticker, ncusip, mgmt_name, mgmt_cd, mgr_name, mgr_dt, adv_name, open_to_inv, retail_fund, inst_fund, m_fund, index_fund_flag, vau_fund, et_flag, delist_cd, first_offer_dt, end_dt, dead_flag, merge_fundno, crsp_portno, actual_12b1, max_12b1, mgmt_fee, exp_ratio, turn_ratio, fiscal_yearend, crsp_obj_cd, si_obj_cd, accrual_fund, sales_restrict, wbrger_obj_cd, policy, lipper_class, lipper_class_name, lipper_obj_cd, lipper_obj_name, lipper_asset_cd, lipper_tax_cd
+  date col 'caldt': format looks like ISO date (e.g. 1997-12-31)
+  date col 'nav_latest_dt': format looks like ISO date (e.g. 1997-12-31)
+  date col 'tna_latest_dt': format looks like ISO date (e.g. 1997-12-31)
+  date col 'nav_52w_h_dt': format looks like ISO date (e.g. 1998-10-05)
+  date col 'nav_52w_l_dt': format looks like ISO date (e.g. 1998-12-24)
+  date col 'unrealized_app_dt': format looks like ISO date (e.g. 1998-12-31)
+  date col 'asset_dt': format looks like ISO date (e.g. 1998-06-30)
+  date col 'maturity_dt': format looks like ISO date (e.g. 1998-06-30)
+  date col 'mgr_dt': format looks like ISO date (e.g. 1997-02-01)
+  date col 'first_offer_dt': format looks like ISO date (e.g. 1997-02-01)
+  date col 'end_dt': format looks like ISO date (e.g. 2000-07-31)
+  key col present: crsp_fundno (dtype int64)
+  key col present: crsp_portno (dtype float64)
+
+--- CRSP Fund-Portfolio Map ---
+  path: Fund-Portfolio Map.csv  (21.5 MB)
+  columns (26): crsp_fundno, crsp_portno, begdt, enddt, cusip8, crsp_cl_grp, fund_name, ticker, ncusip, first_offer_dt, mgmt_name, mgmt_cd, mgr_name, mgr_dt, adv_name, open_to_inv, retail_fund, inst_fund, m_fund, index_fund_flag, vau_fund, et_flag, end_dt, dead_flag, delist_cd, merge_fundno
+  date col 'begdt': format looks like ISO date (e.g. 2003-03-31)
+  date col 'enddt': format looks like ISO date (e.g. 2026-06-30)
+  date col 'first_offer_dt': format looks like ISO date (e.g. 1969-02-12)
+  date col 'mgr_dt': format looks like ISO date (e.g. 2000-01-01)
+  date col 'end_dt': format looks like ISO date (e.g. 2026-06-30)
+  key col present: crsp_fundno (dtype int64)
+  key col present: crsp_portno (dtype int64)
+
+--- ND Active Share (TR 1979-2019) ---
+  path: TR Active Share - 1979m6 to 2019m12 - Generated 2 May 2024.csv  (200.1 MB)
+  columns (50): fundno, wficn, ym, initial_holding_count, final_holding_count, total_assets, max_weight, shrcd_10, shrcd_11, shrcd_12, shrcd_14, shrcd_15, shrcd_18, shrcd_21, shrcd_23, shrcd_24, shrcd_30, shrcd_31, shrcd_40, shrcd_41, shrcd_42, shrcd_44, shrcd_48, shrcd_70, shrcd_71, shrcd_72, shrcd_73, shrcd_74, shrcd_75, as_r1, as_r1g, as_r1v, as_r2, as_r2g, as_r2v, as_r3, as_r3g, as_r3v, as_rm, as_rmg, as_rmv, as_s4, as_s4g, as_s4v, as_s5, as_s5g, as_s5v, as_s6, as_s6g, as_s6v
+  date col 'ym': format looks like statamonth 'YYYYmM' (e.g. 1998m3)
+  as_* columns (21): as_r1, as_r1g, as_r1v, as_r2, as_r2g, as_r2v, as_r3, as_r3g, as_r3v, as_rm, as_rmg, as_rmv, as_s4, as_s4g, as_s4v, as_s5, as_s5g, as_s5v, as_s6, as_s6g, as_s6v
+  units check (as_r1): max in sample = 1.0 -> fraction 0-1
+  key col present: wficn (dtype float64)
+  key col present: fundno (dtype int64)
+
+--- ND Active Share (CRSP 2020-2023) ---
+  path: CRSP Active Share - 2020m3 to 2023m9 - Generated 2 May 2024.csv  (18.2 MB)
+  columns (25): crsp_portno, wficn, ym, total_assets, holding_count, max_weight, as_r1, as_r1g, as_r1v, as_r2, as_r2g, as_r2v, as_r3, as_rm, as_rmg, as_rmv, as_s4, as_s4g, as_s4v, as_s5, as_s5g, as_s5v, as_s6, as_s6g, as_s6v
+  date col 'ym': format looks like statamonth 'YYYYmM' (e.g. 2020m3)
+  as_* columns (19): as_r1, as_r1g, as_r1v, as_r2, as_r2g, as_r2v, as_r3, as_rm, as_rmg, as_rmv, as_s4, as_s4g, as_s4v, as_s5, as_s5g, as_s5v, as_s6, as_s6g, as_s6v
+  units check (as_r1): max in sample = 1.0 -> fraction 0-1
+  key col present: wficn (dtype float64)
+  key col present: crsp_portno (dtype int64)
+
+--- Petajisto activeshare ---
+  path: activeshare.csv  (10.6 MB)
+  READ ERROR: Error tokenizing data. C error: Expected 15 fields in line 293, saw 16
+
+
+--- CPZ factors monthly ---
+  path: factorret_cpz_monthly.csv  (0.0 MB)
+  columns (11): date, s5rf, r2s5, rms5, r2rm, r3vr3g, s5vs5g, rmvrmg, r2vr2g, umd, rf
+  date col 'date': format looks like other (e.g. 1/31/1979)
+
+PROBE DONE - send this file to Claude before running 01-03.

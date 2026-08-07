@@ -1,0 +1,21 @@
+H7 FORWARD ALPHA (calendar-time portfolios)
+============================================================
+spells: 18,094 across 7,295 funds
+capitulator entries: 693; resister entries: 7,444 (resist threshold = 8q underwater, hold 36m)
+portfolio months with both portfolios populated: 381 (1994-10 to 2026-06)
+avg members: capitulator 62, resister 643
+factors: 1926-07 to 2026-05
+
+alphas (monthly, annualized in brackets; 380 months; classic OLS t-stats - pilot-grade):
+  CAPM     resister                     alpha=-0.123%/m [ -1.47%/yr]  t=-2.07
+  CAPM     capitulator                  alpha=-0.097%/m [ -1.16%/yr]  t=-2.69
+  CAPM     resister-minus-capitulator   alpha=-0.026%/m [ -0.31%/yr]  t=-0.45
+  FF3      resister                     alpha=-0.139%/m [ -1.67%/yr]  t=-2.75
+  FF3      capitulator                  alpha=-0.099%/m [ -1.19%/yr]  t=-2.80
+  FF3      resister-minus-capitulator   alpha=-0.040%/m [ -0.48%/yr]  t=-0.88
+  FF3+Mom  resister                     alpha=-0.128%/m [ -1.54%/yr]  t=-2.50
+  FF3+Mom  capitulator                  alpha=-0.105%/m [ -1.26%/yr]  t=-2.92
+  FF3+Mom  resister-minus-capitulator   alpha=-0.023%/m [ -0.28%/yr]  t=-0.50
+
+Interpretation guide: H7 predicts a positive resister-minus-capitulator alpha. Caveats: classic SEs (not Newey-West); factor controls FF3+Mom only (no CPZ/AQR yet); min-AS event definition; equal-weighted portfolios; entries are look-ahead-safe (classified on information available at entry month).
+H7 DONE - outputs aggregate-only and shareable.

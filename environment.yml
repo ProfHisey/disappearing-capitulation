@@ -1,0 +1,12 @@
+name: capit
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas>=2.2
+  - numpy
+  - pyarrow
+  - matplotlib
+  - pip
+  - pip:
+      - lifelines

@@ -1,0 +1,79 @@
+V4 POST-2014 VALIDATION
+============================================================
+
+(a) INTERNAL CONSISTENCY (index blends, pre vs post 2014)
+  2008-2013 R3 vs 0.92*R1+0.08*R2: mean -1.0 bps/m | sd 5.5 | max|.| 36 bps (72m)
+  2008-2013 R1 vs 0.50*R1G+0.50*R1V: mean -0.0 bps/m | sd 1.9 | max|.| 10 bps (72m)
+  2008-2013 R2 vs 0.50*R2G+0.50*R2V: mean -0.2 bps/m | sd 2.6 | max|.| 18 bps (72m)
+  2014-2026 R3 vs 0.92*R1+0.08*R2: mean -0.5 bps/m | sd 6.6 | max|.| 29 bps (150m)
+  2014-2026 R1 vs 0.50*R1G+0.50*R1V: mean +10.6 bps/m | sd 34.9 | max|.| 225 bps (149m)
+  2014-2026 R2 vs 0.50*R2G+0.50*R2V: mean +24.9 bps/m | sd 80.0 | max|.| 497 bps (149m)
+  reading: blend weights drift, so nonzero errors are normal; what matters is whether sd/max JUMP after 2014.
+
+(b) FRENCH TRIANGULATION, pre vs post 2014
+  R2 vs French p_small 2008-2013: corr 0.9973 | mean -10.3 bps/m | sd 51.3 (72m)
+  R2 vs French p_small 2014-2023: corr 0.9941 | mean -12.7 bps/m | sd 70.6 (120m)
+  R1 vs French p_big 2008-2013: corr 0.9916 | mean -0.4 bps/m | sd 79.2 (72m)
+  R1 vs French p_big 2014-2023: corr 0.9692 | mean +4.4 bps/m | sd 117.7 (120m)
+  R1G vs French p_big 2008-2013: corr 0.9650 | mean +5.6 bps/m | sd 149.5 (72m)
+  R1G vs French p_big 2014-2023: corr 0.8739 | mean +29.1 bps/m | sd 242.5 (120m)
+  R1V vs French p_big 2008-2013: corr 0.9937 | mean -6.3 bps/m | sd 64.4 (72m)
+  R1V vs French p_big 2014-2023: corr 0.9869 | mean -21.6 bps/m | sd 80.3 (120m)
+  reading: post-2014 stats should look like pre-2014 stats. A sign change or doubled sd marks the broken segment.
+
+(c) SEQUX / LMVTX TRACES 2013-2018
+
+  SEQUX 2013Q1-2018Q4 (AS, trailing rel4q, min-AS benchmark):
+    2013Q1: AS 0.92 | rel4q -0.4% | bench S5V
+    2013Q2: AS 0.92 | rel4q +1.1% | bench S5V
+    2013Q3: AS   na | rel4q     na | bench S5V
+    2013Q4: AS 0.93 | rel4q -0.4% | bench S5V
+    2014Q1: AS 0.94 | rel4q -1.6% | bench R1G
+    2014Q2: AS   na | rel4q     na | bench ?
+    2014Q3: AS 0.93 | rel4q -0.4% | bench S5V
+    2014Q4: AS 0.92 | rel4q +1.8% | bench S5V
+    2015Q1: AS 0.92 | rel4q +11.6% | bench S5V
+    2015Q2: AS 0.93 | rel4q +12.9% | bench S5V
+    2015Q3: AS 0.92 | rel4q +13.8% | bench S5V
+    2015Q4: AS 0.92 | rel4q -5.0% | bench S5G
+    2016Q1: AS 0.92 | rel4q -22.8% | bench S5G
+    2016Q2: AS   na | rel4q     na | bench ?
+    2016Q3: AS 0.91 | rel4q -26.0% | bench S5G
+    2016Q4: AS 0.91 | rel4q -27.7% | bench S5G
+    2017Q1: AS 0.90 | rel4q -15.6% | bench S5G
+    2017Q2: AS 0.90 | rel4q -2.8% | bench S5G
+    2017Q3: AS   na | rel4q     na | bench ?
+    2017Q4: AS 0.87 | rel4q -4.3% | bench S5G
+    2018Q1: AS 0.84 | rel4q -7.5% | bench S5G
+    2018Q2: AS 0.82 | rel4q -3.5% | bench R1G
+    2018Q3: AS 0.83 | rel4q -8.6% | bench R1G
+    2018Q4: AS 0.81 | rel4q -20.1% | bench S5G
+
+  LMVTX 2013Q1-2018Q4 (AS, trailing rel4q, min-AS benchmark):
+    2013Q1: AS 0.78 | rel4q -6.2% | bench S5V
+    2013Q2: AS 0.80 | rel4q -1.1% | bench S5V
+    2013Q3: AS 0.81 | rel4q +4.6% | bench S5V
+    2013Q4: AS 0.81 | rel4q +4.9% | bench S5V
+    2014Q1: AS 0.81 | rel4q +6.3% | bench S5V
+    2014Q2: AS 0.82 | rel4q +4.2% | bench R1V
+    2014Q3: AS 0.82 | rel4q -0.8% | bench S5
+    2014Q4: AS 0.83 | rel4q -1.6% | bench S5G
+    2015Q1: AS 0.83 | rel4q -6.3% | bench S5G
+    2015Q2: AS 0.83 | rel4q -4.1% | bench S5G
+    2015Q3: AS 0.84 | rel4q -11.0% | bench S5G
+    2015Q4: AS 0.83 | rel4q -8.1% | bench S5V
+    2016Q1: AS 0.87 | rel4q -7.3% | bench S5V
+    2016Q2: AS 0.84 | rel4q -8.7% | bench S5
+    2016Q3: AS 0.82 | rel4q -0.0% | bench S5G
+    2016Q4: AS 0.81 | rel4q +2.0% | bench S5G
+    2017Q1: AS 0.80 | rel4q +0.5% | bench S5G
+    2017Q2: AS 0.81 | rel4q -1.0% | bench S5G
+    2017Q3: AS 0.85 | rel4q -6.0% | bench S5G
+    2017Q4: AS 0.86 | rel4q -16.0% | bench S5G
+    2018Q1: AS 0.85 | rel4q -12.8% | bench S5
+    2018Q2: AS 0.85 | rel4q -11.9% | bench S5
+    2018Q3: AS 0.84 | rel4q -12.5% | bench S5
+    2018Q4: AS 0.81 | rel4q -6.2% | bench S5G
+  reading: rel4q hovering just above zero through 2015-16 for SEQUX = the Valeant spell is a near-miss under corrected benchmarks (legitimate). rel4q missing, or positive by a wide margin while the fund publicly trailed by 20%+, = the post-2014 official segment is wrong and needs re-extraction.
+
+15b DONE - traces local only.

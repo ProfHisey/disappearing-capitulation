@@ -1,0 +1,180 @@
+NEW SOURCES PROBE
+============================================================
+
+=== russell/ ===
+
+--- ftse_russell_us.csv  (17.3 MB) ---
+  columns (55): display_id, effective_date, display_level, index_name, security, daily_weight, daily_return, daily_contribution, mtd_avg_weight, mtd_return, mtd_contribution, qtd_avg_weight, qtd_return, qtd_contribution, ytd_avg_weight, ytd_return, ytd_contribution, oneyr_avg_weight, oneyr_return, oneyr_contribution, twoyr_avg_weight, twoyr_return, twoyr_contribution, thryr_avg_weight, thryr_return, thryr_contribution, fouryr_avg_weight, fouryr_return, fouryr_contribution, fiveyr_avg_weight, fiveyr_return, fiveyr_contribution, entity_id, level_code, classification_type, classification_layer_code, report_title, ind_code, ind_desc_2, supersector_code, supersector_description, sector_code, sector_description, subsector_code, subsector_desc, report_periodicity, num_of_layers, tier_1_code, tier_1_desc, tier_2_code, tier_2_desc, tier_3_code, tier_3_desc, tier_4_code, tier_4_desc
+  date col 'effective_date': looks like ISO (e.g. 2008-08-29)
+  numeric col 'daily_weight': sample min 0.001124, max 1 (percent-vs-decimal check)
+  numeric col 'daily_return': sample min -9.016, max 14.29 (percent-vs-decimal check)
+  numeric col 'mtd_avg_weight': sample min 0.001206, max 1 (percent-vs-decimal check)
+  numeric col 'mtd_return': sample min -42.06, max 36.47 (percent-vs-decimal check)
+  numeric col 'qtd_avg_weight': sample min 0.001211, max 1 (percent-vs-decimal check)
+  numeric col 'qtd_return': sample min -57.49, max 57.45 (percent-vs-decimal check)
+  numeric col 'ytd_avg_weight': sample min 0.001262, max 1 (percent-vs-decimal check)
+  numeric col 'ytd_return': sample min -79.11, max 81.42 (percent-vs-decimal check)
+  numeric col 'oneyr_avg_weight': sample min 0.002276, max 1 (percent-vs-decimal check)
+  numeric col 'oneyr_return': sample min -79.29, max 130.6 (percent-vs-decimal check)
+  numeric col 'twoyr_avg_weight': sample min 0.003093, max 1 (percent-vs-decimal check)
+  numeric col 'twoyr_return': sample min -85.01, max 45.87 (percent-vs-decimal check)
+  numeric col 'thryr_avg_weight': sample min 0.003093, max 1 (percent-vs-decimal check)
+  numeric col 'thryr_return': sample min -87.75, max 46.94 (percent-vs-decimal check)
+  numeric col 'fouryr_avg_weight': sample min 0.003532, max 1 (percent-vs-decimal check)
+  numeric col 'fouryr_return': sample min -87.9, max 68.91 (percent-vs-decimal check)
+  numeric col 'fiveyr_avg_weight': sample min 0.004321, max 1 (percent-vs-decimal check)
+  numeric col 'fiveyr_return': sample min -87.9, max 116.4 (percent-vs-decimal check)
+  numeric col 'level_code': sample min 20, max 30 (percent-vs-decimal check)
+
+--- idx_holdings_us.csv  (466.0 MB) ---
+  columns (60): ticker, date, conscode, cusip, isin, exchange, name, indcodeicb, supsecicb, sectoricb, subsecicb, sharechg, shares, invweight, valshares, groshares, defshares, dymshares, return, mtdreturn, mktcap, russell1000, russell2000, russell2500, russellmc, russellt200, russellsc, rtop50, r3000_wt, r3000g_wt, r3000v_wt, r1000_wt, r1000g_wt, r1000v_wt, r2000_wt, r2000g_wt, r2000v_wt, r2500_wt, r2500g_wt, r2500v_wt, rmidc_wt, rmidcg_wt, rmidcv_wt, r200_wt, r200g_wt, r200v_wt, rssc_wt, rsscg_wt, rsscv_wt, mktvalue, escode, econsector, subscode, subsector, indcode, industry, supsec, sector, subsec, price
+  date col 'date': looks like ISO (e.g. 1978-12-29)
+
+--- rgs_sw_us.csv  (211.5 MB) ---
+  columns (23): entity_id, effective_date, display_level, index_name, tier_1_sector_description, tier_2_sub_sector_description, tier_3_industry_description, tier_4_description, classification_code, month_end_weight, classification_type, classification_layer_code, report_title, tier_1_code, tier_1_desc, tier_2_code, tier_2_desc, tier_3_code, tier_3_desc, tier_4_code, tier_4_desc, report_periodicity, num_of_layers
+  date col 'effective_date': looks like ISO (e.g. 1979-01-31)
+  numeric col 'month_end_weight': sample min 0, max 0.2961 (percent-vs-decimal check)
+
+=== crsp_sp500/ ===
+
+--- composite daily.csv  (2.2 MB) ---
+  columns (26): indno, yyyymmdd, dlycaldt, dlytotret, dlytotind, dlyprcret, dlyprcind, dlyincret, dlyincind, dlyusdcnt, dlyusdval, dlytotcnt, dlytotval, dlyeligcnt, dlywgtamt, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  date col 'dlycaldt': looks like ISO (e.g. 2011-04-25)
+  date col 'indbegdt': looks like ISO (e.g. 1962-07-02)
+  date col 'indenddt': looks like ISO (e.g. 2026-06-30)
+  date col 'basedt': looks like ISO (e.g. 1923-01-01)
+  numeric col 'dlyprcret': sample min -0.08279, max 0.09287 (percent-vs-decimal check)
+
+--- composite monthly.csv  (0.2 MB) ---
+  columns (26): indno, yyyymm, mthcaldt, mthtotret, mthtotind, mthprcret, mthprcind, mthincret, mthincind, mthusdcnt, mthusdval, mthtotcnt, mthtotval, mtheligcnt, mthwgtamt, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  date col 'mthcaldt': looks like ISO (e.g. 1989-11-30)
+  date col 'indbegdt': looks like ISO (e.g. 1962-07-02)
+  date col 'indenddt': looks like ISO (e.g. 2026-06-30)
+  date col 'basedt': looks like ISO (e.g. 1923-01-01)
+  numeric col 'mthprcret': sample min -0.2994, max 0.4222 (percent-vs-decimal check)
+
+--- composite.csv  (2632.9 MB) ---
+  columns (42): indno, mbrstartdt, mbrenddt, permno, hdrcusip, permco, siccd, cusip, ticker, sharetype, securitytype, securitysubtype, usincflg, issuertype, primaryexch, conditionaltype, tradingstatusflg, dlycaldt, dlyprc, dlyprcflg, dlycap, dlycapflg, dlyret, dlyretx, dlyretmissflg, dlyretdurflg, dlyorddivamt, dlynonorddivamt, dlyfacprc, dlydistretflg, dlyvol, dlyclose, dlylow, dlyhigh, dlybid, dlyask, dlyopen, dlynumtrd, dlymmcnt, dlycumfacpr, dlycumfacshr, shrout
+  date col 'mbrstartdt': looks like ISO (e.g. 1925-12-31)
+  date col 'mbrenddt': looks like ISO (e.g. 1932-10-01)
+  date col 'dlycaldt': looks like ISO (e.g. 1928-08-24)
+  numeric col 'dlyret': sample min -0.1162, max 0.1856 (percent-vs-decimal check)
+  numeric col 'dlyretx': sample min -0.1162, max 0.1856 (percent-vs-decimal check)
+
+--- value weighted daily.csv  (6.1 MB) ---
+  columns (26): indno, yyyymmdd, dlycaldt, dlytotret, dlytotind, dlyprcret, dlyprcind, dlyincret, dlyincind, dlyusdcnt, dlyusdval, dlytotcnt, dlytotval, dlyeligcnt, dlywgtamt, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  date col 'dlycaldt': looks like ISO (e.g. 2019-02-21)
+  date col 'indbegdt': looks like ISO (e.g. 1925-12-31)
+  date col 'indenddt': looks like ISO (e.g. 2026-06-30)
+  date col 'basedt': looks like ISO (e.g. 1972-12-29)
+  numeric col 'dlytotret': sample min -0.08986, max 0.1256 (percent-vs-decimal check)
+  numeric col 'dlyprcret': sample min -0.08986, max 0.1256 (percent-vs-decimal check)
+  numeric col 'dlyincret': sample min 0, max 0.008047 (percent-vs-decimal check)
+
+--- value weighted monthly.csv  (0.3 MB) ---
+  columns (26): indno, yyyymm, mthcaldt, mthtotret, mthtotind, mthprcret, mthprcind, mthincret, mthincind, mthusdcnt, mthusdval, mthtotcnt, mthtotval, mtheligcnt, mthwgtamt, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  date col 'mthcaldt': looks like ISO (e.g. 1989-11-30)
+  date col 'indbegdt': looks like ISO (e.g. 1925-12-31)
+  date col 'indenddt': looks like ISO (e.g. 2026-06-30)
+  date col 'basedt': looks like ISO (e.g. 1972-12-29)
+  numeric col 'mthtotret': sample min -0.2875, max 0.4143 (percent-vs-decimal check)
+  numeric col 'mthprcret': sample min -0.2915, max 0.4123 (percent-vs-decimal check)
+  numeric col 'mthincret': sample min 0.000484, max 0.0225 (percent-vs-decimal check)
+
+=== djia/ ===
+
+--- djia monthly.csv  (0.1 MB) ---
+  columns (13): date, djc, dji, djt, dju, d10, d5, djct, djit, djtt, djut, d10t, d5t
+  date col 'date': looks like ISO (e.g. 1896-05-26)
+
+=== mflinks/ ===
+
+--- mflink1.csv  (5.8 MB) ---
+  columns (7): crsp_fundno, wficn, cusip8, fund_name, ticker, ncusip, merge_fundno
+
+--- mflink2.csv  (479.2 MB) ---
+  columns (14): fundno, fdate, wficn, fundname, mgrcoab, rdate, assets, ioc, prdate, country, fundno_id, fundname_full, num_holdings, pct_crsp_holdings
+  date col 'fdate': looks like ISO (e.g. 1994-12-31)
+  date col 'rdate': looks like ISO (e.g. 1994-10-31)
+  date col 'prdate': looks like ISO (e.g. 1998-10-31)
+
+=== nsar/ ===
+
+--- 12b1.csv  (0.2 MB) ---
+  columns (12): accession, fund_key, pay1_12b1, pay2_12b1, pay3_12b1, pay4_12b1, pay5_12b1, pay6_12b1, pay7_12b1, pay8_12b1, total_12b1, unreimbursed_payment_12b1
+
+--- balance sheet.csv  (1.0 MB) ---
+  columns (35): accession, fund_key, bs_item_a, bs_item_b, bs_item_c, bs_item_d, bs_item_e, bs_item_f, bs_item_g, bs_item_h, bs_item_i, bs_item_j, bs_item_k, bs_item_l, bs_item_m, bs_item_n, bs_item_o, bs_item_p, bs_item_q, bs_item_r1, bs_item_r2, bs_item_r3, bs_item_r4, bs_item_s, bs_item_t, bs_item_u1, bs_item_u2, bs_item_v1, bs_item_v2, bs_item_w, bs_item_x, bs_item_y, bs_item_z75a, bs_item_z75b, bs_item_z76
+
+--- fund family.csv  (0.0 MB) ---
+  columns (6): accession, family_flag, fund_key, entry_key, num_investment_co_in_family, family_name
+
+--- fund_alt_investment.csv  (0.7 MB) ---
+  columns (38): accession, permission_flag_a, fund_key, engage_flag_a, permission_flag_b, engage_flag_b, permission_flag_c, engage_flag_c, permission_flag_d, engage_flag_d, permission_flag_e, engage_flag_e, permission_flag_f, engage_flag_f, permission_flag_g, engage_flag_g, permission_flag_h, engage_flag_h, permission_flag_i, engage_flag_i, permission_flag_j, engage_flag_j, permission_flag_k, engage_flag_k, permission_flag_l, engage_flag_l, permission_flag_m, engage_flag_m, permission_flag_n, engage_flag_n, permission_flag_o, engage_flag_o, permission_flag_p, engage_flag_p, permission_flag_q, engage_flag_q, permission_flag_r, engage_flag_r
+
+--- fund_debt_invest.csv  (0.5 MB) ---
+  columns (25): accession, debt_investment_flag, fund_key, debt_item_b, debt_item_c, debt_item_d, debt_item_e, debt_item_f, debt_item_g, debt_item_h, debt_item_i, debt_item_j, debt_item_k, debt_item_l, debt_item_m, debt_item_n, debt_item_o, debt_item_p, debt_item_q, debt_item_r, port_maturity, port_maturity2, debt_guaranteed_flag, debt_delinquent_flag, debt_nav_flag
+
+--- Fund_equity_invest.csv  (0.3 MB) ---
+  columns (13): accession, equity_fund_flag, fund_key, investment_obj_b, investment_obj_c, investment_obj_d, investment_obj_e, investment_obj_f, investment_obj_g, balance_fund_flag, precious_metal_flag, global_fund_flag, index_fund_flag
+
+--- headers.csv  (4.2 MB) ---
+  columns (10): accession, rdate, fdate, regfile_no, owner_cik, series_id, series_name, class_contract_id, class_contract_name, class_contract_ticker_symbol
+  date col 'rdate': looks like ISO (e.g. 2005-11-30)
+  date col 'fdate': looks like ISO (e.g. 2006-03-01)
+
+--- income statement.csv  (1.0 MB) ---
+  columns (38): accession, fund_key, is_item_a, is_item_b, is_item_c, is_item_d, is_item_e, is_item_f, is_item_g, is_item_i, is_item_j, is_item_k, is_item_l, is_item_m, is_item_n, is_item_o, is_item_p, is_item_q, is_item_r, is_item_s, is_item_t, is_item_u, is_item_v, is_item_w, is_item_x, is_item_y, is_item_z, is_item_zaa, is_item_zbb, is_item_zcc1, is_item_zcc2, is_item_zdd1, is_item_zdd2, is_item_zee, is_item_73a1, is_item_73a2, is_item_73b, is_item_73c
+
+--- monthly_sales_repurchases.csv  (2.7 MB) ---
+  columns (12): accession, fund_key, month_of_period, shr_sold1, shr_sold2, shr_sold3, shr_sold4, total_shr_sold1, total_shr_sold2, total_shr_sold3, total_shr_sold4, total_sales_purchase
+  numeric col 'total_sales_purchase': sample min 0, max 1.426e+06 (percent-vs-decimal check)
+
+--- registrant.csv  (3.9 MB) ---
+  columns (53): accession, report_date, reg_name, file_num, tele_num, street_address, city, state, zip_code, zip_code_ext, foreign_country, foreign_country_postal, first_flag, last_flag, sbic_flag, uit_flag, multi_port_flag, multi_port_count, fund_key, series_num, series_name, series_last_flag, open_end_fund_flag, load_deduction_flag, front_load_sales, max_sales_load, min_sales_load, front_load_retain, front_load_payout, aff_to_unaff_payout, retail_aff_payout, deferred_load_flag, total_deferred_loads, deferred_load_retain_flag, retain_deferred_loads, redemption_fee_flag, redemption_fee, maintenance_fee_flag, distribution_12b1_flag, direct_pay_12b1_flag, insurance_co_flag, insurance_co_flag2, insurance_co_flag3, insurance_co_flag4, insurance_co_flag5, investment_co_flag, investment_co_flag1, investment_co_flag2, min_investment_requirement, turnover_purchases, turnover_sales, turnover_mav, turnover_pct
+  date col 'report_date': looks like ISO (e.g. 2005-11-30)
+  numeric col 'front_load_sales': sample min 0, max 1.492e+04 (percent-vs-decimal check)
+  numeric col 'max_sales_load': sample min 0, max 5.75 (percent-vs-decimal check)
+  numeric col 'min_sales_load': sample min 0, max 0 (percent-vs-decimal check)
+  numeric col 'front_load_retain': sample min 0, max 1984 (percent-vs-decimal check)
+  numeric col 'retail_aff_payout': sample min 0, max 217 (percent-vs-decimal check)
+  numeric col 'retain_deferred_loads': sample min 0, max 0 (percent-vs-decimal check)
+  numeric col 'redemption_fee': sample min 0, max 5.45e+05 (percent-vs-decimal check)
+  numeric col 'turnover_sales': sample min 0, max 1.404e+07 (percent-vs-decimal check)
+
+=== pastor-stambaugh/ ===
+
+--- pastor-stambaugh.csv  (0.0 MB) ---
+  columns (4): date, ps_level, ps_innov, ps_vwf
+  date col 'date': looks like ISO (e.g. 1962-08-31)
+  numeric col 'ps_level': sample min -0.4617, max 0.198 (percent-vs-decimal check)
+
+=== thomson_s12/ ===
+
+--- s12type1.csv.csv  (316.3 MB) ---
+  columns (9): fundno, rdate, fdate, fundname, mgrcoab, country, assets, ioc, prdate
+  date col 'rdate': looks like ISO (e.g. 1979-06-30)
+  date col 'fdate': looks like ISO (e.g. 1980-03-31)
+
+--- Unknown 1.csv  (8997.2 MB) ---
+  columns (4): fundno, fdate, cusip, shares
+  date col 'fdate': looks like ISO (e.g. 1980-03-31)
+
+--- Unknown 2.csv  (7089.0 MB) ---
+  columns (4): crsp_fundno, caldt, dnav, dret
+  date col 'caldt': looks like ISO (e.g. 1998-09-01)
+  numeric col 'dret': sample min -0.1274, max 0.04129 (percent-vs-decimal check)
+
+=== re-pulled loads (crsp_mf/) ===
+
+--- Front Loads.csv  (0.6 MB) ---
+  columns (6): crsp_fundno, front_group_no, begdt, enddt, dollar_amt, front_load
+  date col 'begdt': looks like ISO (e.g. 2004-06-25)
+  date col 'enddt': looks like ISO (e.g. 2008-06-30)
+
+--- Rear Loads.csv  (8.3 MB) ---
+  columns (8): crsp_fundno, rear_group_no, begdt, enddt, load_type, inv_lvl, time_period, rear_load
+  date col 'begdt': looks like ISO (e.g. 1997-12-31)
+  date col 'enddt': looks like ISO (e.g. 1998-08-31)
+
+PROBE DONE - metadata only; send this file to Claude.

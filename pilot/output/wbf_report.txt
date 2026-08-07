@@ -1,0 +1,22 @@
+WHO BREAKS FIRST (2000-2023, same funds, same spells)
+============================================================
+retail-flagged share classes: 38,879 of 75,913
+  monthly returns: 10,331,215 rows, 75,894 share classes
+retail flow observations: 682,740 wficn-quarters, 11,305 funds
+  cpz factors: 1979-01 to 2014-01
+
+spells (2000+, both arms observable at start): 19,650 across 5,511 funds
+MANAGER capitulation events (min-AS < 60%): 220 (1.1% of spells)
+CLIENT capitulation events (retail flow <= -10%/q): 5,340 (27.2%)
+  sensitivity (quarter-events at thresholds, info): <= -5%: 17,736, <= -15%: 2,526
+
+WHO BREAKS FIRST (among 5,473 spells with >=1 event):
+  client first: 5,302 (96.9%)
+  manager first: 157 (2.9%)
+  tie first: 14 (0.3%)
+  both events in same spell: 87
+median time to manager event: 4q
+median time to client event: 2q
+
+Caveats: paired arms (same funds) - overlay is descriptive, real build uses paired/competing-risk tests; retail flags begin Dec 1999; client threshold is a pre-specified pilot definition (-10%/quarter).
+WBF DONE - outputs aggregate-only and shareable.

@@ -1,0 +1,55 @@
+BENCHMARK SERIES v3 (hybrid: reconstructed + CPZ actual fill)
+============================================================
+
+reconstructed coverage per code (v2):
+  R1: 1979-01 to 2026-06 (568 months; |ret|>40%: 0)
+  R1G: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  R1V: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  R2: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  R2G: 1979-01 to 2026-06 (570 months; |ret|>40%: 0)
+  R2V: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  R3: 1979-01 to 2026-06 (568 months; |ret|>40%: 0)
+  R3G: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  R3V: 1979-01 to 2026-06 (568 months; |ret|>40%: 0)
+  RM: 1979-01 to 2026-06 (568 months; |ret|>40%: 0)
+  RMG: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  RMV: 1979-01 to 2026-06 (569 months; |ret|>40%: 0)
+  S5: 1926-01 to 2026-06 (1204 months; |ret|>40%: 0)
+  cpz factors: 1979-01 to 2014-01
+
+v3 coverage per code:
+  R1: 1979-01 to 2026-06 (568 months)
+  R1G: 1979-01 to 2026-06 (569 months)
+  R1V: 1979-01 to 2026-06 (569 months)
+  R2: 1979-01 to 2026-06 (569 months)
+  R2G: 1979-01 to 2026-06 (570 months)
+  R2V: 1979-01 to 2026-06 (569 months)
+  R3: 1979-01 to 2026-06 (568 months)
+  R3G: 1979-01 to 2026-06 (569 months)
+  R3V: 1979-01 to 2026-06 (568 months)
+  RM: 1979-01 to 2026-06 (568 months)
+  RMG: 1979-01 to 2026-06 (569 months)
+  RMV: 1979-01 to 2026-06 (569 months)
+  S5: 1926-01 to 2026-06 (1204 months)
+  monthly returns: 10,331,215 rows, 75,894 share classes
+  return hygiene: dropped 74,653 fund-months (|ret|>200% or TNA<$1M)
+panel_full: 285,929 fund-quarters, 9,094 funds (cached)
+
+HEADLINES v3 (vs v2, vs proxy):
+  spells: 18,094 (v2 14,557)
+  manager events: 693 (3.8%; v2 516 / 3.5%)
+    1980-94: 6.61% of 1,090 spells (v2 13.86% of 166; proxy 6.5%)
+    1995-2009: 5.04% of 7,884 spells (v2 5.04% of 5,243; proxy 3.1%)
+    2010-23: 2.46% of 9,120 spells (v2 2.50% of 9,148; proxy 0.8%)
+  logrank eras p = 0.0000; depth p = 0.0000
+  client events (2000+, <=-10%/q): 4,799 of 15,163 (31.6%)
+
+crsp_sp500/ files on disk:
+  composite daily.csv: 2.2 MB
+  composite monthly.csv: 0.2 MB
+  sp500_constituents_daily.csv: 2632.9 MB
+  value weighted daily.csv: 6.1 MB
+  value weighted monthly.csv: 0.3 MB
+
+Note: stages 06-08 use the rebuilt panel automatically on next run.
+BENCH v3 DONE - outputs aggregate-only and shareable.

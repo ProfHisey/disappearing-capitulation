@@ -1,0 +1,46 @@
+BENCHMARK SERIES v4 + REASSIGNMENT SHARPENING
+============================================================
+
+(a) EXTRACT + VALIDATE official Russell returns
+  usable rows 26,664; span 2008-08..2026-06; codes ['R1', 'R1G', 'R1V', 'R2', 'R2G', 'R2V', 'R3', 'R3G', 'R3V', 'RM', 'RMG', 'RMV']
+  cpz factors: 1979-01 to 2014-01
+  candidate A_total_rows  : mean abs diff vs CPZ 36.6 bps/m (215 months)
+  candidate B_layer1      : mean abs diff vs CPZ 0.0 bps/m (215 months)
+  candidate B_layer9      : mean abs diff vs CPZ 0.0 bps/m (215 months)
+  candidate C_median_mtd  : mean abs diff vs CPZ 36.6 bps/m (215 months)
+  WINNER: B_layer9 (0.0 bps/m vs CPZ) - official series accepted
+
+(b) BUILD SERIES v4 (CPZ -> official -> reconstruction)
+  cpz factors: 1979-01 to 2014-01
+  R1: 1979-01..2026-06 ({'cpz': 355, 'official': 200, 'reconstruction': 15})
+  R1G: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  R1V: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  R2: 1979-01..2026-06 ({'cpz': 355, 'official': 200, 'reconstruction': 15})
+  R2G: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  R2V: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  R3: 1979-01..2026-06 ({'cpz': 355, 'official': 200, 'reconstruction': 15})
+  R3G: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  R3V: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  RM: 1979-01..2026-06 ({'cpz': 355, 'official': 200, 'reconstruction': 15})
+  RMG: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  RMV: 1979-01..2026-06 ({'cpz': 355, 'official': 214})
+  live benchmark cache overwritten with v4 (v3 backup remains as bench_series_monthly_v3.parquet)
+
+(c) REBUILD PANEL + NEW HEADLINE ANCHOR
+panel_full: 289,857 fund-quarters, 9,096 funds (cached)
+
+  V0-v4 BASELINE (official Russell benchmarks): 25,267 spells | capitulated 1.96% | died 7.53%
+    1980-1994: n  1,090 | cap  6.51% | died  7.25%
+    1995-2009: n  8,643 | cap  3.14% | died  8.28%
+    2010-2023: n 15,534 | cap  0.99% | died  7.13%
+    capitulation [n=129,991, ev=496]  dur_5p HR 2.79 (z +10.3)  depth HR 28.27 (z +7.1)  era_1023 HR 0.21 (z -15.8)
+    death [n=129,991, ev=1,902]  dur_5p HR 1.20 (z +3.7)  depth HR 0.29 (z -7.3)  era_1023 HR 0.76 (z -5.9)
+  compare to v3 V0 (18,094 spells; era caps 6.61/5.04/2.46; cap HRs dur 2.60 depth 117 era 0.37). This table is the new anchor; batteries III/IV inherit it automatically.
+
+(d) REASSIGNMENT CROSSINGS: HOW DIFFERENT IS THE NEW BENCHMARK?
+  257 reassignment crossings measured:
+    AS vs ENTRY benchmark at crossing: p25 0.641 | median 0.687 | p75 0.778 | share < 0.65: 30.7% | share < 0.70: 53.7%
+    new min-AS benchmark in SAME size segment: 89.5%; same index family (style sibling, e.g. R1 vs R1V): 56.0%
+  reading: median near 0.60-0.65 + mostly same-segment = these are the same economic event measured against a nearby ruler, and the min-AS definition stands with a reported sensitivity. Median near 0.75+ or mostly cross-segment = style migration contaminates the event and a joint AS+TE definition becomes necessary.
+
+18c DONE - aggregates only.

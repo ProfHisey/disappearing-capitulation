@@ -1,0 +1,17 @@
+# raw/licensed data never enters this repo
+data/
+*.sas7bdat
+*.dta
+
+# rebuildable intermediates
+pilot/cache/
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.parquet
+
+# env/editor cruft
+.env
+.vscode/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,9 @@
+KM PILOT REPORT (1980-2009, Petajisto data)
+============================================================
+usable fund-quarters: 75,741; funds: 2,555
+underperformance spells (from genuinely-active start): 6,496
+capitulation events (AS crossed below 60%): 235 (3.6% of spells)
+median spell length: 4 quarters; max: 41
+logrank across depth terciles: p = 0.0195
+
+KM DONE - km_pilot.png, km_survival_table.csv, km_report.txt are aggregate-only and shareable.
