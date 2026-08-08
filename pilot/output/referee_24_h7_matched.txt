@@ -1,0 +1,37 @@
+H7 MATCHED-DURATION CHECK
+============================================================
+factors: 1926-07 to 2026-05
+
+MILESTONE K = 4 QUARTERS
+
+  milestone K=4q: folded-by-K 174 (mean depth at K -12.3%) | fighting-at-K 13,769 (mean depth -16.1%)
+    K=4 NET: folded alpha -1.03%/yr (se 0.63%, 275m) | fighting -1.04%/yr (se 0.67%, 440m)
+      SPREAD (fight - fold): -3.08%/yr (se 0.72%, t -4.27, 275m) | MDE(80%) 2.02%/yr
+
+MILESTONE K = 8 QUARTERS
+
+  milestone K=8q: folded-by-K 190 (mean depth at K -14.7%) | fighting-at-K 5,707 (mean depth -19.2%)
+    K=8 NET: folded alpha -1.37%/yr (se 0.58%, 304m) | fighting -1.49%/yr (se 0.67%, 389m)
+      SPREAD (fight - fold): -2.26%/yr (se 0.68%, t -3.34, 304m) | MDE(80%) 1.89%/yr
+    K=8 GROSS: folded alpha -0.13%/yr (se 0.59%, 304m) | fighting -0.14%/yr (se 0.68%, 389m)
+      SPREAD (fight - fold): -2.12%/yr (se 0.67%, t -3.14, 304m) | MDE(80%) 1.89%/yr
+    depth stratum: shallow at K (0 to -15%) - folded 116, fighting 2,480
+    K=8 NET, shallow at K (0 to -15%): folded alpha -0.92%/yr (se 0.81%, 174m) | fighting -1.49%/yr (se 0.54%, 389m)
+      SPREAD (fight - fold): -2.11%/yr (se 0.74%, t -2.85, 174m) | MDE(80%) 2.07%/yr
+    depth stratum: deep at K (beyond -15%) - folded 74, fighting 3,227
+    K=8 NET, deep at K (beyond -15%): folded alpha -1.68%/yr (se 1.56%, 87m) | fighting -1.80%/yr (se 0.89%, 389m)
+      SPREAD (fight - fold): -3.78%/yr (se 1.27%, t -2.99, 87m) | MDE(80%) 3.55%/yr
+
+MILESTONE K = 12 QUARTERS
+
+  milestone K=12q: folded-by-K 147 (mean depth at K -14.8%) | fighting-at-K 2,295 (mean depth -20.3%)
+    K=12 NET: folded alpha -2.95%/yr (se 0.65%, 200m) | fighting -1.65%/yr (se 0.74%, 377m)
+      SPREAD (fight - fold): -1.51%/yr (se 0.81%, t -1.86, 200m) | MDE(80%) 2.27%/yr
+
+Reading guide: battery IV's unmatched spread was -2.38%/yr net (fight minus
+fold, t -3.99). If the matched spreads at K=8 land in the same range with
+usable power, formation-state composition is excluded and the paper's
+Section 8 claim stands as written. Attenuation toward zero means the
+original spread partly reflected WHERE in their spells the two groups stood,
+and Section 8's magnitude gets restated from this table.
+MATCHED-DURATION CHECK DONE - aggregates only.

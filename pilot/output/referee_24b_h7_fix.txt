@@ -1,0 +1,51 @@
+H7 CORRECTION - RF DOUBLE-SUBTRACTION
+============================================================
+factors: 1926-07 to 2026-05
+
+(a) BATTERY IV DESIGN, CORRECTED
+
+  UNMATCHED (battery IV design), NET
+    folded   alpha -1.38%/yr (se 0.38%, 369m)
+    fighting alpha -1.49%/yr (se 0.67%, 389m)
+    SPREAD corrected: -0.05%/yr (se 0.52%, t -0.10) | MDE(80%) 1.46%/yr
+    [old, biased:     -2.38%/yr - bias = mean rf 2.36%/yr, as diagnosed]
+
+  UNMATCHED, GROSS
+    folded   alpha -0.13%/yr (se 0.39%, 369m)
+    fighting alpha -0.14%/yr (se 0.68%, 389m)
+    SPREAD corrected: +0.06%/yr (se 0.52%, t +0.11) | MDE(80%) 1.46%/yr
+    [old, biased:     -2.27%/yr - bias = mean rf 2.36%/yr, as diagnosed]
+
+(b) MATCHED MILESTONES, CORRECTED
+
+  MATCHED K=4, NET
+    folded   alpha -1.03%/yr (se 0.63%, 275m)
+    fighting alpha -1.04%/yr (se 0.67%, 440m)
+    SPREAD corrected: -0.75%/yr (se 0.69%, t -1.09) | MDE(80%) 1.93%/yr
+    [old, biased:     -3.08%/yr - bias = mean rf 2.33%/yr, as diagnosed]
+
+  MATCHED K=8, NET
+    folded   alpha -1.37%/yr (se 0.58%, 304m)
+    fighting alpha -1.49%/yr (se 0.67%, 389m)
+    SPREAD corrected: -0.19%/yr (se 0.60%, t -0.32) | MDE(80%) 1.68%/yr
+    [old, biased:     -2.26%/yr - bias = mean rf 2.09%/yr, as diagnosed]
+
+  MATCHED K=8, GROSS
+    folded   alpha -0.13%/yr (se 0.59%, 304m)
+    fighting alpha -0.14%/yr (se 0.68%, 389m)
+    SPREAD corrected: -0.05%/yr (se 0.60%, t -0.09) | MDE(80%) 1.67%/yr
+    [old, biased:     -2.12%/yr - bias = mean rf 2.09%/yr, as diagnosed]
+
+  MATCHED K=12, NET
+    folded   alpha -2.95%/yr (se 0.65%, 200m)
+    fighting alpha -1.65%/yr (se 0.74%, 377m)
+    SPREAD corrected: +0.71%/yr (se 0.79%, t +0.89) | MDE(80%) 2.22%/yr
+    [old, biased:     -1.51%/yr - bias = mean rf 2.23%/yr, as diagnosed]
+
+Reading guide: the own-benchmark ruler already showed a spread of 0.00 and
+was computed correctly all along; the corrected FF4 spreads should now be
+judged against the MDE. Spread within +/- MDE of zero = Section 8 becomes
+an adequately powered NULL (no conviction premium, no conviction penalty,
+bounded within ~2%/yr), which is what the paper reports. Any residual
+significant spread survives the correction and is real.
+H7 CORRECTION DONE - aggregates only.

@@ -1,0 +1,29 @@
+PAPER EXHIBITS
+============================================================
+
+FIG 1 + TABLE 3 PANEL B (cohort decline + descriptives)
+
+TABLE 3 PANEL B (cohort descriptives):
+  1990-94: n 1,032 | median dur 4q | mean depth -11.8% | mean entry AS 0.87 | median entry TNA $152M
+  1995-99: n 1,841 | median dur 4q | mean depth -19.2% | mean entry AS 0.90 | median entry TNA $122M
+  2000-04: n 3,330 | median dur 4q | mean depth -14.3% | mean entry AS 0.88 | median entry TNA $120M
+  2005-09: n 3,472 | median dur 4q | mean depth -9.9% | mean entry AS 0.88 | median entry TNA $210M
+  2010-14: n 5,279 | median dur 5q | mean depth -12.3% | mean entry AS 0.89 | median entry TNA $318M
+  2015-19: n 5,823 | median dur 4q | mean depth -12.6% | mean entry AS 0.90 | median entry TNA $282M
+  2020-24: n 4,432 | median dur 2q | mean depth -15.9% | mean entry AS 0.91 | median entry TNA $317M
+  wrote fig1_cohort_decline.png
+
+FIG 3 (two clocks: duration and depth profiles)
+  wrote fig3_two_clocks.png
+
+FIG 4 (famous-fund Active Share traces)
+  wrote fig4_famous_traces.png
+
+FIG 5 (the grind before the fold)
+  wrote fig5_grind.png (min per-point n = 347)
+
+FIG 6 (cumulative resister-capitulator spread)
+factors: 1926-07 to 2026-05
+  wrote fig6_h7_cumulative.png (alpha -0.05%/yr over 369 months)
+
+EXHIBITS DONE. Figure 2 = existing cif_by_era.png (stage 13).
