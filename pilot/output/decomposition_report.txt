@@ -1,0 +1,28 @@
+TRADING vs DRIFT DECOMPOSITION (stage 21b)
+============================================================
+candidate events: fighter_placebo 785, crossing 496, cap_pre_placebo 496
+holdings snapshots: 70,352 fund-quarters after dedup
+stock returns: 3,850,091 permno-months
+index constituent id column: cusip
+benchmark constituent rows kept: 379,681 across 128 months
+
+events decomposed: fighter_placebo 343, cap_pre_placebo 122, crossing 112
+mean share of positions with missing returns: 27.8%
+validation: corr(our AS, ND as_min) = 0.921 over 1,081 fund-quarters | mean ours 0.84 vs ND 0.82
+
+DECOMPOSITION (means; AS points, negative = toward index):
+  group                  n   dAS_obs     drift   trading  trade share
+  cap_pre_placebo      122    -0.009    +0.001    -0.010        97.1%
+  crossing             112    -0.090    -0.001    -0.089        99.8%
+  fighter_placebo      343    -0.002    -0.000    -0.002        77.5%
+
+  crossing events with a real AS drop: 90; trading component exceeds drift in 91% of them
+  trading share of the drop: p25 90% | median 100% | p75 110%
+
+Reading guide: 'drift' is what the Active Share drop would have been had the
+fund not traded at all (prices and index reconstitution only); 'trading' is
+the remainder, attributable to the fund's own transactions. The critique-2
+claim dies if trading dominates at crossings while both placebos show small,
+drift-sized changes. Levels of our recomputed AS need not match Notre Dame's
+(different benchmark handling); the correlation is the validity check.
+DECOMPOSITION DONE - aggregates only.

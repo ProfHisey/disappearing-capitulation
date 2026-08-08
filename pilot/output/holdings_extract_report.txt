@@ -1,0 +1,44 @@
+HOLDINGS EXTRACTION (stage 21a)
+============================================================
+target funds: 471 capitulators + 501 fighter sample + 604 controls = 1,576
+mapped to 2,284 portfolio numbers (1,453 of 1,576 target funds have a portno)
+holdings file: Portfolio Holdings.csv (55.3 GB)
+holdings columns: ['crsp_portno', 'report_dt', 'security_rank', 'eff_dt', 'percent_tna', 'nbr_shares', 'market_val', 'crsp_company_key', 'security_name', 'cusip', 'permno', 'permco', 'ticker', 'coupon', 'maturity_dt']
+  chunk 0: scanned ~2M rows, kept 654,848
+  chunk 10: scanned ~22M rows, kept 3,198,101
+  chunk 20: scanned ~42M rows, kept 5,429,283
+  chunk 30: scanned ~62M rows, kept 6,685,987
+  chunk 40: scanned ~82M rows, kept 7,980,626
+  chunk 50: scanned ~102M rows, kept 9,884,796
+  chunk 60: scanned ~122M rows, kept 12,927,991
+  chunk 70: scanned ~142M rows, kept 15,066,227
+  chunk 80: scanned ~162M rows, kept 16,574,039
+  chunk 90: scanned ~182M rows, kept 19,145,274
+  chunk 100: scanned ~202M rows, kept 22,335,435
+  chunk 110: scanned ~222M rows, kept 24,069,252
+  chunk 120: scanned ~242M rows, kept 25,426,716
+  chunk 130: scanned ~262M rows, kept 28,964,775
+  chunk 140: scanned ~282M rows, kept 30,769,452
+  chunk 150: scanned ~302M rows, kept 32,535,231
+  chunk 160: scanned ~322M rows, kept 33,033,232
+  chunk 170: scanned ~342M rows, kept 34,145,171
+  chunk 180: scanned ~362M rows, kept 35,366,316
+  chunk 190: scanned ~382M rows, kept 36,400,672
+  chunk 200: scanned ~402M rows, kept 37,406,943
+  chunk 210: scanned ~422M rows, kept 37,960,221
+  chunk 220: scanned ~442M rows, kept 38,084,022
+  chunk 230: scanned ~462M rows, kept 38,127,229
+filter pass complete: 38,127,229 holdings rows kept
+wrote cache/holdings_target.parquet (38,127,229 rows, 1,452 funds)
+
+coverage by group:
+  capitulator: 429 funds | 2002Q1..2026Q2 | median positions/report 205
+  control: 533 funds | 2001Q4..2026Q2 | median positions/report 142
+  fighter: 490 funds | 2002Q2..2026Q2 | median positions/report 135
+
+capitulations with holdings at >=2 of the 3 quarters around the crossing: 229 of 496 - this is stage 21b's usable sample
+
+STOCK-RETURN FILE PROBES (for stage 21b):
+  crsp_monthly.csv (225 MB): ['permno', 'primaryexch', 'siccd', 'mthcaldt', 'mthprc', 'mthret', 'mthretx', 'shrout']
+
+EXTRACTION DONE. Stage 21b (the decomposition itself) will be written against this cache and these schemas.
