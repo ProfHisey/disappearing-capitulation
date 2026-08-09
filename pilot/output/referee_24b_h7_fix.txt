@@ -5,42 +5,42 @@ factors: 1926-07 to 2026-05
 (a) BATTERY IV DESIGN, CORRECTED
 
   UNMATCHED (battery IV design), NET
-    folded   alpha -1.38%/yr (se 0.38%, 369m)
-    fighting alpha -1.49%/yr (se 0.67%, 389m)
-    SPREAD corrected: -0.05%/yr (se 0.52%, t -0.10) | MDE(80%) 1.46%/yr
-    [old, biased:     -2.38%/yr - bias = mean rf 2.36%/yr, as diagnosed]
+    folded   alpha -1.04%/yr (se 0.40%, 360m)
+    fighting alpha -1.17%/yr (se 0.67%, 389m)
+    SPREAD corrected: -0.06%/yr (se 0.53%, t -0.11) | MDE(80%) 1.47%/yr
+    [old, biased:     -2.32%/yr - bias = mean rf 2.28%/yr, as diagnosed]
 
   UNMATCHED, GROSS
-    folded   alpha -0.13%/yr (se 0.39%, 369m)
-    fighting alpha -0.14%/yr (se 0.68%, 389m)
-    SPREAD corrected: +0.06%/yr (se 0.52%, t +0.11) | MDE(80%) 1.46%/yr
-    [old, biased:     -2.27%/yr - bias = mean rf 2.36%/yr, as diagnosed]
+    folded   alpha +0.18%/yr (se 0.41%, 360m)
+    fighting alpha +0.17%/yr (se 0.68%, 389m)
+    SPREAD corrected: +0.06%/yr (se 0.53%, t +0.12) | MDE(80%) 1.47%/yr
+    [old, biased:     -2.20%/yr - bias = mean rf 2.28%/yr, as diagnosed]
 
 (b) MATCHED MILESTONES, CORRECTED
 
   MATCHED K=4, NET
-    folded   alpha -1.03%/yr (se 0.63%, 275m)
-    fighting alpha -1.04%/yr (se 0.67%, 440m)
-    SPREAD corrected: -0.75%/yr (se 0.69%, t -1.09) | MDE(80%) 1.93%/yr
-    [old, biased:     -3.08%/yr - bias = mean rf 2.33%/yr, as diagnosed]
+    folded   alpha -0.91%/yr (se 0.68%, 273m)
+    fighting alpha -1.33%/yr (se 0.61%, 440m)
+    SPREAD corrected: -0.62%/yr (se 0.70%, t -0.88) | MDE(80%) 1.97%/yr
+    [old, biased:     -2.91%/yr - bias = mean rf 2.28%/yr, as diagnosed]
 
   MATCHED K=8, NET
-    folded   alpha -1.37%/yr (se 0.58%, 304m)
-    fighting alpha -1.49%/yr (se 0.67%, 389m)
-    SPREAD corrected: -0.19%/yr (se 0.60%, t -0.32) | MDE(80%) 1.68%/yr
-    [old, biased:     -2.26%/yr - bias = mean rf 2.09%/yr, as diagnosed]
+    folded   alpha -1.11%/yr (se 0.57%, 278m)
+    fighting alpha -1.17%/yr (se 0.67%, 389m)
+    SPREAD corrected: -0.66%/yr (se 0.64%, t -1.03) | MDE(80%) 1.79%/yr
+    [old, biased:     -2.74%/yr - bias = mean rf 2.09%/yr, as diagnosed]
 
   MATCHED K=8, GROSS
-    folded   alpha -0.13%/yr (se 0.59%, 304m)
-    fighting alpha -0.14%/yr (se 0.68%, 389m)
-    SPREAD corrected: -0.05%/yr (se 0.60%, t -0.09) | MDE(80%) 1.67%/yr
-    [old, biased:     -2.12%/yr - bias = mean rf 2.09%/yr, as diagnosed]
+    folded   alpha +0.10%/yr (se 0.58%, 278m)
+    fighting alpha +0.17%/yr (se 0.68%, 389m)
+    SPREAD corrected: -0.50%/yr (se 0.64%, t -0.79) | MDE(80%) 1.79%/yr
+    [old, biased:     -2.58%/yr - bias = mean rf 2.09%/yr, as diagnosed]
 
   MATCHED K=12, NET
-    folded   alpha -2.95%/yr (se 0.65%, 200m)
-    fighting alpha -1.65%/yr (se 0.74%, 377m)
-    SPREAD corrected: +0.71%/yr (se 0.79%, t +0.89) | MDE(80%) 2.22%/yr
-    [old, biased:     -1.51%/yr - bias = mean rf 2.23%/yr, as diagnosed]
+    folded   alpha -1.66%/yr (se 0.86%, 207m)
+    fighting alpha -0.96%/yr (se 0.72%, 371m)
+    SPREAD corrected: +0.36%/yr (se 0.93%, t +0.39) | MDE(80%) 2.60%/yr
+    [old, biased:     -1.60%/yr - bias = mean rf 1.96%/yr, as diagnosed]
 
 Reading guide: the own-benchmark ruler already showed a spread of 0.00 and
 was computed correctly all along; the corrected FF4 spreads should now be

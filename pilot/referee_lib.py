@@ -63,10 +63,19 @@ def summarize(sp: pd.DataFrame, log: list, label: str) -> None:
                    f" | died {s['spell_died'].mean():6.2%}")
 
 
-def build_dt(sp: pd.DataFrame, pf: dict, lag: int = 1) -> pd.DataFrame:
+def build_dt(sp: pd.DataFrame, pf: dict, lag: int = 1,
+             observed_clock: bool = True) -> pd.DataFrame:
     """Spell-quarter at-risk frame. Covariates (depth, flow) read from the
     quarter `lag` quarters before the at-risk quarter (lag=1 reproduces the
-    stage 14-16 convention; lag=2 is the critique-20 double-lag check)."""
+    stage 14-16 convention; lag=2 is the critique-20 double-lag check).
+    observed_clock=True (audit fix A1): durations count OBSERVED rows, so the
+    at-risk quarter t is the t-th observed row after entry, found by walking
+    the fund's actual quarter index; q_info is the observed row `lag` steps
+    earlier and yr is the true calendar year of the at-risk row. For gapless
+    spells this is identical to the old `start + t` arithmetic; for gappy
+    spells the old arithmetic misdated era dummies at year boundaries and
+    read covariates from possibly-absent calendar quarters. observed_clock=
+    False reproduces the pre-audit behavior for diffing."""
     rows = []
     for _, s in sp.iterrows():
         w = s["wficn"]
@@ -76,9 +85,16 @@ def build_dt(sp: pd.DataFrame, pf: dict, lag: int = 1) -> pd.DataFrame:
         T = int(s["m_dur"]) if s["capitulated"] else int(s["end_dur"])
         T = max(T, 1)
         start = s["start_p"]
+        qs = g.index[g.index >= start] if observed_clock else None
         dsf = 0.0
         for t in range(1, T + 1):
-            q = start + (t - lag)
+            if observed_clock:
+                if t >= len(qs):        # panel/spell mismatch; keep old rule
+                    q, q_at = start + (t - lag), start + t
+                else:
+                    q, q_at = qs[t - lag], qs[t]
+            else:
+                q, q_at = start + (t - lag), start + t
             rl = g.at[q, "rel4q"] if q in g.index else np.nan
             if pd.notna(rl):
                 dsf = min(dsf, float(rl))
@@ -86,7 +102,7 @@ def build_dt(sp: pd.DataFrame, pf: dict, lag: int = 1) -> pd.DataFrame:
                   if q in g.index and "flowq" in g.columns else np.nan)
             rows.append({
                 "wficn": w, "spell_id": s.name, "t": t, "depth": dsf,
-                "flow_lag": fl, "q_info": q, "yr": (start + t).year,
+                "flow_lag": fl, "q_info": q, "yr": q_at.year,
                 "event": int(s["capitulated"] and t == int(s["m_dur"])),
                 "event_die": int(bool(s["spell_died"]) and t == T),
             })

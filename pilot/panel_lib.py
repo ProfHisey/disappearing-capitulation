@@ -348,10 +348,19 @@ def build_panel(log: list, force: bool = False) -> pd.DataFrame:
 
 def extract_spells(panel: pd.DataFrame, client_cut: float | None = -0.10,
                    start_year: int | None = None,
-                   require_flow_at_start: bool = False) -> pd.DataFrame:
+                   require_flow_at_start: bool = False,
+                   emit_last_row_entry: bool = True) -> pd.DataFrame:
     """One row per underperformance spell (entry: rel4q<0 and as_min>=70%).
     Columns: wficn, start_q, end_q (str Periods), end_dur, m_dur, c_dur, depth,
-    ended_by in {recovered, as_missing, data_end}."""
+    ended_by in {recovered, as_missing, data_end}, plus CALENDAR event stamps
+    m_cal_q / c_cal_q (audit fix A1: for spells containing reporting gaps,
+    start_q + m_dur lands BEFORE the true crossing quarter, because durations
+    count observed rows; consumers that need the calendar quarter of an event
+    must use these stamps, never start + dur arithmetic).
+    emit_last_row_entry (audit fix A2): a spell entered on a fund's final
+    observed quarter is emitted as a right-censored 1-quarter data_end spell
+    instead of being silently dropped. Set False to reproduce the pre-audit
+    behavior."""
     rows = []
     for wficn, g in panel.groupby("wficn"):
         g = g.reset_index(drop=True)
@@ -367,16 +376,17 @@ def extract_spells(panel: pd.DataFrame, client_cut: float | None = -0.10,
                     ok = False
                 if ok:
                     in_spell, start_i, m_dur, c_dur = True, i, None, None
+                    m_cal, c_cal = None, None
                     depth = float(r["rel4q"])
             else:
                 if pd.notna(r["rel4q"]):
                     depth = min(depth, float(r["rel4q"]))
                 dur = i - start_i
                 if m_dur is None and pd.notna(r["as_min"]) and r["as_min"] < P.CLOSET_CUTOFF:
-                    m_dur = dur
+                    m_dur, m_cal = dur, str(r["quarter"])
                 if (client_cut is not None and c_dur is None
                         and pd.notna(r["flowq"]) and r["flowq"] <= client_cut):
-                    c_dur = dur
+                    c_dur, c_cal = dur, str(r["quarter"])
                 ended_by = None
                 if pd.isna(r["as_min"]):
                     ended_by = "as_missing"
@@ -387,10 +397,17 @@ def extract_spells(panel: pd.DataFrame, client_cut: float | None = -0.10,
                 if ended_by:
                     rows.append((wficn, str(g.loc[start_i, "quarter"]),
                                  str(r["quarter"]), max(dur, 1), m_dur, c_dur,
-                                 depth, ended_by))
+                                 depth, ended_by, m_cal, c_cal))
                     in_spell = False
+        if in_spell and emit_last_row_entry:
+            # entry occurred on the fund's last observed row: right-censored
+            # 1-quarter spell at the data edge (audit fix A2)
+            rows.append((wficn, str(g.loc[start_i, "quarter"]),
+                         str(g.loc[start_i, "quarter"]), 1, None, None,
+                         depth, "data_end", None, None))
     return pd.DataFrame(rows, columns=["wficn", "start_q", "end_q", "end_dur",
-                                       "m_dur", "c_dur", "depth", "ended_by"])
+                                       "m_dur", "c_dur", "depth", "ended_by",
+                                       "m_cal_q", "c_cal_q"])
 
 
 def ols(y: np.ndarray, X: np.ndarray):

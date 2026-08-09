@@ -82,7 +82,7 @@ for tk, expect in FUNDS.items():
     if len(fl):
         log.append(f"    worst retail flow quarter: {fl.min():+.1%} at {fl.idxmin()}")
     ss = sp[sp["wficn"] == w]
-    for _, s in ss.head(6).iterrows():
+    for _, s in ss.iterrows():
         out = ("CAPITULATED" if s["capitulated"] else
                "DIED" if s["spell_died"] else s["ended_by"])
         log.append(f"    spell {s['start_q']} -> {s['end_q']} "

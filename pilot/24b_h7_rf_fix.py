@@ -51,12 +51,23 @@ fac["m"] = fac["month"].dt.to_period("M")
 FAC = fac.set_index("m")[["mktrf", "smb", "hml", "mom", "rf"]]
 
 
+# audit fixes A1 + A4: deduped membership; entry quarters on the calendar-
+# true clock (crossing stamp for capitulators, k-th OBSERVED underwater
+# quarter for milestone formations), matching stage 26's FIXED convention.
+def obs_q(w, start, k):
+    g = PF.get(w)
+    if g is None:
+        return start + k
+    qs = g.index[g.index >= start]
+    return qs[k] if k < len(qs) else start + k
+
+
 def calendar_port(ev, retcol):
     rows = []
     for _, s in ev.iterrows():
         m0 = s["entry_q"].asfreq("M", how="end") + 1
         rows += [(s["wficn"], m0 + k) for k in range(36)]
-    mem = pd.DataFrame(rows, columns=["wficn", "m"])
+    mem = pd.DataFrame(rows, columns=["wficn", "m"]).drop_duplicates()
     d = mem.merge(fm[["wficn", "m", retcol]], on=["wficn", "m"], how="inner")
     g = d.groupby("m")[retcol].agg(["mean", "size"])
     return g[g["size"] >= 10]["mean"]
@@ -94,10 +105,11 @@ def spread_report(folded, fighting, retcol, label):
 # ---------------- battery IV design (unmatched), corrected ----------------
 def sect_battery4():
     caps = sp[sp["capitulated"]].copy()
-    caps["entry_q"] = caps["start_p"] + caps["m_dur"].astype(int)
+    caps["entry_q"] = pd.PeriodIndex(caps["m_cal_q"], freq="Q")
     res = sp[(sp["end_dur"] >= 8)
              & (sp["m_dur"].isna() | (sp["m_dur"] > 8))].copy()
-    res["entry_q"] = res["start_p"] + 8
+    res["entry_q"] = [obs_q(w, s, 8)
+                      for w, s in zip(res["wficn"], res["start_p"])]
     spread_report(caps, res, "fret", "UNMATCHED (battery IV design), NET")
     spread_report(caps, res, "fret_g", "UNMATCHED, GROSS")
 
@@ -108,7 +120,8 @@ def sect_matched():
         folded = elig[elig["m_dur"].notna() & (elig["m_dur"] <= K)].copy()
         fighting = elig[elig["m_dur"].isna() | (elig["m_dur"] > K)].copy()
         for g in (folded, fighting):
-            g["entry_q"] = g["start_p"] + K
+            g["entry_q"] = [obs_q(w, s, K)
+                            for w, s in zip(g["wficn"], g["start_p"])]
         spread_report(folded, fighting, "fret", f"MATCHED K={K}, NET")
         if K == 8:
             spread_report(folded, fighting, "fret_g", "MATCHED K=8, GROSS")

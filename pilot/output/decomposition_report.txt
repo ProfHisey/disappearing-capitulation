@@ -1,23 +1,26 @@
 TRADING vs DRIFT DECOMPOSITION (stage 21b)
 ============================================================
+crossings whose start+dur arithmetic misdated the event (A1, now fixed): 336 of 496
 candidate events: fighter_placebo 785, crossing 496, cap_pre_placebo 496
+fund-quarters mixing dated and undated eff_dt vintages (A3, now excluded from the dated snapshot): 0.00%
 holdings snapshots: 70,352 fund-quarters after dedup
 stock returns: 3,850,091 permno-months
 index constituent id column: cusip
-benchmark constituent rows kept: 379,681 across 128 months
+benchmark constituent rows kept: 370,762 across 125 months
 
-events decomposed: fighter_placebo 343, cap_pre_placebo 122, crossing 112
-mean share of positions with missing returns: 27.8%
-validation: corr(our AS, ND as_min) = 0.921 over 1,081 fund-quarters | mean ours 0.84 vs ND 0.82
+events decomposed: fighter_placebo 380, crossing 127, cap_pre_placebo 115
+mean share of positions with permno absent from CRSP: 27.2%
+mean share of positions with a PARTIALLY missing return roll (gap months filled at 0% - audit A8 disclosure): 2.5%
+validation: corr(our AS, ND as_min) = 0.926 over 1,182 fund-quarters | mean ours 0.84 vs ND 0.81
 
 DECOMPOSITION (means; AS points, negative = toward index):
   group                  n   dAS_obs     drift   trading  trade share
-  cap_pre_placebo      122    -0.009    +0.001    -0.010        97.1%
-  crossing             112    -0.090    -0.001    -0.089        99.8%
-  fighter_placebo      343    -0.002    -0.000    -0.002        77.5%
+  cap_pre_placebo      115    -0.008    +0.000    -0.008        96.0%
+  crossing             127    -0.102    -0.001    -0.101        98.8%
+  fighter_placebo      380    +0.000    +0.001    -0.000        81.8%
 
-  crossing events with a real AS drop: 90; trading component exceeds drift in 91% of them
-  trading share of the drop: p25 90% | median 100% | p75 110%
+  crossing events with a real AS drop: 112; trading component exceeds drift in 93% of them
+  trading share of the drop: p25 90% | median 99% | p75 107%
 
 Reading guide: 'drift' is what the Active Share drop would have been had the
 fund not traded at all (prices and index reconstitution only); 'trading' is

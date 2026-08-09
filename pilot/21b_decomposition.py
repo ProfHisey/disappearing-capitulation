@@ -62,16 +62,36 @@ CODE_WT = {"R3": "r3000_wt", "R3G": "r3000g_wt", "R3V": "r3000v_wt",
            "R2": "r2000_wt", "R2G": "r2000g_wt", "R2V": "r2000v_wt",
            "RM": "rmidc_wt", "RMG": "rmidcg_wt", "RMV": "rmidcv_wt"}
 
+# audit fix A1: crossing quarters come from the CALENDAR stamp recorded by
+# extract_spells (m_cal_q), never start + m_dur arithmetic, which lands
+# before the true crossing for spells containing reporting gaps. Fighter
+# milestones use the fund's 8th OBSERVED underwater quarter's calendar label.
+PFQ = {w: pd.PeriodIndex(g["quarter"].sort_values())
+       for w, g in panel.groupby("wficn")}
+
+def obs_q(w, start, k):
+    qs = PFQ.get(w)
+    if qs is None:
+        return start + k
+    qs = qs[qs >= start]
+    return qs[k] if k < len(qs) else start + k
+
 events = []
+n_misdate = 0
 for _, s in sp[sp["capitulated"]].iterrows():
-    qc = s["start_p"] + int(s["m_dur"])
+    qc = pd.Period(s["m_cal_q"], freq="Q")
+    if qc != s["start_p"] + int(s["m_dur"]):
+        n_misdate += 1
     events.append((s["wficn"], qc - 1, qc, "crossing"))
     events.append((s["wficn"], qc - 3, qc - 2, "cap_pre_placebo"))
 fight = sp[(sp["end_dur"] >= 8) & (sp["m_dur"].isna() | (sp["m_dur"] > 8))]
 for _, s in fight.iterrows():
     if s["wficn"] % 7 == 0:                       # the 21a fighter sample
-        q8 = s["start_p"] + 8
+        q8 = obs_q(s["wficn"], s["start_p"], 8)
         events.append((s["wficn"], q8 - 1, q8, "fighter_placebo"))
+log.append(f"crossings whose start+dur arithmetic misdated the event "
+           f"(A1, now fixed): {n_misdate:,} of "
+           f"{int(sp['capitulated'].sum()):,}")
 ev = pd.DataFrame(events, columns=["wficn", "q0", "q1", "grp"])
 log.append(f"candidate events: "
            + ", ".join(f"{g} {n}" for g, n in ev["grp"].value_counts().items()))
@@ -96,8 +116,16 @@ snap_key = (hold.groupby(["wficn", "rq"])
                 .agg(rd=("report_dt", "max")).reset_index())
 hold = hold.merge(snap_key, on=["wficn", "rq"])
 hold = hold[hold["report_dt"] == hold["rd"]]
+# audit fix A3: keep NaT-eff_dt rows ONLY when the whole fund-quarter is
+# undated; the old rule kept them alongside the max-eff_dt vintage, so a
+# mixed fund-quarter summed two report vintages per position.
+_na = hold.assign(_isna=hold["eff_dt"].isna()) \
+          .groupby(["wficn", "rq"])["_isna"].agg(["any", "all"])
+log.append(f"fund-quarters mixing dated and undated eff_dt vintages "
+           f"(A3, now excluded from the dated snapshot): "
+           f"{(_na['any'] & ~_na['all']).mean():.2%}")
 ed = hold.groupby(["wficn", "rq"])["eff_dt"].transform("max")
-hold = hold[(hold["eff_dt"] == ed) | hold["eff_dt"].isna()]
+hold = hold[(hold["eff_dt"] == ed) | (hold["eff_dt"].isna() & ed.isna())]
 pv = (hold.groupby(["wficn", "rq", "crsp_portno"])["market_val"]
           .sum().reset_index())
 pv = pv.sort_values("market_val").drop_duplicates(["wficn", "rq"],
@@ -199,7 +227,7 @@ def active_share(wf, wb):
                         - wb.reindex(u, fill_value=0.0)).abs().sum())
 
 rows, val_pairs = [], []
-miss_ret_shares = []
+miss_ret_shares, part_shares = [], []
 for _, e in ev.iterrows():
     w, q0, q1, grp = e["wficn"], e["q0"], e["q1"], e["grp"]
     g0, g1 = HG.get((w, q0)), HG.get((w, q1))
@@ -218,15 +246,18 @@ for _, e in ev.iterrows():
     if len(months) == 0 or len(months) > 8:
         continue
     gross = np.ones(len(vf0))
-    missing = 0
+    missing = partial = 0
     for j, pn in enumerate(vf0["permno"].to_numpy()):
         try:
             r = RET.loc[pn].reindex(months)
         except KeyError:
             missing += 1
             continue
+        if r.isna().any():                 # audit A8: flat-price fill months
+            partial += 1
         gross[j] = float((1 + r.fillna(0)).prod())
     miss_ret_shares.append(missing / len(vf0))
+    part_shares.append(partial / len(vf0))
     vdrift = vf0.copy()
     vdrift["w"] = vdrift["w"].to_numpy() * gross
     vdrift["w"] = vdrift["w"] / vdrift["w"].sum()
@@ -245,8 +276,11 @@ dc = pd.DataFrame(rows)
 log.append(f"\nevents decomposed: "
            + ", ".join(f"{g} {n}" for g, n in dc["grp"].value_counts().items())
            if len(dc) else "\nNO events decomposed - check id matching")
-log.append(f"mean share of positions with missing returns: "
+log.append(f"mean share of positions with permno absent from CRSP: "
            f"{np.mean(miss_ret_shares):.1%}" if miss_ret_shares else "")
+log.append(f"mean share of positions with a PARTIALLY missing return roll "
+           f"(gap months filled at 0% - audit A8 disclosure): "
+           f"{np.mean(part_shares):.1%}" if part_shares else "")
 
 if len(dc):
     vp = pd.DataFrame(val_pairs, columns=["ours", "nd"])
@@ -254,6 +288,11 @@ if len(dc):
                f"{vp['ours'].corr(vp['nd']):.3f} over {len(vp):,} "
                f"fund-quarters | mean ours {vp['ours'].mean():.2f} vs ND "
                f"{vp['nd'].mean():.2f}")
+    if vp["ours"].corr(vp["nd"]) < 0.5:
+        log.append("  *** WARNING: validation correlation < 0.5 - the "
+                   "fund/index identifier matching likely broke (audit "
+                   "landmine: permno-vs-cusip sid branch). DO NOT use "
+                   "these numbers. ***")
     log.append("\nDECOMPOSITION (means; AS points, negative = toward index):")
     log.append(f"  {'group':18s} {'n':>5s} {'dAS_obs':>9s} {'drift':>9s} "
                f"{'trading':>9s} {'trade share':>12s}")

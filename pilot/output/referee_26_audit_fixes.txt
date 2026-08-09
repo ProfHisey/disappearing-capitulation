@@ -1,0 +1,39 @@
+AUDIT FIXES A1/A2/A4 (stage 26)
+============================================================
+
+(a) A2: LAST-ROW SPELLS RECOVERED
+  last-row-entry spells recovered: 723 (+2.86% on the old count)
+  of the recovered spells, spell_died: 336 additional edge-deaths now counted
+
+  OLD (last-row entries dropped): 25,267 spells | capitulated 1.96% | died 7.53%
+    1980-1994: n  1,090 | cap  6.51% | died  7.25%
+    1995-2009: n  8,643 | cap  3.14% | died  8.28%
+    2010-2023: n 15,534 | cap  0.99% | died  7.13%
+
+  NEW (A2 fixed): 25,990 spells | capitulated 1.91% | died 8.61%
+    1980-1994: n  1,105 | cap  6.43% | died  8.42%
+    1995-2009: n  8,824 | cap  3.07% | died  9.58%
+    2010-2023: n 16,061 | cap  0.96% | died  8.09%
+
+(b) A1: EVENT MISDATING QUANTIFIED
+  capitulations misdated by start+dur arithmetic: 336 of 496 (67.7%)
+  misdating size (quarters the true crossing is later): median 4 | p90 12 | max 110
+
+(c) HEADLINE HAZARDS, OLD vs NEW
+    capitulation OLD (pre-audit) [n=129,991, ev=496]  dur_5p HR 2.79 (z +10.3)  depth HR 28.27 (z +7.1)  era_1023 HR 0.21 (z -15.8)
+    capitulation NEW (A1+A2 fixed) [n=130,714, ev=496]  dur_5p HR 2.71 (z +9.9)  depth HR 10.69 (z +5.9)  era_1023 HR 0.22 (z -15.9)
+    death OLD (pre-audit) [n=129,991, ev=1,902]  dur_5p HR 1.20 (z +3.7)  depth HR 0.29 (z -7.3)  era_1023 HR 0.76 (z -5.9)
+    death NEW (A1+A2 fixed) [n=130,714, ev=2,238]  dur_5p HR 0.92 (z -1.8)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
+  v4 baseline for reference: cap era HR 0.21, dur 2.79, depth 28.3; death depth 0.29, era 0.76
+
+(d) A4: H7 SPREADS, OLD vs FIXED
+factors: 1926-07 to 2026-05
+  UNMATCHED, NET:
+    OLD  (event-weighted, start+dur clock): spread -0.05%/yr (se 0.52%, t -0.10) | MDE(80%) 1.46%/yr | 369m | dup member-months folded 0.0% / fighting 0.4%
+    FIXED (deduped, calendar-true clock): spread -0.06%/yr (se 0.53%, t -0.11) | MDE(80%) 1.47%/yr | 360m | dup member-months folded 0.0% / fighting 0.4%
+  MATCHED K=8, NET:
+    OLD  (event-weighted, start+dur clock): spread -0.19%/yr (se 0.60%, t -0.32) | MDE(80%) 1.68%/yr | 304m | dup member-months folded 0.0% / fighting 0.4%
+    FIXED (deduped, calendar-true clock): spread -0.66%/yr (se 0.64%, t -1.03) | MDE(80%) 1.79%/yr | 278m | dup member-months folded 0.1% / fighting 0.4%
+  reading: if OLD and FIXED agree within a fraction of the MDE, the powered-null H7 conclusion is insensitive to the membership convention (A4) and to the clock fix (A1), and the paper cites the FIXED numbers.
+
+STAGE 26 DONE - aggregates only. If (c) moves at the second decimal and (d) stays inside the MDE, the audit findings are closed and the draft cites the NEW numbers with an Appendix B note on the observed-quarters clock.

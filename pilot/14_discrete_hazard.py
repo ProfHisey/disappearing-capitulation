@@ -63,14 +63,21 @@ for _, s in sp.iterrows():
     T = int(s["m_dur"]) if pd.notna(s["m_dur"]) else int(s["end_dur"])
     T = max(T, 1)
     start = s["start_p"]
+    # audit fix A1: durations count OBSERVED rows, so walk the fund's actual
+    # quarter index instead of start + t calendar arithmetic (which misdates
+    # covariate reads and era dummies for spells containing reporting gaps).
+    idx = g.index
+    p0 = idx.get_loc(start)
     depth_so_far = 0.0
     for t in range(1, T + 1):
-        qlag = start + (t - 1)          # info known entering quarter t
+        qlag = idx[p0 + t - 1] if p0 + t - 1 < len(idx) else start + (t - 1)
+        qlag2 = idx[p0 + t - 2] if 0 <= p0 + t - 2 < len(idx) else qlag - 1
+        q_risk = idx[p0 + t] if p0 + t < len(idx) else qlag + 1
         rel_lag = q_at(g, qlag, "rel4q")
         if pd.notna(rel_lag):
             depth_so_far = min(depth_so_far, float(rel_lag))
         as_lag = q_at(g, qlag, "as_min")
-        as_lag2 = q_at(g, qlag - 1, "as_min")
+        as_lag2 = q_at(g, qlag2, "as_min")
         rows.append({
             "spell_id": s["spell_id"], "wficn": w, "t": t,
             "event": int(pd.notna(s["m_dur"]) and t == int(s["m_dur"])),
@@ -79,7 +86,7 @@ for _, s in sp.iterrows():
             "das_lag": (as_lag - as_lag2) if pd.notna(as_lag) and pd.notna(as_lag2) else np.nan,
             "depth": depth_so_far,
             "flow_lag": q_at(g, qlag, "flowq"),
-            "yr": (start + t).year,
+            "yr": q_risk.year,
         })
 dt = pd.DataFrame(rows)
 
@@ -104,6 +111,7 @@ dt["dur_5_8"] = dt["t"].between(5, 8).astype(float)
 dt["dur_9_12"] = dt["t"].between(9, 12).astype(float)
 dt["dur_13p"] = (dt["t"] >= 13).astype(float)
 dt["era_9509"] = dt["yr"].between(1995, 2009).astype(float)
+dt["era_8094"] = (dt["yr"] < 1995).astype(float)
 dt["era_1023"] = (dt["yr"] >= 2010).astype(float)
 dt["depth_x_dur"] = dt["depth"] * (dt["t"] / 4.0)
 
@@ -133,19 +141,49 @@ for c in ["depth", "as_lag", "das_lag", "ln_tna", "exp100", "tenure", "flow_lag"
 # Reduced form = the headline (total effect of stress); mechanics model adds
 # the AS path and is over-controlled BY DESIGN (as_lag is the proximate cause,
 # so stress effects run through it - a mediation structure, not a bug).
-CORE = ["dur_3_4", "dur_5_8", "dur_9_12", "dur_13p", "depth", "depth_x_dur",
-        "ln_tna", "exp100", "tenure", "era_9509", "era_1023"]
-MECH = CORE + ["as_lag", "das_lag"]
-M2COLS = [c for c in CORE if c != "era_9509"] + ["flow_lag"]  # era_9509 is
-# collinear with the constant in a 2000+ sample (baseline becomes 2000-2009)
+#
+# SPECIFICATION NOTE (post-audit): the entry-level controls (tenure above all)
+# cut the sample by a third, and within the surviving sample the 1980-94
+# baseline era holds ZERO capitulation events - era_9509 is then perfectly
+# separated and the fit returns absurd HRs with exploding SEs. So: the
+# headline reduced form runs WITHOUT entry controls on the FULL sample (all
+# eras identified); the controls models drop era_9509 and identify only the
+# 2010+ contrast against a 1980-2009 baseline, stated in the table.
+DUR = ["dur_3_4", "dur_5_8", "dur_9_12", "dur_13p"]
+# eras re-based to 1995-2009 (the era with the events): era_1023 reads
+# directly as the disappearance, era_8094 as the pre-wave scarcity (noisy -
+# only 2 calendar-clock events before 1995; see identification check).
+CORE = DUR + ["depth", "depth_x_dur", "era_8094", "era_1023"]
+CTRL = ["ln_tna", "exp100", "tenure"]
+CORE_C = DUR + ["depth", "depth_x_dur", "era_1023"] + CTRL
+MECH = CORE_C + ["as_lag", "das_lag"]
+M2COLS = DUR + ["depth", "depth_x_dur", "era_1023", "flow_lag"] + CTRL
+
+def era_events(d, label, ycol="event"):
+    e = d[d[ycol] == 1]["yr"]
+    log.append(f"  events by era [{label}]: 1980-94 {int((e < 1995).sum())} | "
+               f"1995-2009 {int(e.between(1995, 2009).sum())} | "
+               f"2010-23 {int((e >= 2010).sum())}")
+
+log.append("\nidentification check (why the controls models drop era_9509):")
+era_events(dt, "full panel")
+era_events(dt.dropna(subset=CTRL), "controls sample")
+era_events(dt, "full panel, death", ycol="event_die")
+era_events(dt.dropna(subset=CTRL), "controls sample, death", ycol="event_die")
+
 res = []
-res += fit(dt, CORE, "M1a 1980-2023 REDUCED FORM (headline: total effect)")
-res += fit(dt, MECH, "M1b 1980-2023 + AS mechanics (mediation evidence)")
+res += fit(dt, CORE, "M1a 1980-2023 REDUCED FORM, full sample (headline)")
+res += fit(dt, CORE_C, "M1a' + entry controls (2010+ contrast only)")
+res += fit(dt, MECH, "M1b + AS mechanics (mediation evidence)")
 res += fit(dt[dt["yr"] >= 2000], M2COLS, "M2 2000-2023 reduced form + flows")
-# M3: same specification, DEATH as the outcome. Prediction registered in
-# advance: depth's sign flips relative to M1a (deep spells die; shallow-long
-# spells capitulate). If confirmed, depth selects the failure MODE.
-res += fit(dt, CORE, "M3 1980-2023 DEATH outcome (mode-selection test)",
+# M3: DEATH as the outcome. Prediction registered in advance: depth's sign
+# flips relative to M1a (deep spells die; shallow-long spells capitulate).
+# If confirmed, depth selects the failure MODE. Death events exist in every
+# era of the controls sample (see check above), so M3 keeps both era dummies
+# (era_8094 + era_1023, baseline 1995-2009, same basing as M1a).
+res += fit(dt, CORE + CTRL, "M3 1980-2023 DEATH outcome (mode-selection test)",
+           ycol="event_die")
+res += fit(dt, CORE, "M3' DEATH, full sample no controls (gradient check)",
            ycol="event_die")
 pd.DataFrame(res, columns=["model", "covariate", "HR", "coef", "se", "z", "p"]) \
   .to_csv(P.OUT / "dt_hazard_table.csv", index=False)

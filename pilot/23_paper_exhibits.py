@@ -171,26 +171,38 @@ def sect_fig5():
         g = PF.get(s["wficn"])
         if g is None:
             continue
-        qc = s["start_p"] + int(s["m_dur"])
+        qc = pd.Period(s["m_cal_q"], freq="Q")      # audit fix A1
         row = [g.at[qc + k, "as_min"] if (qc + k) in g.index else np.nan
                for k in range(-8, 1)]
         paths.append(row)
     A = np.array(paths, dtype=float)
     mean_path = np.nanmean(A, axis=0)
     n_path = np.sum(~np.isnan(A), axis=0)
-    # control: average AS across spell-quarters at duration >= 4 that did
-    # not end in capitulation within the next 2 quarters
-    dt = R.build_dt(sp, PF)
-    ctrl = np.nanmean([PF[w].at[q, "as_min"]
-                       for w, q in zip(dt["wficn"], dt["q_info"])
-                       if q in PF.get(w, pd.DataFrame()).index
-                       ][:200000])
+    # control (audit fix A6): ALL at-risk spell-quarters, computed in full
+    # (the old [:200000] slice silently kept only low-wficn funds), and
+    # EXCLUDING quarters within 2 quarters of that spell's own crossing,
+    # which the old code included (dragging the control toward treatment).
+    vals = []
+    for _, s in sp.iterrows():
+        g = PF.get(s["wficn"])
+        if g is None:
+            continue
+        T = int(s["m_dur"]) if s["capitulated"] else int(s["end_dur"])
+        lim = int(s["m_dur"]) - 3 if s["capitulated"] else T
+        qs = g.index[g.index >= s["start_p"]]
+        for t in range(1, min(T, min(lim, len(qs) - 1)) + 1):
+            v = g.at[qs[t], "as_min"]
+            if pd.notna(v):
+                vals.append(float(v))
+    ctrl = float(np.mean(vals))
+    log.append(f"  fig5 control: {len(vals):,} at-risk spell-quarters "
+               f"(full sample, >=3q before any crossing)")
     fig, ax = plt.subplots(figsize=(5.6, 3.4))
     x = np.arange(-8, 1)
     ax.plot(x, mean_path, "o-", color=C_CAP, lw=1.8,
             label=f"Capitulating funds (n={len(A):,})")
     ax.axhline(ctrl, color="0.5", lw=1.0, ls="--",
-               label="All at-risk spell-quarters (mean)")
+               label="At-risk spell-quarters $\\geq$3q before any crossing (mean)")
     ax.axhline(0.60, color=C_DIE, lw=0.8, ls=":")
     ax.set_xlabel("Quarters before the capitulation crossing")
     ax.set_ylabel("Mean Active Share")
@@ -206,18 +218,29 @@ def sect_fig6():
     fac = PL.get_factors(log)
     fac["m"] = fac["month"].dt.to_period("M")
     FAC = fac.set_index("m")[["mktrf", "smb", "hml", "mom", "rf"]]
+    # audit fixes A1 + A4: calendar-true entry quarters (crossing stamp for
+    # capitulators, 8th OBSERVED underwater quarter for resisters) and
+    # deduped portfolio membership, matching stage 26's FIXED convention.
+    def obs_q(w, start, k):
+        g = PF.get(w)
+        if g is None:
+            return start + k
+        qs = g.index[g.index >= start]
+        return qs[k] if k < len(qs) else start + k
+
     caps = sp[sp["capitulated"]].copy()
-    caps["entry_q"] = caps["start_p"] + caps["m_dur"].astype(int)
+    caps["entry_q"] = pd.PeriodIndex(caps["m_cal_q"], freq="Q")
     res = sp[(sp["end_dur"] >= 8)
              & (sp["m_dur"].isna() | (sp["m_dur"] > 8))].copy()
-    res["entry_q"] = res["start_p"] + 8
+    res["entry_q"] = [obs_q(w, s, 8)
+                      for w, s in zip(res["wficn"], res["start_p"])]
 
     def port(ev):
         rows = []
         for _, s in ev.iterrows():
             m0 = s["entry_q"].asfreq("M", how="end") + 1
             rows += [(s["wficn"], m0 + k) for k in range(36)]
-        mem = pd.DataFrame(rows, columns=["wficn", "m"])
+        mem = pd.DataFrame(rows, columns=["wficn", "m"]).drop_duplicates()
         d = mem.merge(fm[["wficn", "m", "fret"]], on=["wficn", "m"],
                       how="inner")
         g = d.groupby("m")["fret"].agg(["mean", "size"])

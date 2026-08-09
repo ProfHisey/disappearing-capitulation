@@ -1,32 +1,32 @@
 SURVIVAL MACHINERY v1 (Aalen-Johansen + Cox)
 ============================================================
-spells 25,267: capitulated 496, died 1,902, censored 22,869
+spells 25,990: capitulated 496, died 2,238, censored 23,256
 
 Aalen-Johansen cumulative incidence (competing risks correct):
 group          event          8q  16q  24q  40q
-overall        capitulate   0.028 0.068 0.102 0.144
-overall        die          0.115 0.231 0.331 0.429
-1980-94        capitulate   0.062 0.206 0.364 0.413
-1980-94        die          0.105 0.187 0.187 0.187
-1995-2009      capitulate   0.057 0.117 0.121 0.142
-1995-2009      die          0.141 0.278 0.361 0.482
-2010-23        capitulate   0.012 0.029 0.057 0.109
-2010-23        die          0.102 0.217 0.333 0.422
+overall        capitulate   0.028 0.066 0.099 0.138
+overall        die          0.128 0.242 0.347 0.437
+1980-94        capitulate   0.056 0.213 0.360 0.408
+1980-94        die          0.125 0.200 0.200 0.200
+1995-2009      capitulate   0.056 0.113 0.118 0.142
+1995-2009      die          0.153 0.289 0.384 0.490
+2010-23        capitulate   0.013 0.030 0.056 0.110
+2010-23        die          0.114 0.224 0.339 0.428
 
-Cox sample: 15,548 spells with full covariates, 249 capitulation events
+Cox sample: 15,776 spells with full covariates, 249 capitulation events
 
 CAUSE-SPECIFIC COX, capitulation hazard (HR = exp(coef)):
   as0          HR 0.000  coef -14.401 (se 0.890)  p=0.0000
-  rel0         HR 0.882  coef -0.125 (se 0.861)  p=0.8842
-  flow0        HR 0.369  coef -0.997 (se 0.555)  p=0.0726
-  ln_tna       HR 1.025  coef +0.025 (se 0.035)  p=0.4866
-  exp_ratio    HR 3.428  coef +1.232 (se 14.505)  p=0.9323
+  rel0         HR 0.884  coef -0.124 (se 0.861)  p=0.8858
+  flow0        HR 0.370  coef -0.995 (se 0.555)  p=0.0732
+  ln_tna       HR 1.025  coef +0.025 (se 0.035)  p=0.4847
+  exp_ratio    HR 3.636  coef +1.291 (se 14.501)  p=0.9291
   tenure_yrs   HR 0.921  coef -0.083 (se 0.019)  p=0.0000
-  era_9509     HR 0.547  coef -0.603 (se 0.252)  p=0.0167
-  era_1023     HR 0.188  coef -1.672 (se 0.259)  p=0.0000
+  era_9509     HR 0.547  coef -0.603 (se 0.252)  p=0.0166
+  era_1023     HR 0.188  coef -1.673 (se 0.259)  p=0.0000
   concordance: 0.866
 
-proportional-hazards test: min p across covariates = 0.0216  (PH violation flagged - stratify or add time-interactions in real build)
+proportional-hazards test: min p across covariates = 0.0218  (PH violation flagged - stratify or add time-interactions in real build)
 
 Notes: covariates measured at spell entry (no look-ahead); death/recovery censored (cause-specific formulation); tenure from CRSP mgr_dt (noisy - Morningstar upgrade later); flow0 limits the sample to flow-covered spells.
 SURVIVAL MACHINERY DONE - aggregates only.

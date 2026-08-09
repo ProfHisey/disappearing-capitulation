@@ -1,0 +1,31 @@
+FINAL TABLE NUMBERS (stage 27)
+============================================================
+
+(a) TABLE 3: OUTCOME SHARES BY ENTRY COHORT
+  spells before 1990 (excluded from era claims): 58 of 25,990
+  cohort           n  capitulated  died (all)  died (liq)
+  1990-1994    1,047         6.8%        8.9%        1.6%
+  1995-1999    1,875         7.6%        7.9%        2.2%
+  2000-2004    3,409         2.1%       11.3%        3.5%
+  2005-2009    3,540         1.6%        8.8%        2.4%
+  2010-2014    5,358         1.4%        9.1%        2.9%
+  2015-2019    5,947         1.0%        9.4%        3.4%
+  2020-2023    4,756         0.5%        5.3%        1.5%
+
+(b) SPELL-LEVEL DEATH SPLIT
+  spell-level deaths: 2,238 of 25,990 spells
+    merger         1,173
+    liquidation    693
+    other          372
+
+(c) LIQUIDATION-ONLY ERA CONTRAST
+  1990-1994: died-liquidation share 1.62%  (n 1,047)
+  1995-2009: died-liquidation share 2.79%  (n 8,824)
+  2010-2023: died-liquidation share 2.68%  (n 16,061)
+
+(d) OWN-BENCHMARK RULER (Table 4 row 3)
+    capitulators: own-benchmark net -2.39%/yr over 108 quarters
+    resisters: own-benchmark net -2.43%/yr over 119 quarters
+    SPREAD (R - C): -0.00%/yr (se 0.62%, t -0.00) over 108 common quarters (quarterly own-benchmark ruler, FIXED formation)
+
+STAGE 27 DONE - aggregates only. These plus stages 22/24b/26 are the complete v7 number set.
