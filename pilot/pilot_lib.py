@@ -98,10 +98,17 @@ def parse_anydate(s: pd.Series) -> pd.Series:
 
 def to_unit_interval(x: pd.Series, name: str, log: list) -> pd.Series:
     """Active Share as fraction: divide by 100 if it looks like percent."""
+    md = x.median(skipna=True)     # audit landmine fix: median trigger
+    if pd.notna(md) and md > 1.5:  # (a single corrupt max no longer rescales
+        log.append(f"  note: {name} looked like percent "
+                   f"(median={md:.1f}); divided by 100")
+        return x / 100.0           # the whole column)
     mx = x.max(skipna=True)
     if pd.notna(mx) and mx > 1.5:
-        log.append(f"  note: {name} looked like percent (max={mx:.1f}); divided by 100")
-        return x / 100.0
+        nbad = int((x > 1.05).sum())
+        log.append(f"  note: {name} has {nbad} values > 1.05 (max={mx:.1f}) "
+                   f"with a unit-scale median - set to missing as corrupt")
+        x = x.where(x <= 1.05)
     return x
 
 
@@ -186,6 +193,11 @@ def load_monthly_returns(log: list) -> pd.DataFrame:
                 df[c] = pd.to_numeric(df[c], errors="coerce")
         df["crsp_fundno"] = pd.to_numeric(df["crsp_fundno"], errors="coerce").astype("Int64")
         df.to_parquet(pq, index=False)
+    ndup = int(df.duplicated(["crsp_fundno", "caldt"]).sum())
+    if ndup:                       # audit landmine fix: dedup + loud log
+        log.append(f"  WARNING: {ndup:,} duplicate (crsp_fundno, caldt) "
+                   f"rows in monthly returns - keeping last")
+        df = df.drop_duplicates(["crsp_fundno", "caldt"], keep="last")
     log.append(f"  monthly returns: {len(df):,} rows, "
                f"{df['crsp_fundno'].nunique():,} share classes")
     return df

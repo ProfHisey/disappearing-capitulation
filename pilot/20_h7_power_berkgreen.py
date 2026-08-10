@@ -172,9 +172,13 @@ def sect_berkgreen():
     Both can be partly true; what matters for positioning (critique 19)
     is which margin carries the era decline and the duration gradient.""")
 
-R.section(log, "(a) H7 CALENDAR-TIME, NET AND GROSS, WITH MDE (critique 7)",
+log.append("\n*** SECTIONS (a)/(a2) ARE THE LEGACY SPEC - SUPERSEDED BY 24b ***\n"
+           "*** Their spreads carry the rf double-subtraction bug and the ***\n"
+           "*** pre-audit start+dur clock; kept ONLY for the audit trail. ***\n"
+           "*** Quote H7 numbers from referee_24b_h7_fix.txt, never here. ***")
+R.section(log, "(a) H7 CALENDAR-TIME [LEGACY/BIASED - see banner] (critique 7)",
           sect_h7)
-R.section(log, "(a2) H7 OWN-BENCHMARK RULER (critique 7)", sect_h7_bench)
+R.section(log, "(a2) H7 OWN-BENCHMARK RULER [LEGACY CLOCK - see banner] (critique 7)", sect_h7_bench)
 R.section(log, "(b) BERK-GREEN HORSE RACE + PER-10%-FLOW HRs "
                "(critiques 19, 14)", sect_berkgreen)
 

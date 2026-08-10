@@ -3,95 +3,95 @@ REFEREE BATTERY I - SPELL MACHINERY
 
 V0 BASELINE (identical machinery to stages 14-16)
 
-  V0 baseline: 18,094 spells | capitulated 3.83% | died 13.46%
-    1980-1994: n  1,090 | cap  6.61% | died  7.52%
-    1995-2009: n  7,884 | cap  5.04% | died 15.45%
-    2010-2023: n  9,120 | cap  2.46% | died 12.45%
-    capitulation [n=170,702, ev=693]  dur_5p HR 2.60 (z +9.8)  depth HR 117.29 (z +11.4)  era_1023 HR 0.37 (z -12.8)
-    death [n=170,702, ev=2,435]  dur_5p HR 1.03 (z +0.5)  depth HR 0.42 (z -7.1)  era_1023 HR 0.75 (z -7.0)
+  V0 baseline: 25,990 spells | capitulated 1.91% | died 8.61%
+    1980-1994: n  1,105 | cap  6.43% | died  8.42%
+    1995-2009: n  8,824 | cap  3.07% | died  9.58%
+    2010-2023: n 16,061 | cap  0.96% | died  8.09%
+    capitulation [n=130,714, ev=496]  dur_5p HR 2.71 (z +9.9)  depth HR 10.69 (z +5.9)  era_1023 HR 0.22 (z -15.9)
+    death [n=130,714, ev=2,238]  dur_5p HR 0.92 (z -1.8)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
 
 (a) FEES: gross returns + fee buffer (critique 1)
-  expense ratio: 9.5% of fund-quarters missing entirely -> filled with panel median 1.21%
+  expense ratio: 9.6% of fund-quarters missing entirely -> filled with panel median 1.21%
 
-  V1 GROSS RETURNS: 19,412 spells | capitulated 3.31% | died 12.02%
-    1980-1994: n  1,036 | cap  5.21% | died  6.56%
-    1995-2009: n  8,141 | cap  4.56% | died 13.52%
-    2010-2023: n 10,235 | cap  2.12% | died 11.38%
-    capitulation [n=163,334, ev=642]  dur_5p HR 2.63 (z +9.8)  depth HR 160.46 (z +10.7)  era_1023 HR 0.34 (z -13.1)
-    death [n=163,334, ev=2,334]  dur_5p HR 1.03 (z +0.6)  depth HR 0.44 (z -6.7)  era_1023 HR 0.76 (z -6.5)
-  share of BASELINE spells with |max depth| <= own annual fee: 4.0%  (the fee-artifact share the referee asked for)
+  V1 GROSS RETURNS: 26,575 spells | capitulated 1.59% | died 7.76%
+    1980-1994: n  1,047 | cap  5.06% | died  7.55%
+    1995-2009: n  8,726 | cap  2.78% | died  8.68%
+    2010-2023: n 16,802 | cap  0.75% | died  7.29%
+    capitulation [n=117,726, ev=422]  dur_5p HR 2.58 (z +8.8)  depth HR 9.24 (z +5.2)  era_1023 HR 0.20 (z -15.1)
+    death [n=117,726, ev=2,061]  dur_5p HR 0.86 (z -2.9)  depth HR 0.56 (z -3.2)  era_1023 HR 0.79 (z -5.2)
+  share of BASELINE spells with |max depth| <= own annual fee: 7.7%  (the fee-artifact share the referee asked for)
 
-  V2 FEE BUFFER (entry needs net rel4q < -1.5%): 19,620 spells | capitulated 3.22% | died 11.92%
-    1980-1994: n  1,008 | cap  4.86% | died  6.45%
-    1995-2009: n  8,150 | cap  4.54% | died 13.63%
-    2010-2023: n 10,462 | cap  2.03% | died 11.11%
-    capitulation [n=162,503, ev=631]  dur_5p HR 2.70 (z +9.9)  depth HR 172.62 (z +10.7)  era_1023 HR 0.34 (z -13.3)
-    death [n=162,503, ev=2,338]  dur_5p HR 1.06 (z +1.2)  depth HR 0.44 (z -6.6)  era_1023 HR 0.75 (z -6.6)
+  V2 FEE BUFFER (entry needs net rel4q < -1.5%): 26,688 spells | capitulated 1.55% | died 7.67%
+    1980-1994: n  1,020 | cap  4.71% | died  7.55%
+    1995-2009: n  8,705 | cap  2.83% | died  8.72%
+    2010-2023: n 16,963 | cap  0.70% | died  7.14%
+    capitulation [n=116,020, ev=413]  dur_5p HR 2.70 (z +9.0)  depth HR 10.22 (z +5.3)  era_1023 HR 0.20 (z -15.3)
+    death [n=116,020, ev=2,048]  dur_5p HR 0.88 (z -2.6)  depth HR 0.55 (z -3.3)  era_1023 HR 0.80 (z -5.0)
 
 (b) SPELL-DEFINITION GRID (critique 12)
 
-  V3 ENTRY BUFFER -2%: 20,115 spells | capitulated 3.01% | died 11.44%
-    1980-1994: n    965 | cap  4.56% | died  6.63%
-    1995-2009: n  8,229 | cap  4.30% | died 13.10%
-    2010-2023: n 10,921 | cap  1.90% | died 10.62%
-    capitulation [n=159,312, ev=606]  dur_5p HR 2.75 (z +9.8)  depth HR 201.70 (z +10.4)  era_1023 HR 0.33 (z -13.3)
-    death [n=159,312, ev=2,302]  dur_5p HR 1.09 (z +1.8)  depth HR 0.48 (z -5.9)  era_1023 HR 0.74 (z -7.0)
+  V3 ENTRY BUFFER -2%: 26,584 spells | capitulated 1.45% | died 7.41%
+    1980-1994: n    974 | cap  4.52% | died  7.49%
+    1995-2009: n  8,629 | cap  2.73% | died  8.40%
+    2010-2023: n 16,981 | cap  0.62% | died  6.91%
+    capitulation [n=111,074, ev=386]  dur_5p HR 2.72 (z +8.7)  depth HR 10.77 (z +5.2)  era_1023 HR 0.18 (z -15.2)
+    death [n=111,074, ev=1,971]  dur_5p HR 0.90 (z -2.1)  depth HR 0.59 (z -2.8)  era_1023 HR 0.79 (z -5.0)
 
-  V4 8-QUARTER TRAILING WINDOW: 10,914 spells | capitulated 6.18% | died 20.37%
-    1980-1994: n    537 | cap 11.73% | died  9.50%
-    1995-2009: n  5,249 | cap  7.58% | died 22.44%
-    2010-2023: n  5,128 | cap  4.17% | died 19.38%
-    capitulation [n=157,860, ev=675]  dur_5p HR 2.38 (z +8.1)  depth HR 15.55 (z +11.7)  era_1023 HR 0.44 (z -10.3)
-    death [n=157,860, ev=2,223]  dur_5p HR 0.88 (z -2.2)  depth HR 0.62 (z -5.3)  era_1023 HR 0.74 (z -6.6)
+  V4 8-QUARTER TRAILING WINDOW: 16,124 spells | capitulated 3.19% | died 12.75%
+    1980-1994: n    542 | cap 11.07% | died  9.41%
+    1995-2009: n  5,654 | cap  4.56% | died 14.18%
+    2010-2023: n  9,928 | cap  1.98% | died 12.12%
+    capitulation [n=122,052, ev=515]  dur_5p HR 2.59 (z +8.6)  depth HR 3.81 (z +4.8)  era_1023 HR 0.24 (z -15.6)
+    death [n=122,052, ev=2,056]  dur_5p HR 0.82 (z -3.8)  depth HR 0.47 (z -6.0)  era_1023 HR 0.74 (z -6.4)
 
-  V5 MIN-DEPTH FILTER (drop spells shallower than -2%): 16,990 spells | capitulated 4.07% | died 14.29%
-    1980-1994: n    952 | cap  7.56% | died  8.61%
-    1995-2009: n  7,376 | cap  5.36% | died 16.46%
-    2010-2023: n  8,662 | cap  2.59% | died 13.07%
-    capitulation [n=169,387, ev=691]  dur_5p HR 2.54 (z +9.7)  depth HR 127.69 (z +11.5)  era_1023 HR 0.37 (z -12.7)
-    death [n=169,387, ev=2,428]  dur_5p HR 1.02 (z +0.4)  depth HR 0.43 (z -6.9)  era_1023 HR 0.74 (z -7.1)
-  baseline spell max-depth distribution: p10 -41.8%, p25 -29.6%, p50 -19.1%, p75 -9.8%, p90 -3.5%
+  V5 MIN-DEPTH FILTER (drop spells shallower than -2%): 22,864 spells | capitulated 2.15% | died 9.34%
+    1980-1994: n    959 | cap  7.40% | died  8.97%
+    1995-2009: n  7,786 | cap  3.45% | died 10.43%
+    2010-2023: n 14,119 | cap  1.08% | died  8.76%
+    capitulation [n=126,851, ev=492]  dur_5p HR 2.63 (z +9.7)  depth HR 12.97 (z +6.2)  era_1023 HR 0.21 (z -15.9)
+    death [n=126,851, ev=2,135]  dur_5p HR 0.94 (z -1.3)  depth HR 0.38 (z -5.9)  era_1023 HR 0.78 (z -5.6)
+  baseline spell max-depth distribution: p10 -28.8%, p25 -18.3%, p50 -10.1%, p75 -4.5%, p90 -1.7%
   gap rule (stated for the paper): months failing the return screens leave the fund-quarter with a missing return; a spell hitting a missing-AS quarter ends as 'as_missing' (censored), never bridged.
 
 (c) AGE SCREENS + LEFT TRUNCATION (critique 9)
 
-  V6 drop spells in fund's first 2 years (incubation screen): 15,713 spells | capitulated 3.92% | died 12.03%
-    1980-1994: n  1,007 | cap  6.06% | died  7.25%
-    1995-2009: n  6,669 | cap  5.32% | died 14.32%
-    2010-2023: n  8,037 | cap  2.49% | died 10.74%
+  V6 drop spells in fund's first 2 years (incubation screen): 23,837 spells | capitulated 1.87% | died 8.04%
+    1980-1994: n  1,020 | cap  5.88% | died  8.24%
+    1995-2009: n  7,804 | cap  3.11% | died  9.14%
+    2010-2023: n 15,013 | cap  0.95% | died  7.45%
 
-  V6 drop spells in fund's first 3 years (incubation screen): 14,391 spells | capitulated 3.81% | died 11.38%
-    1980-1994: n    953 | cap  5.98% | died  7.03%
-    1995-2009: n  5,869 | cap  5.26% | died 13.78%
-    2010-2023: n  7,569 | cap  2.42% | died 10.07%
-    V6(3y) capitulation [n=135,215, ev=549]  dur_5p HR 2.75 (z +9.0)  depth HR 134.56 (z +10.1)  era_1023 HR 0.37 (z -11.1)
-    V6(3y) death [n=135,215, ev=1,638]  dur_5p HR 1.04 (z +0.7)  depth HR 0.59 (z -3.5)  era_1023 HR 0.75 (z -5.7)
+  V6 drop spells in fund's first 3 years (incubation screen): 22,265 spells | capitulated 1.75% | died 7.64%
+    1980-1994: n    964 | cap  5.81% | died  7.88%
+    1995-2009: n  6,969 | cap  2.90% | died  8.81%
+    2010-2023: n 14,332 | cap  0.91% | died  7.05%
+    V6(3y) capitulation [n=111,481, ev=389]  dur_5p HR 2.70 (z +8.6)  depth HR 11.97 (z +5.0)  era_1023 HR 0.22 (z -13.8)
+    V6(3y) death [n=111,481, ev=1,701]  dur_5p HR 0.91 (z -1.7)  depth HR 0.72 (z -1.6)  era_1023 HR 0.76 (z -5.3)
 
-  left-truncated spells (underwater already at the fund's first usable quarter): 5,181 of 18,094
+  left-truncated spells (underwater already at the fund's first usable quarter): 4,456 of 25,990
 
-  V7 drop left-truncated spells: 12,913 spells | capitulated 4.01% | died 11.24%
-    1980-1994: n    654 | cap  7.19% | died  5.50%
-    1995-2009: n  5,705 | cap  5.24% | died 14.39%
-    2010-2023: n  6,554 | cap  2.62% | died  9.08%
-    V7 capitulation [n=120,690, ev=518]  dur_5p HR 2.66 (z +8.2)  depth HR 105.06 (z +9.3)  era_1023 HR 0.41 (z -9.9)
+  V7 drop left-truncated spells: 21,534 spells | capitulated 1.76% | died 7.60%
+    1980-1994: n    659 | cap  6.98% | died  6.07%
+    1995-2009: n  6,985 | cap  2.81% | died  8.90%
+    2010-2023: n 13,890 | cap  0.98% | died  7.01%
+    V7 capitulation [n=107,334, ev=378]  dur_5p HR 2.61 (z +8.1)  depth HR 10.49 (z +4.6)  era_1023 HR 0.24 (z -13.0)
 
 (d) DEATH-WINDOW SENSITIVITY (critique 11)
 
-  death window 0q: died 243 spells (1.34%)
-    death, window 0q [n=170,702, ev=243]  dur_5p HR 1.23 (z +1.3)  depth HR 0.92 (z -0.2)  era_1023 HR 1.36 (z +2.1)
+  death window 0q: died 221 spells (0.85%)
+    death, window 0q [n=130,714, ev=221]  dur_5p HR 1.09 (z +0.6)  depth HR 2.68 (z +1.5)  era_1023 HR 1.58 (z +2.8)
 
-  death window 1q: died 1,754 spells (9.69%)
-    death, window 1q [n=170,702, ev=1,754]  dur_5p HR 1.13 (z +2.1)  depth HR 0.55 (z -4.1)  era_1023 HR 0.93 (z -1.4)
+  death window 1q: died 1,616 spells (6.22%)
+    death, window 1q [n=130,714, ev=1,616]  dur_5p HR 1.02 (z +0.4)  depth HR 0.68 (z -1.9)  era_1023 HR 1.02 (z +0.3)
 
-  death window 2q: died 2,190 spells (12.10%)
-    death, window 2q [n=170,702, ev=2,190]  dur_5p HR 1.07 (z +1.3)  depth HR 0.48 (z -5.8)  era_1023 HR 0.78 (z -5.5)
+  death window 2q: died 2,015 spells (7.75%)
+    death, window 2q [n=130,714, ev=2,015]  dur_5p HR 0.97 (z -0.6)  depth HR 0.51 (z -3.8)  era_1023 HR 0.82 (z -4.2)
 
-  death window 4q: died 2,435 spells (13.46%)
-    death, window 4q [n=170,702, ev=2,435]  dur_5p HR 1.03 (z +0.5)  depth HR 0.42 (z -7.1)  era_1023 HR 0.75 (z -7.0)
+  death window 4q: died 2,238 spells (8.61%)
+    death, window 4q [n=130,714, ev=2,238]  dur_5p HR 0.92 (z -1.8)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
   reading: if the depth HR sign holds at 0-1q windows, the look-ahead critique costs magnitude at most, not the claim.
 
 (e) DEPTH DOUBLE-LAG (critique 20)
-    capitulation, depth lagged 2q (vs 1q in V0) [n=170,702, ev=693]  dur_5p HR 2.81 (z +9.4)  depth HR 52.66 (z +9.7)  era_1023 HR 0.36 (z -13.1)
+    capitulation, depth lagged 2q (vs 1q in V0) [n=130,714, ev=496]  dur_5p HR 2.75 (z +9.2)  depth HR 5.97 (z +4.5)  era_1023 HR 0.22 (z -15.8)
   note for the paper: the stage-14 convention already lags depth one quarter behind the event quarter; this is the stricter check.
 
 (f) CLEANING-RULE COUNTS (critique 23)

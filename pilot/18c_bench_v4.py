@@ -220,7 +220,7 @@ def sect_reassign():
     vals, same_seg, sibling, n = [], 0, 0, 0
     for _, s in sp0[sp0["capitulated"]].iterrows():
         w, start = s["wficn"], s["start_p"]
-        qc = start + int(s["m_dur"])
+        qc = pd.Period(s["m_cal_q"], freq="Q")  # audit fix A1 (round 2)
         if (w, start) not in BPI.index or (w, qc) not in BPI.index:
             continue
         b0 = str(BPI.at[(w, start), "bench_min"])

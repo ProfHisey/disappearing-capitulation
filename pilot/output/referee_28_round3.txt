@@ -1,0 +1,68 @@
+REFEREE ROUND 3 ANSWERS (stage 28)
+============================================================
+
+(a) N1: ENTRY-AS CONFOUND / COMPOSITION
+  entry Active Share by era (composition check):
+    1980-94: mean 0.868 | p25 0.802 | p50 0.877 | p75 0.940
+    1995-2009: mean 0.885 | p25 0.812 | p50 0.902 | p75 0.967
+    2010-23: mean 0.901 | p25 0.830 | p50 0.925 | p75 0.995
+    baseline slim (reference) [n=130,714, ev=496]  dur_5p HR 2.71 (z +9.9)  depth HR 10.69 (z +5.9)  era_1023 HR 0.22 (z -15.9)
+    slim + ENTRY AS covariate [n=130,714, ev=496]  dur_5p HR 2.03 (z +7.3)  depth HR 0.44 (z -2.4)  era_1023 HR 0.27 (z -13.6)  as0 HR 0.00 (z -21.0)
+  era HR within entry-AS bands:
+      band 70-80 [n=27,024, ev=339]  dur_5p HR 2.10 (z +6.5)  depth HR 0.44 (z -1.7)  era_1023 HR 0.28 (z -11.2)
+      band 80-90 [n=32,364, ev=102]  dur_5p HR 1.82 (z +2.8)  depth HR 0.45 (z -1.3)  era_1023 HR 0.18 (z -7.3)
+      band 90+ [n=71,326, ev=55]  dur_5p HR 2.18 (z +2.4)  depth HR 3.47 (z +1.3)  era_1023 HR 0.42 (z -2.9)
+  reading: if the era HR stays far below 1 with entry AS controlled and within every band, neither the depth result nor the decline is a distance-to-threshold artifact.
+
+(b) N2: CONTINUOUS SUBSTITUTION + LEAD TIME
+  within-spell AS decline (as_min_sp - as0), by entry era, UNCONDITIONAL on crossing:
+    1980-94: p10 -0.158 | p25 -0.049 | p50 -0.011 | p75 +0.000
+      share of spells with decline > 5pts  24.7% | > 10pts  15.2% | > 15pts  10.3%
+      share reaching AS < 0.65:  9.77% | < 0.625:  8.05% | < 0.60:  6.43%
+    1995-2009: p10 -0.089 | p25 -0.034 | p50 -0.007 | p75 +0.000
+      share of spells with decline > 5pts  18.0% | > 10pts   8.8% | > 15pts   5.0%
+      share reaching AS < 0.65:  5.43% | < 0.625:  4.06% | < 0.60:  3.07%
+    2010-23: p10 -0.047 | p25 -0.017 | p50 -0.002 | p75 +0.000
+      share of spells with decline > 5pts   9.5% | > 10pts   3.5% | > 15pts   1.6%
+      share reaching AS < 0.65:  2.29% | < 0.625:  1.38% | < 0.60:  0.96%
+  Section 9 lead-time check (453 capitulations with a t-2 observation):
+    already below 70 two quarters before crossing: 47.9%; below 65: 23.6%
+  reading: if 10-point-plus declines and sub-65 visits collapsed across eras in step with crossings, the BEHAVIOR disappeared, not just the threshold event. If they did not, critique N2 has legs and the paper must report both.
+
+(c) N5: TABLE 4 MATCHED-ROW RECONCILIATION
+factors: 1926-07 to 2026-05
+  matched K=8, COMMON MONTHS ONLY (278m):
+    folded   alpha -1.11%/yr
+    fighting alpha -1.77%/yr
+    difference     -0.66%/yr  <- must equal the spread below
+    spread alpha   -0.66%/yr (se 0.64%), 95% CI [-1.91%, +0.59%]
+  reading: v7's Table 4 printed FULL-WINDOW group alphas beside a COMMON-MONTH spread; the referee's 10x gap is that misalignment, not a computation error. v8 prints common-month levels. The CI line replaces 'null' rhetoric: the paper should say the matched spread is negative but small (point estimate about a third of the MDE), bounded well inside +/-2%/yr.
+
+(d) N12: POST-FOLD TRAJECTORY
+    year 1: own-benchmark net -1.68%/yr (n 1,415 fund-qtrs) | mean AS 0.552
+    year 2: own-benchmark net -1.85%/yr (n 1,334 fund-qtrs) | mean AS 0.571
+    year 3: own-benchmark net -2.65%/yr (n 1,220 fund-qtrs) | mean AS 0.580
+  reading: if mean AS stays near or below 0.60 and the own-benchmark bleed decays toward minus-fees, folded funds stay folded and N12's implausibility worry is answered by the trajectory (early quarters still carry live-bet losses; later ones are index-plus-fees).
+
+(e) N7: STRICT-DEFINITION COHORT TABLE
+  reassignment-flavored crossings reclassified: 54 of 496
+  cohort           n  strict cap (loose cap)
+  1990-1994    1,047        6.1%        6.8%
+  1995-1999    1,875        6.9%        7.6%
+  2000-2004    3,409        1.8%        2.1%
+  2005-2009    3,540        1.6%        1.6%
+  2010-2014    5,358        1.1%        1.4%
+  2015-2019    5,947        0.9%        1.0%
+  2020-2023    4,756        0.5%        0.5%
+  reading: v8 reports both columns in Table 3 (or its caption), so the loose-definition levels never stand alone.
+
+(f) N3: DURATION x ERA INTERACTION
+    slim + duration x era interaction [n=130,714, ev=496]  dur_5p HR 3.15 (z +9.7)  depth HR 10.80 (z +5.9)  era_1023 HR 0.28 (z -8.4)  dur5p_x_era HR 0.64 (z -2.3)
+  reading: an interaction HR near 1 says the duration gradient is stable across eras - the APC restriction the identification subsection will state (duration profile constant across eras) is then TESTED, not assumed.
+
+(g) N10: MID-HOLD ATTRITION BY GROUP
+    folded-by-q8: 190 entries | fund dies within the 36-month hold: 41 (21.6%)
+    fighting-at-q8: 5,707 entries | fund dies within the 36-month hold: 865 (15.2%)
+  reading: calendar-time members simply stop contributing return months at death (no delisting return is imputed); this prints the differential-attrition exposure the convention carries so v8 can state the rule and the counts (referee N10).
+
+STAGE 28 DONE - aggregates only. Feed the results back for draft v8's rewrite decisions (title framing, abstract, Section 9 lead time).

@@ -49,7 +49,11 @@ def sect_fig1():
     rows, xs, cap, dql = [], [], [], []
     fm = PL.get_fund_monthly([])
     fm["quarter"] = fm["caldt"].dt.to_period("Q")
-    tnaq = fm.set_index(["wficn", "quarter"])["tna"]
+    # audit round 2 fix: fm is MONTHLY, so a (wficn, quarter) index holds
+    # ~3 rows per key and .get() returned a Series - the old "median entry
+    # TNA" was a pooled fund-month median. Collapse to quarter-end first.
+    tnaq = (fm.sort_values("caldt")
+              .groupby(["wficn", "quarter"])["tna"].last())
     for c5, g in sp[sp["c5"] >= 1990].groupby("c5"):
         lbl = f"{int(c5)}-{str(int(c5) + 4)[2:]}"
         xs.append(lbl)

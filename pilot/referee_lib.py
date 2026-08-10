@@ -85,14 +85,19 @@ def build_dt(sp: pd.DataFrame, pf: dict, lag: int = 1,
         T = int(s["m_dur"]) if s["capitulated"] else int(s["end_dur"])
         T = max(T, 1)
         start = s["start_p"]
-        qs = g.index[g.index >= start] if observed_clock else None
+        # audit round 2 fix: walk the fund's FULL index from the entry row's
+        # position, so lag=2 at t=1 reads the observed row BEFORE entry
+        # instead of qs[-1] (Python negative indexing = a future quarter).
+        if observed_clock:
+            idx = g.index
+            p0 = idx.get_loc(start) if start in idx else None
         dsf = 0.0
         for t in range(1, T + 1):
-            if observed_clock:
-                if t >= len(qs):        # panel/spell mismatch; keep old rule
-                    q, q_at = start + (t - lag), start + t
-                else:
-                    q, q_at = qs[t - lag], qs[t]
+            if observed_clock and p0 is not None:
+                j, ja = p0 + t - lag, p0 + t
+                q = idx[j] if 0 <= j < len(idx) else start + (t - lag)
+                q_at = idx[ja] if ja < len(idx) else \
+                    (idx[min(ja, len(idx) - 1)] + (ja - len(idx) + 1))
             else:
                 q, q_at = start + (t - lag), start + t
             rl = g.at[q, "rel4q"] if q in g.index else np.nan

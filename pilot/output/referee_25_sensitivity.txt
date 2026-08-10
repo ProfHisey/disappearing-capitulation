@@ -2,25 +2,26 @@ FINAL SENSITIVITY AUDIT (stage 25)
 ============================================================
 
 (a) REASSIGNMENT TAIL REMOVED (critique 3 sensitivity)
-  crossings dropped (AS vs original benchmark >= 0.75 at crossing): 81 of 496
+  crossings dropped (AS vs original benchmark >= 0.75 at crossing): 54 of 496
 
-  STRICT DEFINITION (migration-flavored crossings removed): 25,267 spells | capitulated 1.64% | died 7.53%
-    1980-1994: n  1,090 | cap  4.68% | died  7.25%
-    1995-2009: n  8,643 | cap  2.67% | died  8.28%
-    2010-2023: n 15,534 | cap  0.86% | died  7.13%
-    capitulation, strict definition [n=130,418, ev=415]  dur_5p HR 2.48 (z +8.6)  depth HR 33.18 (z +6.6)  era_1023 HR 0.23 (z -14.1)
-    death, strict definition [n=130,418, ev=1,902]  dur_5p HR 1.19 (z +3.6)  depth HR 0.29 (z -7.4)  era_1023 HR 0.76 (z -5.8)
+  STRICT DEFINITION (migration-flavored crossings removed): 25,990 spells | capitulated 1.70% | died 8.61%
+    1980-1994: n  1,105 | cap  5.79% | died  8.42%
+    1995-2009: n  8,824 | cap  2.80% | died  9.58%
+    2010-2023: n 16,061 | cap  0.82% | died  8.09%
+    capitulation, strict definition [n=131,091, ev=442]  dur_5p HR 3.01 (z +10.4)  depth HR 15.12 (z +6.2)  era_1023 HR 0.20 (z -15.9)
+    death, strict definition [n=131,091, ev=2,238]  dur_5p HR 0.92 (z -1.9)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
   compare: v4 baseline era caps 6.51/3.14/0.99, era HR 0.21, dur 2.79, depth 28.3.
 
 (b) GAP AUDIT + BREAK-AT-GAP VARIANT
-  spells containing calendar gaps: 8,466 of 25,267 (33.5%); total bridged quarters 33,780
+  *** SUPERSEDED: this section's 'break-at-gap variant' is a NO-OP (asfreq on a PeriodIndex inserts nothing; see stage 25b diagnostic). The real variants live in stage 25c. Kept only for the audit trail - the gap-share count below is still valid. ***
+  spells containing calendar gaps: 8,466 of 25,990 (32.6%); total bridged quarters 33,780
 
-  BREAK-AT-GAP VARIANT (spells censor at any missing quarter): 25,267 spells | capitulated 1.96% | died 7.53%
-    1980-1994: n  1,090 | cap  6.51% | died  7.25%
-    1995-2009: n  8,643 | cap  3.14% | died  8.28%
-    2010-2023: n 15,534 | cap  0.99% | died  7.13%
-    capitulation, break-at-gap [n=129,991, ev=496]  dur_5p HR 2.79 (z +10.3)  depth HR 28.27 (z +7.1)  era_1023 HR 0.21 (z -15.8)
-    death, break-at-gap [n=129,991, ev=1,902]  dur_5p HR 1.20 (z +3.7)  depth HR 0.29 (z -7.3)  era_1023 HR 0.76 (z -5.9)
+  BREAK-AT-GAP VARIANT (spells censor at any missing quarter): 25,990 spells | capitulated 1.91% | died 8.61%
+    1980-1994: n  1,105 | cap  6.43% | died  8.42%
+    1995-2009: n  8,824 | cap  3.07% | died  9.58%
+    2010-2023: n 16,061 | cap  0.96% | died  8.09%
+    capitulation, break-at-gap [n=130,714, ev=496]  dur_5p HR 2.71 (z +9.9)  depth HR 10.69 (z +5.9)  era_1023 HR 0.22 (z -15.9)
+    death, break-at-gap [n=130,714, ev=2,238]  dur_5p HR 0.92 (z -1.8)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
   reading: bridging biases durations DOWN for gappy funds (fatigue conservative); breaking biases them down harder. The truth sits between the two variants - if both show the gradients and the era decline, the gap rule is immaterial and Appendix B says so with numbers.
 
 STAGE 25 DONE - aggregates only. The coded robustness queue is now empty; remaining work waits on N-SAR and Morningstar.

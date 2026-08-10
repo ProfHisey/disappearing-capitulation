@@ -115,9 +115,17 @@ log.append(f"filter pass complete: {kept_total:,} holdings rows kept")
 parts = sorted(PARTS.glob("part_*.parquet"))
 hold = pd.concat([pd.read_parquet(f) for f in parts], ignore_index=True)
 hold["wficn"] = hold[hp].map(PORT_W)
-dtc = next((c for c in hold.columns
-            if "report_dt" in c or "eff_dt" in c or c == "date"
-            or "caldt" in c), None)
+# audit hardening: prefer report_dt explicitly, never by column order
+dtc = None
+for pref in ("report_dt", "eff_dt", "caldt"):
+    dtc = next((c for c in hold.columns if pref in c), None)
+    if dtc:
+        break
+if dtc is None and "date" in hold.columns:
+    dtc = "date"
+log.append(f"holdings snapshot date column chosen: {dtc!r} "
+           f"(preference order report_dt > eff_dt > caldt > date, hardened "
+           f"post-audit)")
 if dtc is not None:
     hold["rq"] = pd.to_datetime(hold[dtc], errors="coerce").dt.to_period("Q")
 hold.to_parquet(P.CACHE / "holdings_target.parquet", index=False)
@@ -138,7 +146,7 @@ if dtc is not None:
                    f"median positions/report {nrep.median():.0f}")
     caps_cov = 0
     for _, s in sp[sp["capitulated"]].iterrows():
-        qc = s["start_p"] + int(s["m_dur"])
+        qc = pd.Period(s["m_cal_q"], freq="Q")  # audit fix A1 (round 2)
         h = hold[(hold["wficn"] == s["wficn"])
                  & hold["rq"].isin([qc - 2, qc - 1, qc])]
         if h["rq"].nunique() >= 2:

@@ -144,10 +144,10 @@ for c in ["depth", "as_lag", "das_lag", "ln_tna", "exp100", "tenure", "flow_lag"
 #
 # SPECIFICATION NOTE (post-audit): the entry-level controls (tenure above all)
 # cut the sample by a third, and within the surviving sample the 1980-94
-# baseline era holds ZERO capitulation events - era_9509 is then perfectly
+# baseline era holds ZERO capitulation events - a pre-1995 era dummy is then perfectly
 # separated and the fit returns absurd HRs with exploding SEs. So: the
 # headline reduced form runs WITHOUT entry controls on the FULL sample (all
-# eras identified); the controls models drop era_9509 and identify only the
+# eras identified); the controls models drop era_8094 and identify only the
 # 2010+ contrast against a 1980-2009 baseline, stated in the table.
 DUR = ["dur_3_4", "dur_5_8", "dur_9_12", "dur_13p"]
 # eras re-based to 1995-2009 (the era with the events): era_1023 reads
@@ -165,7 +165,7 @@ def era_events(d, label, ycol="event"):
                f"1995-2009 {int(e.between(1995, 2009).sum())} | "
                f"2010-23 {int((e >= 2010).sum())}")
 
-log.append("\nidentification check (why the controls models drop era_9509):")
+log.append("\nidentification check (why the controls models drop the pre-1995 era dummy):")
 era_events(dt, "full panel")
 era_events(dt.dropna(subset=CTRL), "controls sample")
 era_events(dt, "full panel, death", ycol="event_die")

@@ -86,10 +86,11 @@ def sect_grid():
     qs = sp0["depth"].quantile([0.10, 0.25, 0.50, 0.75, 0.90])
     log.append("  baseline spell max-depth distribution: "
                + ", ".join(f"p{int(k * 100)} {v:+.1%}" for k, v in qs.items()))
-    log.append("  gap rule (stated for the paper): months failing the return "
-               "screens leave the fund-quarter with a missing return; a spell "
-               "hitting a missing-AS quarter ends as 'as_missing' (censored), "
-               "never bridged.")
+    log.append("  gap rule (stated for the paper, post-25b/25c): quarters "
+               "absent from the panel are BRIDGED - durations count observed "
+               "quarters; 'as_missing' fires only on explicit missing-AS rows. "
+               "The censor-at-gap and calendar-true variants are bracketed in "
+               "stage 25c and disclosed in Appendix B.")
 
 # ------------------------------------- (c) age screens, left truncation ----
 def sect_age():

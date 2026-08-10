@@ -58,6 +58,17 @@ def load_bench_panel():
 
 BP = load_bench_panel()
 BPI = BP.set_index(["wficn", "quarter"]).sort_index()
+# audit round 2 (fix A1): observed-clock quarter lookup per fund, so scan
+# indexes t align with the observed-row durations from extract_spells
+PFI = {w: g.set_index("quarter").index.sort_values()
+       for w, g in panel.groupby("wficn")}
+
+def obs_q18(w, start, t):
+    qs = PFI.get(w)
+    if qs is None or start not in qs:
+        return start + t
+    j = qs.get_loc(start) + t
+    return qs[j] if 0 <= j < len(qs) else start + t
 log.append(f"per-benchmark AS panel: {len(BP):,} fund-quarters, "
            f"{len(P.as_columns(BP))} benchmark columns")
 
@@ -77,7 +88,7 @@ def sect_frozen():
             continue
         m_frozen = np.nan
         for t in range(1, int(s["end_dur"]) + 1):
-            k = (w, start + t)
+            k = (w, obs_q18(w, start, t))     # audit fix A1 (round 2)
             if k in BPI.index:
                 v = BPI.at[k, col]
                 if pd.notna(v) and float(v) < P.CLOSET_CUTOFF:

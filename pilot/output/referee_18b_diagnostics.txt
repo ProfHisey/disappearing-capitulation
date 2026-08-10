@@ -2,34 +2,34 @@ BATTERY II FOLLOW-UP - FROZEN FORENSICS + R2 GAP
 ============================================================
 
 (i) FROZEN-BENCHMARK FORENSICS
-  693 baseline capitulation crossings classified:
-    frozen_cross            116 (16.7%)
-    reassignment_cross      397 (57.3%)
-    untracked_at_crossing   180 (26.0%)
+  496 baseline capitulation crossings classified:
+    frozen_cross            299 (60.3%)
+    reassignment_cross      195 (39.3%)
+    untracked_at_crossing     2 (0.4%)
     entry_missing             0 (0.0%)
   by era (frozen / reassignment / untracked / entry-missing):
-    1980-1994: n  72 |  1.4% / 55.6% / 43.1% /  0.0%
-    1995-2009: n 397 | 12.3% / 56.7% / 31.0% /  0.0%
-    2010-2023: n 224 | 29.5% / 58.9% / 11.6% /  0.0%
+    1980-1994: n  71 | 67.6% / 32.4% /  0.0% /  0.0%
+    1995-2009: n 271 | 62.7% / 37.3% /  0.0% /  0.0%
+    2010-2023: n 154 | 52.6% / 46.1% /  1.3% /  0.0%
   reading: a large 'untracked' or 'entry_missing' share, concentrated early, means battery II's frozen row was a coverage artifact there, not reassignment.
 
-  spells with entry benchmark trackable: 18,094; well-tracked (>=80% of quarters observed): 13,505
+  spells with entry benchmark trackable: 25,990; well-tracked (>=80% of quarters observed): 25,270
 
-  FROZEN definition, WELL-TRACKED spells only: 13,505 spells | capitulated 1.83% | died 12.66%
-    1980-1994: n    648 | cap  0.15% | died  5.56%
-    1995-2009: n  4,595 | cap  2.29% | died 15.04%
-    2010-2023: n  8,262 | cap  1.71% | died 11.90%
+  FROZEN definition, WELL-TRACKED spells only: 25,270 spells | capitulated 1.40% | died 7.54%
+    1980-1994: n  1,090 | cap  5.05% | died  7.25%
+    1995-2009: n  8,647 | cap  2.34% | died  8.29%
+    2010-2023: n 15,533 | cap  0.62% | died  7.15%
   compare to battery II's unrestricted frozen table: if the era decline reappears here, coverage was the culprit.
 
 (ii) R2/RM GAP: FILL SPLIT + FRENCH TRIANGULATION
   cpz factors: 1979-01 to 2014-01
 
-  R2: 279 fill months (identical to CPZ), 142 genuinely reconstructed overlap months
-    reconstructed segment 2002-04..2014-01: mean diff +129.2 bps/m | TE 74.2 bps/m | corr 0.9917
-    triangulation vs French p_small: corr(ours, French) 0.9913 vs corr(CPZ, French) 0.9967 | mean(ours-French) +119.2 bps/m | mean(CPZ-French) -10.0 bps/m
+  R2: 355 fill months (identical to CPZ), 66 genuinely reconstructed overlap months
+    reconstructed segment 2008-08..2014-01: mean diff +0.0 bps/m | TE 0.0 bps/m | corr 1.0000
+    triangulation vs French p_small: corr(ours, French) 0.9975 vs corr(CPZ, French) 0.9975 | mean(ours-French) -13.7 bps/m | mean(CPZ-French) -13.7 bps/m
 
-  RM: 279 fill months (identical to CPZ), 142 genuinely reconstructed overlap months
-    reconstructed segment 2002-04..2014-01: mean diff +71.3 bps/m | TE 51.6 bps/m | corr 0.9949
+  RM: 355 fill months (identical to CPZ), 66 genuinely reconstructed overlap months
+    reconstructed segment 2008-08..2014-01: mean diff -0.0 bps/m | TE 0.0 bps/m | corr 1.0000
 
   S5: 0 fill months (identical to CPZ), 421 genuinely reconstructed overlap months
     reconstructed segment 1979-01..2014-01: mean diff +0.8 bps/m | TE 6.9 bps/m | corr 0.9999

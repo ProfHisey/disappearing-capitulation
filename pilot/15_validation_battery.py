@@ -133,9 +133,16 @@ for _, s in sp.iterrows():
         continue
     T = int(s["m_dur"]) if s["capitulated"] else int(s["end_dur"])
     start = s["start_p"]
+    idx = g.index                       # audit round 2: observed clock (A1)
+    p0 = idx.get_loc(start) if start in idx else None
     depth_so_far = 0.0
     for t in range(1, max(T, 1) + 1):
-        rl = g.at[start + (t - 1), "rel4q"] if (start + (t - 1)) in g.index else np.nan
+        if p0 is not None and 0 <= p0 + t - 1 < len(idx):
+            q = idx[p0 + t - 1]
+            q_at = idx[p0 + t] if p0 + t < len(idx) else q + 1
+        else:
+            q, q_at = start + (t - 1), start + t
+        rl = g.at[q, "rel4q"] if q in g.index else np.nan
         if pd.notna(rl):
             depth_so_far = min(depth_so_far, float(rl))
         rows.append({
@@ -143,7 +150,7 @@ for _, s in sp.iterrows():
             "event": int(s["capitulated"] and t == int(s["m_dur"])),
             "event_die": int(bool(s["spell_died"]) and t == T),
             "dur_5p": float(t >= 5),
-            "era_1023": float((start + t).year >= 2010),
+            "era_1023": float(q_at.year >= 2010),
             "half": "even" if w % 2 == 0 else "odd",
         })
 dtv = pd.DataFrame(rows)
@@ -179,8 +186,11 @@ for half in ("odd", "even"):
 log.append("\nReading guide: (A) any trace contradicting public history means a "
            "join/timing bug - stop and investigate before anything else. "
            "(B1) decline should be roughly monotone across 8 cohorts. "
-           "(B2) capitulation share should FALL and death share RISE toward "
-           "deeper deciles. (B3) hazard should rise roughly smoothly with t. "
+           "(B2) death share should RISE monotonically toward deeper deciles; "
+           "raw capitulation also rises with depth (deep spells are long "
+           "spells) except at the extreme - the regression separates "
+           "time-at-risk and proximity (stage 28). "
+           "(B3) hazard should rise roughly smoothly with t. "
            "(C) the flip and era signs must hold in both halves.")
 log.append("VALIDATION BATTERY DONE - aggregates + brief fund traces, local only.")
 P.write_report("validation_report.txt", log)

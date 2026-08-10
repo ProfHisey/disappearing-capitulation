@@ -4,7 +4,12 @@ factors: 1926-07 to 2026-05
 
 formation: 496 capitulator entries, 5,707 resister entries (36m hold, EW, >=10 members)
 
-(a) H7 CALENDAR-TIME, NET AND GROSS, WITH MDE (critique 7)
+*** SECTIONS (a)/(a2) ARE THE LEGACY SPEC - SUPERSEDED BY 24b ***
+*** Their spreads carry the rf double-subtraction bug and the ***
+*** pre-audit start+dur clock; kept ONLY for the audit trail. ***
+*** Quote H7 numbers from referee_24b_h7_fix.txt, never here. ***
+
+(a) H7 CALENDAR-TIME [LEGACY/BIASED - see banner] (critique 7)
   NET capitulators : alpha -1.38%/yr (se 0.38%) over 369 months
   NET resisters    : alpha -1.49%/yr (se 0.67%) over 389 months
   NET SPREAD (resist - capit): -2.38%/yr (se 0.60%, t -3.99, n 369m) | 95% CI [-3.54%, -1.21%] | MDE(80% power) 1.67%/yr
@@ -13,14 +18,14 @@ formation: 496 capitulator entries, 5,707 resister entries (36m hold, EW, >=10 m
   GROSS SPREAD (resist - capit): -2.27%/yr (se 0.60%, t -3.80, n 369m) | 95% CI [-3.44%, -1.10%] | MDE(80% power) 1.67%/yr
   reading: if the MDE is materially wider than any premium worth writing about (say 2%/yr), H7 is 'uninformative', not 'null' - and the paper says so. The GROSS leg removes the fee-arithmetic equalizer.
 
-(a2) H7 OWN-BENCHMARK RULER (critique 7)
+(a2) H7 OWN-BENCHMARK RULER [LEGACY CLOCK - see banner] (critique 7)
   OWN-BENCH capitulators : -3.02%/yr (se 0.66%) over 111 quarters
   OWN-BENCH resisters    : -3.01%/yr (se 0.92%) over 119 quarters
   OWN-BENCH SPREAD: -0.00%/yr (se 0.65%, t -0.01) | MDE(80%) 1.83%/yr
   note: 12-quarter window vs each fund's own min-AS benchmark; caveat that post-capitulation the benchmark is nearly the portfolio, so this leg mostly prices the RESISTERS' live bets - exactly the object H7 cares about.
 
 (b) BERK-GREEN HORSE RACE + PER-10%-FLOW HRs (critiques 19, 14)
-    capitulation 2000-23, horse race [n=88,967, ev=206]  dur_5p HR 1.92 (z +4.1)  depth HR 47.58 (z +4.4)  inflow HR 0.74 (z -0.9)  outflow HR 1.00 (z -0.0)  g4 HR 0.52 (z -4.4)  ln_tna HR 1.05 (z +1.5)
+    capitulation 2000-23, horse race [n=100,102, ev=304]  dur_5p HR 1.86 (z +4.9)  depth HR 9.76 (z +4.0)  inflow HR 0.75 (z -1.3)  outflow HR 1.02 (z +0.3)  g4 HR 0.59 (z -4.1)  ln_tna HR 1.04 (z +1.6)
   reading (flows are PER 10% OF TNA per quarter - critique 14):
     Berk-Green capacity story predicts: inflow HR > 1 and g4 HR > 1
       (funds de-activate as money and size arrive).

@@ -43,6 +43,16 @@ bp["quarter"] = bp["month"].dt.to_period("Q")
 bp = (bp.sort_values(["wficn", "quarter", "total_assets"])
         .drop_duplicates(["wficn", "quarter"], keep="last"))
 BPI = bp.set_index(["wficn", "quarter"]).sort_index()
+# audit round 2 (fix A1): observed-clock quarter lookup per fund
+PFI = {w: g.set_index("quarter").index.sort_values()
+       for w, g in panel.groupby("wficn")}
+
+def obs_q18(w, start, t):
+    qs = PFI.get(w)
+    if qs is None or start not in qs:
+        return start + t
+    j = qs.get_loc(start) + t
+    return qs[j] if 0 <= j < len(qs) else start + t
 
 # ------------------------------- (i) frozen-benchmark forensics ----------
 def sect_frozen_forensics():
@@ -52,7 +62,7 @@ def sect_frozen_forensics():
     by_era = {}
     for _, s in caps.iterrows():
         w, start = s["wficn"], s["start_p"]
-        qc = start + int(s["m_dur"])          # baseline crossing quarter
+        qc = pd.Period(s["m_cal_q"], freq="Q")  # audit fix A1 (round 2)
         era = next((f"{lo}-{hi}" for lo, hi in R.ERAS
                     if lo <= start.year <= hi), "?")
         if (w, start) not in BPI.index:
@@ -99,7 +109,7 @@ def sect_frozen_forensics():
         T = int(s["end_dur"])
         n_obs, m_frozen = 0, np.nan
         for t in range(1, T + 1):
-            k = (w, start + t)
+            k = (w, obs_q18(w, start, t))     # audit fix A1 (round 2)
             if k in BPI.index and pd.notna(BPI.at[k, col]):
                 n_obs += 1
                 if (np.isnan(m_frozen)

@@ -48,12 +48,18 @@ sp.loc[sp["m_dur"].notna(), "outcome"] = "capitulated"
 pf = {w: g.set_index("quarter") for w, g in panel.groupby("wficn")}
 
 def path(row, col, t0, t1):
-    """Values of `col` at spell-relative quarters t0..t1 (NaN-padded)."""
+    """Values of `col` at spell-relative OBSERVED quarters t0..t1 (audit
+    round 2, fix A1: the relative index counts observed rows, aligning with
+    m_dur/end_dur for spells containing reporting gaps)."""
     g = pf[row["wficn"]]
+    idx = g.index
+    if row["start_p"] not in idx:
+        return [np.nan] * (t1 - t0 + 1)
+    p0 = idx.get_loc(row["start_p"])
     out = []
     for t in range(t0, t1 + 1):
-        q = row["start_p"] + t
-        out.append(g.at[q, col] if q in g.index else np.nan)
+        j = p0 + t
+        out.append(g[col].iloc[j] if 0 <= j < len(idx) else np.nan)
     return out
 
 def mean_se(mat):
@@ -143,7 +149,7 @@ log.append("    " + ", ".join(f"{k} first: {v:,} ({v / max(tot, 1):.1%})"
 diffs = []
 for _, r in sp[sp["m_dur"].notna()].iterrows():
     g = pf[r["wficn"]]
-    eq = r["start_p"] + int(r["m_dur"])
+    eq = pd.Period(r["m_cal_q"], freq="Q")  # audit fix A1 (round 2)
     pre = [g.at[eq - k, "flowq"] for k in range(1, 5) if (eq - k) in g.index]
     post = [g.at[eq + k, "flowq"] for k in range(1, 5) if (eq + k) in g.index]
     pre = [v for v in pre if pd.notna(v)]

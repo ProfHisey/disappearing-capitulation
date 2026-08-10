@@ -98,9 +98,15 @@ for _, s in sp.iterrows():
         continue
     T = int(s["m_dur"]) if s["capitulated"] else int(s["end_dur"])
     start = s["start_p"]
+    idx = g.index                       # audit round 2: observed clock (A1)
+    p0 = idx.get_loc(start) if start in idx else None
     dsf = 0.0
     for t in range(1, max(T, 1) + 1):
-        q = start + (t - 1)
+        if p0 is not None and 0 <= p0 + t - 1 < len(idx):
+            q = idx[p0 + t - 1]
+            q_at = idx[p0 + t] if p0 + t < len(idx) else q + 1
+        else:
+            q, q_at = start + (t - 1), start + t
         rl = g.at[q, "rel4q"] if q in g.index else np.nan
         if pd.notna(rl):
             dsf = min(dsf, float(rl))
@@ -108,7 +114,7 @@ for _, s in sp.iterrows():
             "wficn": w, "spell_id": s.name, "t": t, "depth": dsf,
             "event": int(s["capitulated"] and t == int(s["m_dur"])),
             "event_die": int(bool(s["spell_died"]) and t == T),
-            "era_1023": float((start + t).year >= 2010),
+            "era_1023": float(q_at.year >= 2010),
         })
 dt = pd.DataFrame(rows)
 dt["dur_3_4"] = dt["t"].between(3, 4).astype(float)

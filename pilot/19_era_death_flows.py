@@ -214,13 +214,16 @@ def who_first(pan, label):
     for _, s in sp.iterrows():
         g = pf.get(s["wficn"])
         vals = []
-        if g is not None:
+        if g is not None and s["start_p"] in g.index:
+            # audit round 2: observed clock, so t aligns with m_dur (A1)
+            idx = g.index
+            p0 = idx.get_loc(s["start_p"])
             for t in range(1, int(s["end_dur"]) + 1):
-                q = s["start_p"] + t
-                if q in g.index:
-                    f = g.at[q, "flowq"]
-                    if pd.notna(f):
-                        vals.append(float(f))
+                if p0 + t >= len(idx):
+                    break
+                f = g.at[idx[p0 + t], "flowq"]
+                if pd.notna(f):
+                    vals.append(float(f))
         minfl.append(min(vals) if vals else np.nan)
     minfl = pd.Series(minfl, index=sp.index)
     tstar = float(np.nanquantile(minfl.dropna(), p_base))
@@ -232,12 +235,15 @@ def who_first(pan, label):
         if g is None or not s["capitulated"]:
             continue
         c_dur = None
-        for t in range(1, int(s["end_dur"]) + 1):
-            q = s["start_p"] + t
-            if q in g.index:
-                f = g.at[q, "flowq"]
+        if s["start_p"] in g.index:
+            idx = g.index
+            p0 = idx.get_loc(s["start_p"])
+            for t in range(1, int(s["end_dur"]) + 1):
+                if p0 + t >= len(idx):
+                    break
+                f = g.at[idx[p0 + t], "flowq"]
                 if pd.notna(f) and f <= tstar:
-                    c_dur = t
+                    c_dur = t          # observed-clock t, comparable to m_dur
                     break
         if c_dur is None:
             continue

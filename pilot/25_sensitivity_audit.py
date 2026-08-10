@@ -44,7 +44,7 @@ def sect_reassign():
     sp = sp0.copy()
     for i, s in sp[sp["capitulated"]].iterrows():
         w, start = s["wficn"], s["start_p"]
-        qc = start + int(s["m_dur"])
+        qc = pd.Period(s["m_cal_q"], freq="Q")   # audit fix A1 (round 2)
         if (w, start) not in bp.index or (w, qc) not in bp.index:
             continue
         col = "as_" + str(bp.at[(w, start), "bench_min"]).lower()
@@ -62,8 +62,8 @@ def sect_reassign():
     dt = R.build_dt(sp, PF)
     R.slim_fit(dt, R.SLIM, "event", log, "capitulation, strict definition")
     R.slim_fit(dt, R.SLIM, "event_die", log, "death, strict definition")
-    log.append("  compare: v4 baseline era caps 6.51/3.14/0.99, era HR 0.21, "
-               "dur 2.79, depth 28.3.")
+    log.append("  compare: post-audit baseline era caps 6.43/3.07/0.96, "
+               "era HR 0.22, dur 2.71, depth 10.7.")
 
 # ------------------------------------------------ (b) gap audit ----
 def sect_gaps():

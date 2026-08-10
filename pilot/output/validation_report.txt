@@ -22,6 +22,10 @@ VALIDATION BATTERY
     spell 2002Q1 -> 2003Q2 (3q, depth -9.4%): recovered
     spell 2005Q2 -> 2005Q4 (1q, depth -0.6%): recovered
     spell 2006Q1 -> 2011Q2 (14q, depth -22.8%): recovered
+    spell 2012Q1 -> 2013Q3 (6q, depth -6.2%): recovered
+    spell 2014Q3 -> 2016Q4 (9q, depth -11.0%): recovered
+    spell 2017Q2 -> 2021Q3 (15q, depth -32.2%): recovered
+    spell 2022Q1 -> 2022Q3 (2q, depth -4.7%): recovered
 
   FAIRX: Fairholme (expect: deep spell + redemption run circa 2011)
     wficn 240432 NOT IN PANEL - INVESTIGATE
@@ -36,6 +40,11 @@ VALIDATION BATTERY
     spell 1999Q1 -> 2001Q1 (6q, depth -28.2%): recovered
     spell 2002Q4 -> 2006Q1 (11q, depth -16.9%): recovered
     spell 2006Q4 -> 2008Q1 (4q, depth -7.5%): recovered
+    spell 2009Q3 -> 2010Q2 (2q, depth -9.2%): recovered
+    spell 2013Q1 -> 2013Q2 (1q, depth -0.4%): recovered
+    spell 2013Q4 -> 2014Q4 (3q, depth -1.6%): recovered
+    spell 2015Q4 -> 2021Q1 (19q, depth -27.7%): recovered
+    spell 2021Q4 -> 2023Q1 (5q, depth -14.0%): data_end
 
   CGMFX: CGM Focus (expect: extreme swings, deep spells post-2008)
     in panel 1997Q4 to 2022Q2 (80 quarters); AS first 0.97, min 0.87 (at 2009Q1), last 0.94
@@ -54,29 +63,29 @@ VALIDATION BATTERY
 (B1) ERA DECLINE, five-year cohorts (spell capitulation / death rates):
   1980-1984:    20 spells | capitulated  0.00% | died  0.00%
   1985-1989:    38 spells | capitulated  0.00% | died  0.00%
-  1990-1994: 1,032 spells | capitulated  6.88% | died  7.66%
-  1995-1999: 1,841 spells | capitulated  7.77% | died  6.84%
-  2000-2004: 3,330 spells | capitulated  2.10% | died  9.94%
-  2005-2009: 3,472 spells | capitulated  1.67% | died  7.46%
-  2010-2014: 5,279 spells | capitulated  1.40% | died  8.13%
-  2015-2019: 5,823 spells | capitulated  0.98% | died  8.36%
-  2020-2024: 4,432 spells | capitulated  0.52% | died  4.31%
+  1990-1994: 1,047 spells | capitulated  6.78% | died  8.88%
+  1995-1999: 1,875 spells | capitulated  7.63% | died  7.89%
+  2000-2004: 3,409 spells | capitulated  2.05% | died 11.32%
+  2005-2009: 3,540 spells | capitulated  1.64% | died  8.79%
+  2010-2014: 5,358 spells | capitulated  1.38% | died  9.15%
+  2015-2019: 5,947 spells | capitulated  0.96% | died  9.42%
+  2020-2024: 4,756 spells | capitulated  0.48% | died  5.26%
 
 (B2) MODE SELECTION, depth deciles (opposite gradients expected):
-  decile 0 (mean depth -40.8%, n=2,527): capitulated  1.86% | died 12.03%
-  decile 1 (mean depth -24.6%, n=2,527): capitulated  3.56% | died 13.02%
-  decile 2 (mean depth -18.6%, n=2,526): capitulated  3.21% | died 10.73%
-  decile 3 (mean depth -14.8%, n=2,527): capitulated  2.57% | died  9.73%
-  decile 4 (mean depth -11.7%, n=2,527): capitulated  2.77% | died  9.38%
-  decile 5 (mean depth -9.0%, n=2,526): capitulated  2.06% | died  7.96%
-  decile 6 (mean depth -6.7%, n=2,527): capitulated  1.58% | died  6.49%
-  decile 7 (mean depth -4.6%, n=2,526): capitulated  1.19% | died  3.92%
-  decile 8 (mean depth -2.7%, n=2,527): capitulated  0.71% | died  1.70%
-  decile 9 (mean depth -0.8%, n=2,527): capitulated  0.12% | died  0.32%
+  decile 0 (mean depth -40.5%, n=2,599): capitulated  1.81% | died 12.54%
+  decile 1 (mean depth -24.4%, n=2,599): capitulated  3.66% | died 12.97%
+  decile 2 (mean depth -18.4%, n=2,599): capitulated  3.04% | died 11.47%
+  decile 3 (mean depth -14.6%, n=2,599): capitulated  2.50% | died 10.27%
+  decile 4 (mean depth -11.5%, n=2,599): capitulated  2.62% | died 10.43%
+  decile 5 (mean depth -8.8%, n=2,599): capitulated  2.08% | died  8.66%
+  decile 6 (mean depth -6.6%, n=2,599): capitulated  1.46% | died  7.54%
+  decile 7 (mean depth -4.5%, n=2,599): capitulated  1.12% | died  5.19%
+  decile 8 (mean depth -2.6%, n=2,599): capitulated  0.69% | died  3.66%
+  decile 9 (mean depth -0.8%, n=2,599): capitulated  0.12% | died  3.39%
   (decile 0 = deepest underperformance)
 
 (B3) FATIGUE, quarter-by-quarter empirical capitulation hazard:
-  q 1: at-risk 25,267  events  43  hazard  0.170%
+  q 1: at-risk 25,990  events  43  hazard  0.165%
   q 2: at-risk 18,758  events  57  hazard  0.304%
   q 3: at-risk 15,714  events  59  hazard  0.375%
   q 4: at-risk 13,818  events  49  hazard  0.355%
@@ -94,11 +103,11 @@ VALIDATION BATTERY
   q16: at-risk  1,099  events   3  hazard  0.273%
 
 (C) SPLIT-SAMPLE (odd vs even wficn), slim reduced form:
-  odd half, CAPITULATION [n=65,137, ev=241]  dur_5p: coef +1.04 (z 7.2)  depth: coef +2.90 (z 4.5)  era_1023: coef -1.69 (z -11.4)
-  odd half, DEATH [n=65,137, ev=942]  dur_5p: coef +0.32 (z 4.6)  depth: coef -1.14 (z -4.7)  era_1023: coef -0.32 (z -4.8)
+  odd half, CAPITULATION [n=65,488, ev=241]  dur_5p: coef +1.03 (z 7.1)  depth: coef +2.06 (z 3.7)  era_1023: coef -1.68 (z -11.6)
+  odd half, DEATH [n=65,488, ev=1,093]  dur_5p: coef +0.06 (z 1.0)  depth: coef -0.72 (z -3.0)  era_1023: coef -0.31 (z -4.9)
     -> depth sign flip between outcomes in odd half: YES
-  even half, CAPITULATION [n=64,854, ev=255]  dur_5p: coef +1.01 (z 7.4)  depth: coef +3.76 (z 5.5)  era_1023: coef -1.41 (z -10.8)
-  even half, DEATH [n=64,854, ev=960]  dur_5p: coef +0.05 (z 0.7)  depth: coef -1.30 (z -5.7)  era_1023: coef -0.24 (z -3.5)
+  even half, CAPITULATION [n=65,226, ev=255]  dur_5p: coef +0.97 (z 6.9)  depth: coef +2.67 (z 4.6)  era_1023: coef -1.40 (z -10.8)
+  even half, DEATH [n=65,226, ev=1,145]  dur_5p: coef -0.22 (z -3.4)  depth: coef -0.89 (z -3.9)  era_1023: coef -0.20 (z -3.2)
     -> depth sign flip between outcomes in even half: YES
 
 Reading guide: (A) any trace contradicting public history means a join/timing bug - stop and investigate before anything else. (B1) decline should be roughly monotone across 8 cohorts. (B2) capitulation share should FALL and death share RISE toward deeper deciles. (B3) hazard should rise roughly smoothly with t. (C) the flip and era signs must hold in both halves.

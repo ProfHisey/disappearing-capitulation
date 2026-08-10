@@ -1,0 +1,18 @@
+COMPOSITION CHECKS (stage 29)
+============================================================
+
+(a) BIG SLIDES BY ERA WITHIN ENTRY-AS BANDS
+  share of spells with a 10+ point within-spell AS decline (threshold-free), by era WITHIN entry-AS bands:
+    band 70-80 |  22.0% (n   273) |  15.7% (n 1,964) |   7.1% (n 3,091)
+    band 80-90 |  18.9% (n   375) |  11.7% (n 2,387) |   4.8% (n 3,687)
+    band 90+   |   8.1% (n   457) |   4.2% (n 4,473) |   1.8% (n 9,283)
+  reading: the collapse must appear inside every band for the composition-in-entry-AS story to stay dead.
+
+(b) BIG SLIDES BY ERA, RETAIL vs INSTITUTIONAL
+  same statistic, retail vs institutional funds:
+    retail        |  16.9% (n   940) |   8.9% (n 8,337) |   3.5% (n 13,132)
+    institutional |   5.5% (n   165) |   6.4% (n   487) |   3.3% (n 2,929)
+  (spells with no retail classification: 0)
+  reading: if the collapse appears in BOTH halves, the retail-to-institutional mix shift cannot explain it and the round-4 channel closes. If it lives in one half only, the paper reports that honestly and interprets accordingly.
+
+STAGE 29 DONE - aggregates only. This closes the final open referee channel that existing data can close.
