@@ -1,0 +1,20 @@
+N-PORT MONTHLY GROSS FLOWS (stage 33b)
+============================================================
+archives found: 27
+filings read: 341,049
+REPORT_DATE minus REPORT_ENDING_PERIOD, in months (value: share): {-9: '25.5%', 0: '24.9%', -3: '24.8%', -6: '24.7%', -12: '0.1%', -2: '0.0%'}
+  -> expected pattern: ~equal shares at 0/-3/-6/-9 (quarters within a fiscal year). REPORT_DATE = quarter end (used); REPORT_ENDING_PERIOD = fiscal year end (NOT used). Any other pattern: STOP and investigate.
+rows dropped for missing SERIES_ID: 18,083
+filings after amendment dedup (latest FILING_DATE per series-period): 317,879
+unique series: 17,512   unique registrants (CIK): 1,480
+panel rows: 953,637   duplicate series-months after dedup: 665
+  kept last -> 952,972 rows
+month span: 2019-07 to 2026-05
+  sales: non-missing 99.8%, median of positives $5.1M
+  reinvestments: non-missing 99.7%, median of positives $1.3M
+  redemptions: non-missing 99.8%, median of positives $8.5M
+written: E:\Finance\data\sources\nport\derived\monthly_gross_flows.csv  (178 MB)
+designated-index table: 6,792 series -> designated_index.csv
+  top declared benchmarks: S&P 500 Index (350); S&P 500 (166); Securities Portfolio (127); S&P 500 Total Return Index (115); Fund's Securities Portfolio (108); 0 (86); Securities Portfolio VaR (79); S&P 500 INDEX (60)
+
+STAGE 33b DONE. NOTE: series_id is the SEC S000-style id - linking to CRSP needs the SEC series/class-ticker mapping (stage 33c candidate) or LEI/name matching. Holdings extraction for the Active Share extension is a separate stage (33d).

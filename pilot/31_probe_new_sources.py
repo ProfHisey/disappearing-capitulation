@@ -20,6 +20,7 @@ TARGETS = [
     SRC / "thomson_s12" / "s12type2.csv",
     SRC / "thomson_s12" / "s12type4.csv",
     SRC / "crsp_indexes" / "monthly_indexes.csv",
+    SRC / "crsp_indexes" / "monthly_indexes_levels.csv",
     SRC / "crsp_indexes" / "treasury_inflation.csv",
     SRC / "thomson_s34" / "s34type1.csv",
     SRC / "thomson_s34" / "s34type2.csv",

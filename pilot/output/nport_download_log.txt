@@ -1,0 +1,36 @@
+N-PORT DOWNLOAD LOG (stage 32)
+============================================================
+  OK (240 MB): 2019q4_nport.zip
+  OK (340 MB): 2020q1_nport.zip
+  OK (333 MB): 2020q2_nport.zip
+  OK (371 MB): 2020q3_nport.zip
+  OK (359 MB): 2020q4_nport.zip
+  OK (343 MB): 2021q1_nport.zip
+  OK (358 MB): 2021q2_nport.zip
+  OK (380 MB): 2021q3_nport.zip
+  OK (375 MB): 2021q4_nport.zip
+  OK (482 MB): 2022q1_nport.zip
+  OK (433 MB): 2022q2_nport.zip
+  OK (724 MB): 2022q3_nport.zip
+  OK (422 MB): 2022q4_nport.zip
+  OK (480 MB): 2023q1_nport.zip
+  OK (428 MB): 2023q2_nport.zip
+  OK (457 MB): 2023q3_nport.zip
+  OK (420 MB): 2023q4_nport.zip
+  OK (447 MB): 2024q1_nport.zip
+  OK (507 MB): 2024q2_nport.zip
+  OK (478 MB): 2024q3_nport.zip
+  OK (406 MB): 2024q4_nport.zip
+  OK (462 MB): 2025q1_nport.zip
+  OK (435 MB): 2025q2_nport.zip
+  OK (469 MB): 2025q3_nport.zip
+  OK (418 MB): 2025q4_nport.zip
+  OK (463 MB): 2026q1_nport.zip
+  OK (441 MB): 2026q2_nport.zip
+  404 (not published yet): 2026q3_nport.zip
+  404 (not published yet): 2026q4_nport.zip
+
+SUMMARY: 27 downloaded, 0 already on disk, 2 not yet published, 0 failed
+library now holds 27 zips, 11.47 GB
+
+STAGE 32 DONE. Keep the zips; stage 33 parses directly from them. Rerun any quarter's 'FAILED' by just rerunning the script.

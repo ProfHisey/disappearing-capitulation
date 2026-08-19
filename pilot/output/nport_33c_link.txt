@@ -1,0 +1,16 @@
+N-PORT -> CRSP LINK (stage 33c)
+============================================================
+SEC mapping: 28,444 class rows, 12,011 series, 28,444 tickers
+Fund Summary date column used: caldt
+CRSP fundnos with a ticker: 66,075 (61,045 distinct tickers)
+tickers mapping to >1 fundno (ambiguous): 4,672 of 61,045
+link rows written: 29,077 -> series_crsp_link.csv
+  series linked to >=1 fundno: 11,080
+  series linked unambiguously: 10,767
+  series linked to a wficn: 7,117
+flows-panel series: 17,512
+  with any CRSP link: 10,607 (60.6%)
+  with a wficn: 7,042 (40.2%)
+  reading: wficn coverage is what matters for joining gross flows onto the capitulation panel. Sub-100% is expected - the flows panel includes bond/international/money funds outside MFLINKS's equity focus; judge coverage after filtering to domestic equity in the analysis stage.
+
+STAGE 33c DONE - aggregates only. Next: 33d holdings extraction (post-2023 Active Share extension).

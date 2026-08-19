@@ -37,6 +37,22 @@ FILE: crsp_indexes\monthly_indexes.csv
   cntvaltype: {'USED': 73261, 'BOTH': 67706}
 
 ----------------------------------------------------------------------
+FILE: crsp_indexes\monthly_indexes_levels.csv
+  size: 0.03 GB
+  columns (16): mthcaldt, indno, _name_, _label_, col1, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  rows: 153,516
+  mthcaldt span: 1925-12-31 to 2025-12-31  (missing 0.0%)
+  indbegdt span: 1925-12-31 to 2006-03-08  (missing 0.0%)
+  indenddt span: 2025-12-31 to 2025-12-31  (missing 0.0%)
+  unique indno: 141
+  _name_: {'MthTotInd': 153516}
+  _label_: {'Monthly Index Level from Index Total Return': 153516}
+  indfamtype: {'F': 98060, 'C': 25221, 'N': 12882, 'E': 10711, 'R': 4804, 'L': 1838}
+  freqavail: {'MTH': 133992, 'BTH': 19524}
+  weighttype: {'MC': 123281, 'EV': 17686, 'X': 12549}
+  cntvaltype: {'USED': 73261, 'BOTH': 67706}
+
+----------------------------------------------------------------------
 FILE: crsp_indexes\treasury_inflation.csv
   size: 0.00 GB
   columns (5): indnm, indno, mthcaldt, mthtotret, mthtotind

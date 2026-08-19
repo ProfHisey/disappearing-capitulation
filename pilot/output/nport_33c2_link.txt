@@ -1,0 +1,20 @@
+N-PORT -> CRSP LINK v2, SURVIVORSHIP-FREE (stage 33c2)
+============================================================
+  2019: downloaded (8.5 MB)
+  2020: downloaded (8.2 MB)
+  2021: downloaded (8.0 MB)
+  2022: downloaded (7.9 MB)
+  2023: downloaded (7.8 MB)
+  2024: downloaded (7.6 MB)
+  2025: downloaded (7.6 MB)
+  2026: downloaded (8.1 MB)
+bridge: 50,000 series-ticker pairs, 21,665 series (v1 snapshot had 12,011)
+link rows: 41,465 -> series_crsp_link_v2.csv
+  series linked to >=1 fundno: 15,057
+  series linked to a wficn: 10,050
+flows-panel series: 17,512
+  any CRSP link: 13,316 (76.0%)  [v1: 60.6%]
+  with a wficn:  9,144 (52.2%)  [v1: 40.2%]
+  series that VANISH from SEC lists by 2024 (death candidates) now linkable: 1,912 - these are what v1's survivor-only snapshot missed.
+
+STAGE 33c2 DONE - aggregates only. v2 supersedes v1 for all downstream joins; last_list_year is a bonus death-year proxy.
