@@ -1,0 +1,37 @@
+COMPUSTAT PROBE (stage 30)
+======================================================================
+
+----------------------------------------------------------------------
+FILE: ccm_link.csv  (0.05 GB)
+  identified as: CCM LINKING TABLE
+  columns: 47
+  rows: 110,092   unique gvkey: 46,530
+  linktype: {'NR': 37433, 'NU': 31436, 'LC': 16898, 'LU': 15916, 'LS': 6943, 'LX': 1169, 'LN': 185, 'LD': 112}
+  linkprim: {'C': 53414, 'P': 48486, 'N': 4933, 'J': 3259}
+  unique lpermno: 35,769
+
+----------------------------------------------------------------------
+FILE: funda.csv  (1.78 GB)
+  identified as: FUNDAMENTALS ANNUAL (funda)
+  columns: 980
+  rows (streamed count): 648,318
+  unique gvkey: 46,809
+  datadate span: 1950-06-30 to 2026-07-31
+  indfmt: {'INDL': 599575, 'FS': 48743}
+  datafmt: {'STD': 648318}
+  consol: {'C': 648318}
+  curcd: {'USD': 575001, 'CAD': 73317}
+
+----------------------------------------------------------------------
+FILE: fundq.csv  (4.60 GB)
+  identified as: FUNDAMENTALS QUARTERLY (fundq)
+  columns: 679
+  rows (streamed count): 2,127,200
+  unique gvkey: 46,134
+  datadate span: 1961-03-31 to 2026-07-31
+  indfmt: {'INDL': 2127200}
+  datafmt: {'STD': 2127200}
+  consol: {'C': 2127200}
+  curcdq: {'USD': 1896443, 'CAD': 230757}
+
+PROBE DONE. If a file's identity doesn't match its name, rename it, rerun, and record the final output as the manifest.

@@ -1,0 +1,89 @@
+NEW SOURCE PROBE (stage 31)
+======================================================================
+
+----------------------------------------------------------------------
+FILE: thomson_s12\s12type2.csv
+  size: 0.27 GB
+  columns (13): ticker, fdate, cusip, stkname, ticker2, exchcd, stkcd, stkcdesc, shrout2_str, shrout1, prc, shrout2, indcode
+  rows: 3,548,734
+  fdate span: 1980-03-31 to 2025-12-31  (missing 0.0%)
+  unique ticker: 77,813
+  unique cusip: 207,398
+  stkcd: {'7': 2231707, '0': 722176, '+': 175820, '4': 11658, '-': 1162, '8': 337, '#': 14}
+
+----------------------------------------------------------------------
+FILE: thomson_s12\s12type4.csv
+  size: 6.92 GB
+  columns (4): fundno, fdate, cusip, change
+  rows (streamed count): 218,731,614
+  fdate span: 1980-03-31 to 2025-12-31
+  unique fundno: 138,161
+  unique cusip: 190,344
+
+----------------------------------------------------------------------
+FILE: crsp_indexes\monthly_indexes.csv
+  size: 0.03 GB
+  columns (16): mthcaldt, indno, _name_, _label_, col1, indfam, indfamtype, indnm, indbegdt, indenddt, baselvl, basedt, freqavail, weighttype, cntvaltype, portnum
+  rows: 153,516
+  mthcaldt span: 1925-12-31 to 2025-12-31  (missing 0.0%)
+  indbegdt span: 1925-12-31 to 2006-03-08  (missing 0.0%)
+  indenddt span: 2025-12-31 to 2025-12-31  (missing 0.0%)
+  unique indno: 141
+  _name_: {'MthTotRet': 153516}
+  _label_: {'Monthly Total Return on Index': 153516}
+  indfamtype: {'F': 98060, 'C': 25221, 'N': 12882, 'E': 10711, 'R': 4804, 'L': 1838}
+  freqavail: {'MTH': 133992, 'BTH': 19524}
+  weighttype: {'MC': 123281, 'EV': 17686, 'X': 12549}
+  cntvaltype: {'USED': 73261, 'BOTH': 67706}
+
+----------------------------------------------------------------------
+FILE: crsp_indexes\treasury_inflation.csv
+  size: 0.00 GB
+  columns (5): indnm, indno, mthcaldt, mthtotret, mthtotind
+  rows: 10,711
+  mthcaldt span: 1925-12-31 to 2025-12-31  (missing 0.0%)
+  unique indno: 10
+
+----------------------------------------------------------------------
+FILE: thomson_s34\s34type1.csv
+  size: 0.04 GB
+  columns (8): mgrno, rdate, fdate, mgrname, country, typecode, permkey, prdate
+  rows: 512,040
+  rdate span: 1978-12-31 to 2025-12-31  (missing 0.0%)
+  fdate span: 1980-03-31 to 2025-12-31  (missing 0.0%)
+  prdate span: 1990-12-31 to 2025-09-30  (missing 17.6%)
+  unique mgrno: 15,483
+
+----------------------------------------------------------------------
+FILE: thomson_s34\s34type2.csv
+  size: 0.14 GB
+  columns (12): ticker, fdate, cusip, stkname, ticker2, exchcd, stkcd, stkcdesc, shrout1, prc, shrout2, indcode
+  rows: 1,977,948
+  fdate span: 1980-03-31 to 2025-12-31  (missing 0.0%)
+  unique ticker: 60,052
+  unique cusip: 89,776
+  stkcd: {'0': 767867, '7': 533096, '+': 133230, '4': 11964, '-': 569, '8': 249, '#': 14}
+
+----------------------------------------------------------------------
+FILE: thomson_s34\s34type3.csv
+  size: 5.48 GB
+  columns (8): mgrno, fdate, cusip, type, shares, sole, shared, no
+  rows (streamed count): 127,140,268
+  fdate span: 1980-03-31 to 2025-12-31
+  unique mgrno: 15,476
+  unique cusip: 95,378
+
+----------------------------------------------------------------------
+FILE: thomson_s34\s34type4.csv
+  size: 3.61 GB
+  columns (5): mgrno, fdate, cusip, type, change
+  rows (streamed count): 107,264,129
+  fdate span: 1980-03-31 to 2025-12-31
+  unique mgrno: 15,067
+  unique cusip: 90,153
+
+----------------------------------------------------------------------
+FILE: compustat\fundq_fs.csv
+  NOT PRESENT YET - skipped
+
+STAGE 31 DONE - rerun after each new file lands; the final clean run is the manifest of record for the acquisition log.
