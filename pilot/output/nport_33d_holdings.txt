@@ -1,0 +1,23 @@
+N-PORT EQUITY HOLDINGS EXTRACT (stage 33d)
+============================================================
+archives in scope (2023q4+): 11
+wficn-linked series (link v2): 10,050
+filings: 72,289 in scope -> 71,728 after global amendment dedup; 7,541 series; periods 2023-10 to 2026-05
+  2023q4_nport.zip: kept 486,141 equity rows (2,018 filings)
+  2024q1_nport.zip: kept 1,140,141 equity rows (6,124 filings)
+  2024q2_nport.zip: kept 1,272,577 equity rows (6,441 filings)
+  2024q3_nport.zip: kept 1,242,663 equity rows (6,429 filings)
+  2024q4_nport.zip: kept 1,176,405 equity rows (6,103 filings)
+  2025q1_nport.zip: kept 1,171,025 equity rows (5,974 filings)
+  2025q2_nport.zip: kept 1,207,396 equity rows (6,258 filings)
+  2025q3_nport.zip: kept 1,156,245 equity rows (5,953 filings)
+  2025q4_nport.zip: kept 1,145,308 equity rows (5,853 filings)
+  2026q1_nport.zip: kept 1,103,375 equity rows (5,590 filings)
+  2026q2_nport.zip: kept 1,233,249 equity rows (6,105 filings)
+
+holdings rows scanned: 62,945,125; equity rows kept: 12,334,525
+ASSET_CAT distribution among linked funds' holdings (pre-equity-filter): {'EC': 12225426, 'DBT': 5680835, 'ABS-MBS': 1944235, 'DFE': 557806, 'LON': 405105, 'ABS-O': 339281, 'ABS-CBDO': 236011, 'DE': 209858, 'DIR': 200880, 'STIV': 119373, 'EP': 109099, 'OTHER': 60243}
+latest quarter: missing CUSIP share 20.0% (HOLDING_ID retained - ISIN fallback via IDENTIFIERS.tsv is stage 33d2 if this is material)
+sum of equity PERCENTAGE per filing, latest quarter: median 98.7, p10 36.9, p90 99.9 (values near 90-100 = equity funds; low values = hybrid/bond funds to be filtered in 33e)
+
+STAGE 33d DONE - parts in cache\nport_holdings_parts\. Next: 33e computes Active Share vs Russell benchmarks (stage-21b machinery) and splices onto the ND series.
