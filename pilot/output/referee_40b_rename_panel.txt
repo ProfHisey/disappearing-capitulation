@@ -1,0 +1,13 @@
+RENAMING x STRESS x FLOWS (stage 40b)
+============================================================
+rename events: 93,930; flip-flop pairs excluded: 2,632
+fund-level rename events (wficn-quarters): 31,460
+rename events inside capitulation universe: 21,736
+trailing rel4q at rename: median -2.10% (n 9,077) vs population median -2.45%
+  share with rel4q<0 at rename: 59.8% vs population 62.8%
+capitulations with a rename within ±4q: 235 of 496 (47.4%); naive baseline for a 9q window 50.4%
+within-fund quarterly net flow, 4q after minus 4q before rename: median -0.42%, mean -1.78% (n 8,856 events)
+  levels: pre median -0.71%, post median -1.32%
+  caveat: renames cluster at acquisitions/mergers - a flow jump may be reorganization, not marketing. LLM classification of rename TYPE (rebrand vs strategy shift vs merger) is the scale-up that separates these.
+
+STAGE 40b DONE - aggregates only.

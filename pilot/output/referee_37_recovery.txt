@@ -1,0 +1,16 @@
+UN-CAPITULATION / RECOVERY (stage 37)
+============================================================
+capitulation events: 496
+events with any post-crossing AS data: 472 of 496 (median post-crossing quarters observed 18)
+  recovery rate, touch >=0.70 once      : 44.6%  (221 funds)
+  recovery rate, 2 consecutive quarters : 38.7%  (192 funds)
+  recovery rate, 4 consecutive quarters : 31.9%  (158 funds)
+  time to durable (2q) recovery: median 14q, p25 6q, p75 30q
+  durable (2q) recovery rate by capitulation era:
+    1980-94:  50.0% (events 2)
+    1995-2009:  49.5% (events 319)
+    2010-23:  18.9% (events 175)
+  after durable recovery (n 192): re-fold 60%, stay active 14%, die (fund ends) 27%
+  caveat: 'die' here is fund death any time after recovery, not death while active - refine before quoting.
+
+STAGE 37 DONE - aggregates only. If durable recovery is rare (<10%), 'capitulation is an absorbing state' becomes a quotable line and validates treating it as terminal in the hazard models.

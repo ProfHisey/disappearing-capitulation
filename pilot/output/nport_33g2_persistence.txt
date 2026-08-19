@@ -1,0 +1,10 @@
+SURGE PERSISTENCE CHECK (stage 33g2)
+============================================================
+crossers: 127
+AS at LAST observation: median 0.653; still below 0.70: 86.6%; back above 0.75 (bounced): 4.7%
+share of post-crossing quarters spent below 0.70: median 100%
+crossers with >=4q of follow-up (n 93): still below at last obs 87.1%
+
+reading: >70% still below = persistent folds, the surge stands pending 33e2 + integration; <50% = an unstable instrument at the threshold, downgrade to 'elevated churn' until the S&P benchmarks settle it.
+
+STAGE 33g2 DONE - aggregates only.

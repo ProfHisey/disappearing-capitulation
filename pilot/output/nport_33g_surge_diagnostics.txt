@@ -1,0 +1,27 @@
+EXTENSION-ERA SURGE DIAGNOSTICS (stage 33g)
+============================================================
+followed funds: 1,629; crossers: 127
+crossing dates (2q rule met at):
+    2024Q1: 44
+    2024Q2: 17
+    2024Q3: 11
+    2024Q4: 11
+    2025Q1: 4
+    2025Q2: 4
+    2025Q3: 10
+    2025Q4: 17
+    2026Q1: 8
+    2026Q2: 1
+  share of crossings by 2024Q2: 48.0% (uniform over 10 possible crossing quarters would be ~30%)
+  splice step (first ext AS minus last panel AS), crossers    : median +0.005, p25 -0.011, share < -0.05: 6.5% (n 123)
+  splice step (first ext AS minus last panel AS), non-crossers: median +0.002, p25 +0.000, share < -0.05: 0.1% (n 1,398)
+  reading: crossers with a big negative step CROSSED AT THE INSTRUMENT CHANGE, not in the world. Compare the two rows - a large gap = artifact-driven surge.
+  crossers' minimum extension AS: median 0.629, p25 0.567; share staying >0.65 (shallow): 33.9%
+  followed funds' spell duration at boundary: median 1q
+  duration-matched baseline, 1995-2009: 239 events / 30,278 fund-quarters beyond 1q = 3.16%/fund-year
+  duration-matched baseline, 2010-23: 111 events / 60,508 fund-quarters beyond 1q = 0.73%/fund-year
+  reading: THIS is the comparator for 33f's 3.12%/yr - long-duration survivors always had elevated hazard (the duration gradient). If the matched wave-era rate is ~3%, the 'surge' is composition, not regime change.
+
+VERDICT LOGIC: artifact if (a) front-loaded AND (b) crossers show big negative splice steps; shimmer if (c) shallow; composition if (d) matched baseline ~3%; REAL REGIME CHANGE only if all four point the other way - then the S&P benchmark completion (33e2) becomes urgent before any claim.
+
+STAGE 33g DONE - aggregates only.

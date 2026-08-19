@@ -1,0 +1,27 @@
+BENCHMARK SELF-DECLARATION GAMES (stage 34)
+============================================================
+declarations: 48,287 series-quarters, 4,783 series; first archive with FUND_VAR_INFO: 2022q1_nport.zip; span 2021Q4 to 2026Q2
+declared-benchmark CHANGES: 1,508 of 42,947 series-quarter transitions (3.51%); series with >=1 change: 992
+top change pairs (EYEBALL FOR FORMATTING NOISE - a rename of the same index is not a real switch):
+      11  FUND S SECURITIES PORTFOLIO -> FUND SECURITIES PORTFOLIO
+      10  S&P 500 -> S&P 500 PRICE
+       9  BLOOMBERG MUNICIPAL BOND -> SECURITIES PORTFOLIO
+       9  SECURITIES PORTFOLIO -> BTMNTR
+       8  46 SP500GRUSD0 24 9 EAFERNRUSD0 8 95 E -> 48 65 SP500GRUSD0 23 05 EAFERNRUSD0 8 
+       8  48 65 SP500GRUSD0 23 05 EAFERNRUSD0 8  -> 48 65 SP500GRUSD0 23 05 EAFERNRUSD0 8 
+       8  48 65 SP500GRUSD0 23 05 EAFERNRUSD0 8  -> 48 65 SP500GRUSD0 23 05 EAFERNRUSD0 8 
+       8  MSCI WORLD DAILY -> MSCI WORLD
+       8  S&P 500 PRICE -> S&P 500 BENCHMARK
+       7  BB BARCLAYS MUNICIPAL BD -> BBG MUNICIPAL BD
+transitions with wficn+rel4q: 1,548 (80 changes)
+P(declared-benchmark change) by trailing rel4q quintile (0=worst performers):
+    Q0: 3.23%  (n 310)
+    Q1: 5.83%  (n 309)
+    Q2: 3.23%  (n 310)
+    Q3: 8.74%  (n 309)
+    Q4: 4.84%  (n 310)
+  reading: monotone decline from Q0 = losers switch their declared benchmark - the modern Sensoy result.
+declared changes with a min-AS bench reassignment within ±2q: 38 of 594 (6.4%)
+  (baseline unconditional reassignment rate 20.21%/quarter - compare ~67.7% expected in a random 5-quarter window)
+
+STAGE 34 DONE - aggregates only. If (c) shows the gradient, this graduates from descriptive to a paper section (Paper 2 candidate spine with the gross-flow test).

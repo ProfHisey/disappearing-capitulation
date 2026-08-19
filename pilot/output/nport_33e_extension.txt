@@ -1,0 +1,27 @@
+ACTIVE SHARE EXTENSION 2023q4-2026q2 (stage 33e)
+============================================================
+Russell weight matrices: 35 month-ends, 2023-08-31 to 2026-06-30
+  latest-date column sums after renormalize (should be ~1 or 0 for empty): r3000:1.00, r3000g:1.00, r3000v:1.00, r1000:1.00, r1000g:1.00, r1000v:1.00, r2000:1.00, r2000g:1.00, r2000v:1.00, rmidc:1.00, rmidcg:1.00, rmidcv:1.00
+
+AS computed: 55,965 filings (6,091 series); excluded for id_share<80%: 6,165 filings
+quarterly median as_min_ru and share below 0.70:
+    2023Q4: median 0.935, <0.70 20.9%, n 5,675
+    2024Q1: median 0.933, <0.70 21.2%, n 5,588
+    2024Q2: median 0.933, <0.70 21.6%, n 5,545
+    2024Q3: median 0.937, <0.70 21.2%, n 5,520
+    2024Q4: median 0.936, <0.70 21.7%, n 5,499
+    2025Q1: median 0.935, <0.70 22.0%, n 5,466
+    2025Q2: median 0.937, <0.70 21.8%, n 5,367
+    2025Q3: median 0.937, <0.70 22.5%, n 5,282
+    2025Q4: median 0.937, <0.70 23.2%, n 5,217
+    2026Q1: median 0.937, <0.70 22.9%, n 5,172
+    2026Q2: median 0.923, <0.70 23.6%, n 1,634
+bench_min_ru distribution: {'R3': 17349, 'R1G': 8533, 'R1V': 6528, 'R1': 6229, 'RMV': 4955, 'R2G': 3377, 'RMG': 3266, 'R2V': 3098}
+
+splice validation (our first quarter vs paper panel's last month 2023-09-30):
+  matched funds: 3,868; Russell-benchmarked subset: 2,553
+  all matched: corr 0.933, median diff +0.005, |diff|>0.10 share 6.0%
+  Russell-benchmarked: corr 0.972, median diff +0.001, |diff|>0.10 share 2.1%
+  reading: corr >0.85 and small median diff on the Russell-benchmarked subset = splice is publication-viable; a positive median diff is expected (v1 lacks S&P benchmarks, so our min is over a smaller set).
+
+STAGE 33e DONE - aggregates only. Next: 33e2 adds S5 from sp500 constituents; then the extension merges into the panel for the final-build sample to 2026.

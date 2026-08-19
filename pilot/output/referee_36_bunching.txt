@@ -1,0 +1,27 @@
+THRESHOLD BUNCHING TEST (stage 36)
+============================================================
+
+threshold 60% (±3pt window):
+    fund-quarters, pre-2009: below 2,512 vs above 3,153 (share above 55.7%, z=+8.5 vs smooth-null 50%)
+    fund-quarters, post-2009: below 3,720 vs above 4,645 (share above 55.5%, z=+10.1 vs smooth-null 50%)
+    fund-level means, pre-2009: below 125 vs above 147 (share above 54.0%, z=+1.3 vs smooth-null 50%)
+    fund-level means, post-2009: below 119 vs above 151 (share above 55.9%, z=+1.9 vs smooth-null 50%)
+
+threshold 70% (±3pt window):
+    fund-quarters, pre-2009: below 4,431 vs above 4,763 (share above 51.8%, z=+3.5 vs smooth-null 50%)
+    fund-quarters, post-2009: below 6,291 vs above 6,642 (share above 51.4%, z=+3.1 vs smooth-null 50%)
+    fund-level means, pre-2009: below 228 vs above 266 (share above 53.8%, z=+1.7 vs smooth-null 50%)
+    fund-level means, post-2009: below 225 vs above 262 (share above 53.8%, z=+1.7 vs smooth-null 50%)
+
+threshold 80% (±3pt window):
+    fund-quarters, pre-2009: below 5,800 vs above 6,650 (share above 53.4%, z=+7.6 vs smooth-null 50%)
+    fund-quarters, post-2009: below 7,578 vs above 8,569 (share above 53.1%, z=+7.8 vs smooth-null 50%)
+    fund-level means, pre-2009: below 305 vs above 299 (share above 49.5%, z=-0.2 vs smooth-null 50%)
+    fund-level means, post-2009: below 267 vs above 280 (share above 51.2%, z=+0.6 vs smooth-null 50%)
+
+post-2009 fund-quarter counts, 1pt bins 50-70%:
+  50:794 51:766 52:842 53:874 54:885 55:939 56:1066 57:1161 58:1247 59:1312 60:1434 61:1520 62:1691 63:1643 64:1694 65:1875 66:1909 67:2038 68:2108 69:2145
+
+reading: bunching = a jump in mass at/just above the threshold relative to just below, appearing POST-2009 only and stronger at 60/80 (public labels) than at 70 (our internal threshold). Bunching at 70 too would suggest funds manage AS generally, and our crossing events partly measure metric management - flag for the paper if so.
+
+STAGE 36 DONE - aggregates only.

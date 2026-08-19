@@ -1,0 +1,20 @@
+GROSS-FLOW CLIENT TEST, MODERN ERA (stage 35)
+============================================================
+wficn-months with gross flows: 530,397 (7,901 funds), 2019-07 to 2026-05
+matched to capitulation universe: 4,003 funds, 275,371 fund-months (universe 9,096 funds; the rest of the universe is pre-2019 history or unlinked)
+  stressed (rel4q<0): median monthly gross redemption rate 0.99%, mean 0.82%, median net flow +0.64% (n 89,005)
+  unstressed        : median monthly gross redemption rate 1.01%, mean 0.83%, median net flow +0.92% (n 51,946)
+post-2019 deaths in spells: 1,647
+  month-to-death: median gross redemption rate  t-12: 0.26%(n828)  t-10: 0.32%(n872)  t-8: 0.23%(n954)  t-6: 0.51%(n1030)  t-4: 0.44%(n1084)  t-2: 0.54%(n1188)  t+0: 0.56%(n1200)
+  reading: a rising profile = clients drain the fund before the board pulls the plug; flat-then-cliff = deaths are board decisions, not client verdicts.
+post-2019 capitulations: 61 (small by construction - the paper's whole point)
+  median rr 6m before crossing 0.77% vs 6m after 0.66% (n 225/241 fund-months)
+median monthly gross churn (sales+redemptions)/NA by Active Share band:
+    AS <60: 1.73%  (n 15,885)
+    AS 60-70: 1.97%  (n 13,552)
+    AS 70-80: 1.78%  (n 17,024)
+    AS 80-90: 2.01%  (n 24,000)
+    AS 90+: 2.34%  (n 73,986)
+  reading: if high-AS funds carry higher churn, conviction funds live with flightier clients - the N2 hypothesis.
+
+STAGE 35 DONE - aggregates only. Next iteration: monthly hazard with rr as covariate; N-SAR extends all of this to 1994-2018 when Kellogg delivers.

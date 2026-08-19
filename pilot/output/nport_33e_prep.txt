@@ -1,0 +1,15 @@
+33e PREP: RUSSELL x N-PORT JOIN PROBE
+============================================================
+Russell holdings columns (60): ticker, date, conscode, cusip, isin, exchange, name, indcodeicb, supsecicb, sectoricb, subsecicb, sharechg, shares, invweight, valshares, groshares, defshares, dymshares, return, mtdreturn, mktcap, russell1000, russell2000, russell2500, russellmc, russellt200, russellsc, rtop50, r3000_wt, r3000g_wt, r3000v_wt, r1000_wt, r1000g_wt, r1000v_wt, r2000_wt, r2000g_wt, r2000v_wt, r2500_wt, r2500g_wt, r2500v_wt, rmidc_wt, rmidcg_wt, rmidcv_wt, r200_wt, r200g_wt, r200v_wt, rssc_wt, rsscg_wt, rsscv_wt, mktvalue, escode, econsector, subscode, subsector, indcode, industry, supsec, sector, subsec, price
+guessed columns: date=date, index=None, cusip=cusip
+cusip length distribution (sample): {9: 200000}
+date span (full file): 1978-12-29 to 2026-06-30, 507 distinct dates
+bench_min vocabulary (AS cache): {'R1': 53740, 'S5': 53181, 'S5G': 48352, 'R1G': 42333, 'S5V': 33054, 'R1V': 31744, 'RMV': 30049, 'RMG': 26340, 'R2G': 16174, 'S4G': 13588, 'R2V': 12700, 'S6G': 10648, 'S4V': 10205, 'S6V': 6819, 'S4': 4572}
+
+N-PORT 2024q2: 1,010,004 cusip-filled equity rows, 23,952 distinct 8-char cusips
+Russell constituents on 2024-06-28: 2,927 rows, 2,927 distinct 8-char cusips
+  N-PORT∩Russell 8-char overlap: 2,913 (12.2% of N-PORT names)
+  value-weighted match: 74.2% of N-PORT equity dollars are in the Russell universe
+
+reading: >85% value-weighted match = the 33e join works on 8-char cusips; below that, check 9-char/check-digit handling and the Russell universe date alignment before building 33e.
+STAGE 33e_prep DONE - aggregates only.

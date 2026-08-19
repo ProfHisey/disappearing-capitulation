@@ -1,0 +1,13 @@
+EXTENSION-ERA SURRENDER WATCH (stage 33f)
+============================================================
+extension series: 52,288 wficn-quarters, 5,588 funds
+spells open/uncapitulated near 2023Q3: 2,358
+  with extension AS coverage: 1,629 (69.1%) - uncovered funds are unlinked or dropped by the id_share filter; note selection.
+new durable crossings 2023Q4-2026Q2: 127 funds at 2q (89 at 4q) out of 1,629 followed; fund-quarters observed 16,279
+  extension-era crossing rate: 3.12% per fund-YEAR
+  compare: the paper's 2010-23 era produced 175 events - compute the comparable per-fund-year rate from stage 14 outputs when integrating; this is the preview number.
+death-table format differs ('death_dt'); count deaths at integration instead.
+
+reading: if crossings stayed rare while deaths continued, 'nobody surrenders anymore' extends through mid-2026 and the final build gains three more years of the modern regime. A SURGE in crossings would be a finding of its own (and would demand the S&P-benchmark completion first).
+
+STAGE 33f DONE - aggregates only.

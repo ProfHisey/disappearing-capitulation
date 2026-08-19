@@ -1,0 +1,16 @@
+FEE CUTS AS SURRENDER (stage 38)
+============================================================
+expense panel: 675,644 wficn-quarters, 13,593 funds, 1961Q4 to 2026Q1
+median expense-ratio change vs t-8, around capitulation (bps):
+  t-8: +0(n307)  t-6: +0(n261)  t-4: +0(n303)  t-2: +0(n271)  t+0: -1(n285)  t+2: -1(n263)  t+4: -1(n267)  t+6: -2(n254)  t+8: -2(n252)
+stressed fund-years: P(fee cut >= 10bps within 8q):
+    1980-94:  19.3% (n 631; median change -0bps)
+    1995-2009:  19.2% (n 9,122; median change +0bps)
+    2010-23:  18.4% (n 18,051; median change -1bps)
+  reading: rising by era = price-surrender replacing portfolio-surrender (M1/M2 prediction). NOTE fees fell industry-wide - compare against the same statistic for UNSTRESSED fund-years before interpreting:
+    unstressed 1980-94:  23.1% (n 866)
+    unstressed 1995-2009:  22.5% (n 10,123)
+    unstressed 2010-23:  17.8% (n 10,640)
+P(fee cut >=10bps within 8q): at capitulation 16.0% (n 382) vs long-resisting spells at t+8 19.7% (n 1,888)
+
+STAGE 38 DONE - aggregates only. Caveats logged: equal-wt share-class fees v1 (TNA-wt next); industry-wide fee decline means the stressed-vs-unstressed DIFFERENCE is the statistic, not the level.

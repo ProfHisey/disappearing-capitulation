@@ -1,0 +1,14 @@
+RECOVERY FORENSICS (stage 37c)
+============================================================
+durable recoveries at bar 0.75: 143 (143 with benchmark data at both dates)
+  benchmark SWITCHED between crossing and recovery: 62.9%
+    1995-2009: switched 60.7% (n 117)
+    2010-23: switched 73.1% (n 26)
+  among switchers, AS vs ORIGINAL benchmark also >= 0.75 at recovery: 100.0% of 90 measurable (median AS-vs-original 0.833)
+  benchmark-STABLE recoveries (the clean set): 53
+    1995-2009: 46 clean recoveries of 321 era capitulations (14.3% raw, uncensored share)
+    2010-23: 7 clean recoveries of 175 era capitulations (4.0% raw, uncensored share)
+
+reading: if switching is rare (<15%) or switchers still clear the bar vs their ORIGINAL benchmark, 37b's re-conviction finding survives its last threat and F9 (all-or-nothing recovery) enters the facts list. If switching dominates, recovery is partly a benchmark-assignment artifact and gets reported WITH that decomposition.
+
+STAGE 37c DONE - aggregates only.

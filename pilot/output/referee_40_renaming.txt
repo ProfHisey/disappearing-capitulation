@@ -1,0 +1,45 @@
+FUND RENAMING (stage 40)
+============================================================
+name observations: 2,991,654 rows, 75,681 share classes; detected base-name changes: 93,930
+rename rate (changes / share classes observed), by 5yr:
+    1965-1969:   3.8%  (74 changes)
+    1970-1974:   3.3%  (101 changes)
+    1975-1979:   3.1%  (93 changes)
+    1980-1984:   4.6%  (216 changes)
+    1985-1989:   7.0%  (846 changes)
+    1990-1994:  25.3%  (6,561 changes)
+    1995-1999:  18.3%  (10,494 changes)
+    2000-2004:  22.6%  (21,497 changes)
+    2005-2009:   9.8%  (12,193 changes)
+    2010-2014:  11.0%  (16,831 changes)
+    2015-2019:   7.2%  (12,285 changes)
+    2020-2024:   6.1%  (9,733 changes)
+    2025-2029:   4.7%  (2,853 changes)
+top changed pairs (eyeball for normalization noise):
+      38  EQ ADVISORS TRUST: AXA -> EQ ADVISORS TRUST: EQ
+      29  DEUTSCHE GLOBAL -> DEUTSCHE DWS GLOBAL
+      28  EQ ADVISORS TRUST: EQ -> EQ ADVISORS TRUST: AXA
+      24  DWS GLOBAL -> DEUTSCHE GLOBAL
+      21  MARSHALL FUNDS, INC D -> BMO FUNDS, INC D
+      20  JACKSON VARIABLE SERIES TRUST: JNL -> JNL SERIES TRUST: JNL
+      20  JNL VARIABLE FUND LLC: JNL -> JNL SERIES TRUST: JNL
+      19  CURIAN VARIABLE SERIES TRUST: CURIAN -> JACKSON VARIABLE SERIES TRUST: JNL
+      19  EUROPACIFIC GROWTH FUND -> EUPAC FUND
+      18  AMERICAN FUNDS MONEY MARKET FUND -> AMERICAN FUNDS US GOVERNMENT MONEY M
+
+keyword ADOPTIONS via rename (keyword absent before, present after), by 5yr:
+  tech/dot-com  : 1990s:+5/-0  1995s:+5/-0  2000s:+89/-17  2005s:+11/-21  2010s:+26/-17  2015s:+4/-3  2020s:+8/-6  2025s:+4/-1   (total +154/-68)
+  ESG           : 1990s:+0/-1  1995s:+2/-0  2000s:+18/-1  2005s:+9/-1  2010s:+14/-18  2015s:+156/-7  2020s:+226/-104  2025s:+2/-147   (total +427/-279)
+  AI/crypto     : 1990s:+0/-0  1995s:+0/-0  2000s:+11/-4  2005s:+0/-0  2010s:+2/-4  2015s:+32/-22  2020s:+25/-9  2025s:+7/-6   (total +77/-45)
+  index/passive : 1990s:+12/-11  1995s:+13/-8  2000s:+131/-25  2005s:+55/-28  2010s:+40/-290  2015s:+151/-62  2020s:+24/-172  2025s:+5/-18   (total +433/-616)
+  (+adopted / -dropped; watch tech peaking ~1995-2004, ESG ~2015-2021 with drops after 2022, AI post-2023, and active->'index' conversions as literal surrender-by-renaming)
+
+share of LIVING fund names containing each keyword, selected years:
+    1995 (n 8,457) | tech/dot-com 0.3% | ESG 0.2% | AI/crypto 0.0% | index/passive 1.1%
+    2000 (n 17,328) | tech/dot-com 1.9% | ESG 0.4% | AI/crypto 0.1% | index/passive 2.6%
+    2008 (n 28,565) | tech/dot-com 1.0% | ESG 0.5% | AI/crypto 0.0% | index/passive 3.9%
+    2015 (n 34,176) | tech/dot-com 0.7% | ESG 0.6% | AI/crypto 0.1% | index/passive 4.0%
+    2021 (n 31,904) | tech/dot-com 0.7% | ESG 2.6% | AI/crypto 0.5% | index/passive 4.9%
+    2025 (n 30,740) | tech/dot-com 0.8% | ESG 3.2% | AI/crypto 1.0% | index/passive 4.6%
+
+STAGE 40 DONE - aggregates only. 40b (panel join: are renamers post-stress funds? do adoptions attract flows?) runs when a panel slot frees; LLM trendiness grading replaces keywords at scale-up.

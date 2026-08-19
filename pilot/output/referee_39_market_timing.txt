@@ -1,0 +1,21 @@
+MANAGER MARKET TIMING AT CAPITULATION (stage 39)
+============================================================
+
+forward 4q benchmark return after capitulation:
+  events 219 (distinct event-quarters 80), mean +13.5%, median +15.5%
+  baseline fund-quarters 10,835: mean +11.0%, median +12.4%
+  event minus baseline mean: +2.5%
+    1980-94: event mean +16.1% (n 1, quarters 1)
+    1995-2009: event mean +7.1% (n 101, quarters 37)
+    2010-23: event mean +19.0% (n 117, quarters 42)
+
+forward 8q benchmark return after capitulation:
+  events 142 (distinct event-quarters 61), mean +24.7%, median +22.9%
+  baseline fund-quarters 7,242: mean +25.5%, median +24.5%
+  event minus baseline mean: -0.8%
+    1995-2009: event mean +7.0% (n 48, quarters 25)
+    2010-23: event mean +33.8% (n 94, quarters 36)
+
+INFERENCE CAVEAT (loud): capitulations cluster in calendar time (post-2000, post-2008 waves). The distinct-quarter counts above are the honest effective n; a positive gap here is suggestive, not significant, until a calendar-clustered test (quarter-level bootstrap) is run. v1 is descriptive by design.
+
+STAGE 39 DONE - aggregates only. Positive gap = managers fold before rebounds (institutional behavior gap - mirrors the retail result and feeds the M2 option-abandonment story).

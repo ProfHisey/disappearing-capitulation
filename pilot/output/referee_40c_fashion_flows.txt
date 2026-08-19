@@ -1,0 +1,18 @@
+FASHION-RENAME FLOW RESPONSE (stage 40c)
+============================================================
+
+tech adoptions linked to universe: 54 fund-events
+  trailing rel4q at adoption: median -15.20% (n 25) vs population -2.45%; share <0: 88.0% vs 62.8%
+  net flow 4q-after minus 4q-before: median -3.73%, mean -9.18% (n 27); levels pre +0.37% -> post -2.39%
+
+ESG adoptions linked to universe: 87 fund-events
+  trailing rel4q at adoption: median -2.41% (n 53) vs population -2.45%; share <0: 56.6% vs 62.8%
+  net flow 4q-after minus 4q-before: median -0.51%, mean -1.53% (n 45); levels pre -2.43% -> post -3.19%
+
+AI adoptions linked to universe: 15 fund-events
+  trailing rel4q at adoption: median +2.16% (n 10) vs population -2.45%; share <0: 40.0% vs 62.8%
+  net flow 4q-after minus 4q-before: median -1.89%, mean -1.08% (n 8); levels pre -1.31% -> post -3.28%
+
+reading: Cooper-Gulen-Rau found style renames attract flows; if the ESG/tech adoption rows show positive flow shifts against 40b's negative generic baseline, the fashion channel is real and the LLM rename-type classifier is worth building. Small n per fashion - descriptive.
+
+STAGE 40c DONE - aggregates only.

@@ -1,0 +1,16 @@
+N-PORT ISIN/TICKER FALLBACK (stage 33d2)
+============================================================
+  2023q4: rows 486,141; missing cusip 144,606 -> recovered via US ISIN 656; still missing 143,950 (of which foreign-ISIN 139,919, ticker-only 8,419)
+  2024q1: rows 1,140,141; missing cusip 172,526 -> recovered via US ISIN 422; still missing 172,104 (of which foreign-ISIN 164,663, ticker-only 43,186)
+  2024q2: rows 1,272,577; missing cusip 263,794 -> recovered via US ISIN 1,221; still missing 262,573 (of which foreign-ISIN 254,728, ticker-only 43,707)
+  2024q3: rows 1,242,663; missing cusip 222,882 -> recovered via US ISIN 707; still missing 222,175 (of which foreign-ISIN 214,312, ticker-only 41,646)
+  2024q4: rows 1,176,405; missing cusip 214,677 -> recovered via US ISIN 680; still missing 213,997 (of which foreign-ISIN 206,080, ticker-only 38,680)
+  2025q1: rows 1,171,025; missing cusip 208,594 -> recovered via US ISIN 672; still missing 207,922 (of which foreign-ISIN 202,965, ticker-only 37,094)
+  2025q2: rows 1,207,396; missing cusip 210,796 -> recovered via US ISIN 664; still missing 210,132 (of which foreign-ISIN 205,326, ticker-only 36,008)
+  2025q3: rows 1,156,245; missing cusip 207,739 -> recovered via US ISIN 648; still missing 207,091 (of which foreign-ISIN 202,321, ticker-only 35,964)
+  2025q4: rows 1,145,308; missing cusip 212,768 -> recovered via US ISIN 2,444; still missing 210,324 (of which foreign-ISIN 205,443, ticker-only 35,123)
+  2026q1: rows 1,103,375; missing cusip 227,880 -> recovered via US ISIN 2,873; still missing 225,007 (of which foreign-ISIN 220,077, ticker-only 34,378)
+  2026q2: rows 1,233,249; missing cusip 246,762 -> recovered via US ISIN 4,094; still missing 242,668 (of which foreign-ISIN 237,734, ticker-only 37,530)
+
+reading: 'still missing & foreign' is fine - non-US names sit outside the Russell benchmark universe. If ticker-only is large, 33e adds a ticker match against s12type2/crsp_stock.
+STAGE 33d2 DONE - parts updated in place; 33e unblocked.
