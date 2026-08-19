@@ -1,0 +1,22 @@
+DEATH-PROFILE VERIFICATION (stage 35c)
+============================================================
+(a) dead funds: 7,967. delist_cd prefix vs merged proxy crosstab:
+    dcd=?: merged=False 1 | merged=True 0
+    dcd=L: merged=False 419 | merged=True 9
+    dcd=M: merged=False 2 | merged=True 234
+    dcd=N: merged=False 3,872 | merged=True 3,425
+    dcd=R: merged=False 1 | merged=True 0
+    dcd=V: merged=False 4 | merged=True 0
+    reading: L=liquidation, M=merger. Off-diagonal mass = 35b's proxy mislabeled that many funds.
+
+deaths in flows window with flow data: 1,609
+(b) death_m minus last flow month: median 1m, p25 0, p75 2; share >3m: 0.6% (large positive = end_dt trails operations; the 'zero window' may be post-operational)
+(c) all-zero flow months: dying funds (t-12..t0) 19.4% vs population 6.6% (dying >> population = dormancy is real relative to the instrument; population also high = fill-zero suspicion for the instrument itself)
+(d) median rr to DEATH MONTH, by delist_cd prefix:
+  dcd=L all months (n 67):  t-12 0.00%(n63)  t-9 0.00%(n64)  t-6 0.00%(n67)  t-3 0.00%(n67)  t+0 0.80%(n20)
+  dcd=L excl all-zero  :  t-12 0.42%(n45)  t-9 0.30%(n46)  t-6 0.07%(n49)  t-3 0.47%(n46)  t+0 2.19%(n15)
+population median rr: 1.08%
+
+reading: if dcd=L still shows zeros/dormancy in NON-zero months too, and (b) shows end_dt trailing operations, the honest claim is 'liquidated funds go administratively dormant before formal death' - a different (and still interesting) sentence than 'clients abandon them'. Quote nothing from 35b until this run is read.
+
+STAGE 35c DONE - aggregates only.

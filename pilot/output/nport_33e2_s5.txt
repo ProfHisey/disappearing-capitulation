@@ -1,0 +1,13 @@
+S&P 500 WEIGHTS FOR THE EXTENSION (stage 33e2)
+============================================================
+constituents columns (42): indno, mbrstartdt, mbrenddt, permno, hdrcusip, permco, siccd, cusip, ticker, sharetype, securitytype, securitysubtype, usincflg, issuertype, primaryexch, conditionaltype, tradingstatusflg, dlycaldt, dlyprc, dlyprcflg, dlycap, dlycapflg, dlyret, dlyretx, dlyretmissflg, dlyretdurflg, dlyorddivamt, dlynonorddivamt, dlyfacprc, dlydistretflg, dlyvol, dlyclose, dlylow, dlyhigh, dlybid, dlyask, dlyopen, dlynumtrd, dlymmcnt, dlycumfacpr, dlycumfacshr, shrout
+detected: date=dlycaldt, cusip=hdrcusip, permno=permno, cap=dlycap, prc=dlyprc, shrout=shrout
+month-ends kept: 35 (2023-08 to 2026-06); median names/month 503 (expect ~500)
+weight sanity: first month sum 1.000 (names 503)
+
+as_s5 computed for 62,130 filings; v2 cache written
+as_min change (v2 minus v1): median +0.0000, share changed >1pt 6.2%
+bench_min_v2 = S5 share: 11.3%
+filings newly below 0.70 under v2: 85 (the S&P-absence undercount, now measured)
+
+STAGE 33e2 DONE - aggregates only. 33i integration uses the v2 cache automatically if present.

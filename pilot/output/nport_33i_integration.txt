@@ -1,0 +1,26 @@
+FULL PANEL INTEGRATION TO 2026 (stage 33i)
+============================================================
+using 33e2 v2 cache (S&P-augmented as_min)
+M4: series mapping to >1 wficn dropped: 119
+extension fund-quarters after largest-series dedup: 51,866 (5,547 funds)
+continuation rows added (funds already in ND panel): 44,234 (4,685 funds); extension-only new funds deferred: 862
+fund quarterly returns reach 2026Q2
+benchmark returns reach 2026Q2
+extended panel: 315,463 fund-quarters (25,606 in the extension era, 2,891 funds)
+
+spells: 27,788; capitulation events (paper definition, <0.6 in-spell): 531
+capitulation events by calendar era (FINAL-BUILD TABLE):
+    1980-94: 2
+    1995-2009: 319
+    2010-23: 185
+    2024-26: 25
+event rate per 100 at-risk spell-quarters, by era:
+    1980-94: 0.06  (events 2, at-risk 3,253)
+    1995-2009: 0.82  (events 319, at-risk 39,016)
+    2010-23: 0.20  (events 185, at-risk 90,991)
+    2024-26: 0.18  (events 25, at-risk 13,722)
+spells continuing across the 2023Q3 seam: 1,524 (previously censored at data_end)
+
+reading: the 2024-26 row IS the final-build result. If its rate sits at or below 2010-23's, the paper's ending becomes 'through mid-2026, at the lowest rates on record' - quote ONLY after this run's numbers replace the 33h preview in the ledger. Known caveats carried: Russell-only min if 33e2 wasn't run; continuation-only universe; M5 renormalization variant still to be added as a robustness column.
+
+STAGE 33i DONE - aggregates only.

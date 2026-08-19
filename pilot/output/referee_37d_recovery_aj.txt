@@ -1,0 +1,31 @@
+RECOVERY, COMPETING-RISKS VERSION (stage 37d)
+============================================================
+capitulation events 1995+: 494
+
+bar 0.70:
+  1995-2009: n 319 (rec 158, died 137)
+    P(recovered) by 8/16/24q: 14.8% / 24.5% / 31.5%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 10.1% / 19.5% / 29.0%
+  2010-23: n 175 (rec 33, died 47)
+    P(recovered) by 8/16/24q: 10.4% / 18.2% / 22.6%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 12.0% / 21.8% / 32.3%
+
+bar 0.75:
+  1995-2009: n 319 (rec 116, died 161)
+    P(recovered) by 8/16/24q: 9.1% / 16.1% / 20.5%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 10.4% / 21.7% / 31.5%
+  2010-23: n 175 (rec 26, died 51)
+    P(recovered) by 8/16/24q: 7.9% / 13.6% / 16.7%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 12.1% / 21.8% / 33.3%
+
+bar 0.80:
+  1995-2009: n 319 (rec 74, died 187)
+    P(recovered) by 8/16/24q: 4.1% / 7.9% / 10.4%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 10.4% / 22.4% / 33.7%
+  2010-23: n 175 (rec 20, died 52)
+    P(recovered) by 8/16/24q: 6.1% / 10.5% / 13.7%   [37b KM said: see comparison note]
+    P(died)      by 8/16/24q: 13.3% / 21.7% / 33.0%
+
+comparison (37b KM, bar 0.70): wave 18.6/30.2/40.8 vs modern 12.9/20.8/26.9; bar 0.80 inversion modern 8.1/13.0/16.5 vs wave 5.3/10.8/14.2. READING: if the AJ era gap at 0.70 shrinks materially vs KM, the 'partial recovery died' leg of F9 was partly a competing-risk artifact and the ledger's F9 era language gets rewritten; if the 0.80 INVERSION survives AJ, the all-or-nothing finding stands on the corrected estimator. Quality leg (peak AS levels) is unaffected either way.
+
+STAGE 37d DONE - aggregates only.

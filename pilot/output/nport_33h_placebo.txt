@@ -1,0 +1,37 @@
+F10 DECISIVE CHECK: PLACEBOS + RECOUNTS (stage 33h)
+============================================================
+death quarters available: 7,967 (col=death_q)
+
+(A) PLACEBO BOUNDARIES (exact 33f rule on the ND panel):
+  placebo 2005Q3: followed 1,070 funds, 8,295 fund-quarters
+    <0.70 2q rule: 74 crossers = 3.57%/fund-year
+    <0.60 2q rule: 16 crossers = 0.77%/fund-year
+    C2-clean (AS at boundary >=0.70, n 1,033): <0.70 49 = 2.44%/fund-yr; <0.60 10 = 0.50%/fund-yr
+    already below 0.70 at boundary: 37 funds (3.5%) - the C2 'stock'
+  placebo 2010Q3: followed 1,244 funds, 11,308 fund-quarters
+    <0.70 2q rule: 86 crossers = 3.04%/fund-year
+    <0.60 2q rule: 20 crossers = 0.71%/fund-year
+    C2-clean (AS at boundary >=0.70, n 1,202): <0.70 58 = 2.12%/fund-yr; <0.60 15 = 0.55%/fund-yr
+    already below 0.70 at boundary: 42 funds (3.4%) - the C2 'stock'
+  placebo 2015Q3: followed 2,078 funds, 18,024 fund-quarters
+    <0.70 2q rule: 205 crossers = 4.55%/fund-year
+    <0.60 2q rule: 32 crossers = 0.71%/fund-year
+    C2-clean (AS at boundary >=0.70, n 2,021): <0.70 159 = 3.63%/fund-yr; <0.60 21 = 0.48%/fund-yr
+    already below 0.70 at boundary: 57 funds (2.7%) - the C2 'stock'
+  placebo 2019Q3: followed 2,509 funds, 23,180 fund-quarters
+    <0.70 2q rule: 229 crossers = 3.95%/fund-year
+    <0.60 2q rule: 49 crossers = 0.85%/fund-year
+    C2-clean (AS at boundary >=0.70, n 2,430): <0.70 157 = 2.80%/fund-yr; <0.60 28 = 0.50%/fund-yr
+    already below 0.70 at boundary: 79 funds (3.1%) - the C2 'stock'
+
+(B) REAL BOUNDARY 2023Q3 (extension series, fund-deduped, info-at-B conditioning):
+  real 2023Q3: followed 1,452 funds, 13,703 fund-quarters
+    <0.70 2q rule: 89 crossers = 2.60%/fund-year
+    <0.60 2q rule: 22 crossers = 0.64%/fund-year
+    C2-clean (AS at boundary >=0.70, n 1,417): <0.70 61 = 1.82%/fund-yr; <0.60 11 = 0.33%/fund-yr
+    already below 0.70 at boundary: 35 funds (2.4%) - the C2 'stock'
+  M3 note: 33f's spell-level cohort had 2,358 rows vs 2,186 unique funds (delta = duplicate exposure in the original 3.12% figure)
+
+VERDICT KEY: compare the real-boundary C2-clean <0.60 rate against the SAME statistic at the placebos. That pair is the honest apples-to-apples F10 test. Placebo ~ real -> artifact; real >> placebo -> surrender genuinely returned.
+
+STAGE 33h DONE - aggregates only.

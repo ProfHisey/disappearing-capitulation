@@ -1,0 +1,40 @@
+ROUND-5 CHECKS (stage 33j)
+============================================================
+(1) benchmark return series coverage by code:
+    R1: 1979Q1 to 2026Q2
+    R1G: 1979Q1 to 2026Q2
+    R1V: 1979Q1 to 2026Q2
+    R2: 1979Q1 to 2026Q2
+    R2G: 1979Q1 to 2026Q2
+    R2V: 1979Q1 to 2026Q2
+    R3: 1979Q1 to 2026Q2
+    R3G: 1979Q1 to 2026Q2
+    R3V: 1979Q1 to 2026Q2
+    RM: 1979Q1 to 2026Q2
+    RMG: 1979Q1 to 2026Q2
+    RMV: 1979Q1 to 2026Q2
+    S5: 1926Q1 to 2026Q2
+    codes needed but absent from bq: []
+
+(2) events dated 2023Q4: 10
+    wficn 103045: ND@23Q3 nan  ext@23Q4 0.582  ext@24Q1 0.557  step +nan
+    wficn 105263: ND@23Q3 nan  ext@23Q4 0.394  ext@24Q1 0.397  step +nan
+    wficn 105492: ND@23Q3 0.830  ext@23Q4 0.487  ext@24Q1 0.499  step -0.343  SUSPECT
+    wficn 106102: ND@23Q3 0.788  ext@23Q4 0.587  ext@24Q1 nan  step -0.201  SUSPECT
+    wficn 400394: ND@23Q3 nan  ext@23Q4 0.150  ext@24Q1 0.684  step +nan
+    wficn 500310: ND@23Q3 nan  ext@23Q4 0.511  ext@24Q1 0.479  step +nan
+    wficn 500661: ND@23Q3 0.795  ext@23Q4 0.491  ext@24Q1 0.504  step -0.304  SUSPECT
+    wficn 600010: ND@23Q3 nan  ext@23Q4 0.434  ext@24Q1 0.429  step +nan
+    wficn 607282: ND@23Q3 0.722  ext@23Q4 0.292  ext@24Q1 0.289  step -0.430  SUSPECT
+    wficn 607726: ND@23Q3 0.751  ext@23Q4 0.503  ext@24Q1 0.524  step -0.248  SUSPECT
+    splice-step suspects (step<-0.05): 5 of 10 -> quote post-2023 crossings as 30-35 or footnote accordingly
+
+(3) 33h real arm on v2: ew min quarter 2023Q4 (guard: must be 2023Q4)
+    real 2023Q3 on v2: followed 1,445; <0.70 90 = 2.64%/fy; <0.60 22 = 0.65%/fy
+    C2-clean (n 1,410): <0.70 62 = 1.86%/fy; <0.60 11 = 0.33%/fy (33h v1 gave 0.33%; placebos ~0.50%)
+
+(4) duplicate (wficn, quarter) filing rows: 2,356; with NaN net_assets among them: 0 (0 = M-2 has no impact on this build)
+
+(5) extension-era rows in final panel: 25,606 of 44,234 continuation rows; losses come from the passive filter, funds without 3-month CRSP return quarters, and missing benchmark returns - decomposition needs the intermediate frames (rerun 33i with counters if referees ask; the count is disclosed as-is in v9.1)
+
+STAGE 33j DONE - aggregates only (per-fund rows in (2) are derived AS values, not licensed raw).

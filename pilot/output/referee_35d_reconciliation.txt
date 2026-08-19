@@ -1,0 +1,30 @@
+GROSS-FLOW RECONCILIATION (stage 35d)
+============================================================
+fund-months: 525,641; flagged passive: 182,307 (34.7%); unflagged treated active
+
+(b) aggregate net flow rate by year (sum dollars / mean aggregate NA), matched sample:
+    active  2020: +20.1% of assets (funds 4,812)
+    active  2021: +19.9% of assets (funds 4,634)
+    active  2022: +17.0% of assets (funds 4,485)
+    active  2023: +12.8% of assets (funds 4,372)
+    active  2024: +3.0% of assets (funds 4,188)
+    active  2025: +1.4% of assets (funds 3,995)
+    passive 2020: +9.2% of assets (funds 2,290)
+    passive 2021: +12.7% of assets (funds 2,398)
+    passive 2022: +15.8% of assets (funds 2,549)
+    passive 2023: +11.9% of assets (funds 2,500)
+    passive 2024: +6.2% of assets (funds 2,361)
+    passive 2025: +3.7% of assets (funds 2,283)
+  eyeball vs published industry flows: US active equity ran persistent NET OUTFLOWS 2020-2025 (ICI/Morningstar). Active rows near zero or negative = instrument plausible; strongly positive = sales includes exchanges/conversions or link errors -> flow LEVELS unusable, shares/timing only.
+
+(c) mtna coverage: 98.5% of fund-months
+
+(c2) INSTRUMENT vs INSTRUMENT, active fund-months (n 338,451): monthly net flow rate median SEC +0.25% vs CRSP-imputed -0.53%; corr 0.401; median (SEC minus imputed) +0.12%
+  reading: CRSP-imputed is the paper's established instrument. A big positive SEC-minus-imputed median = the SEC sales field overstates net flows (exchanges/conversion traffic); levels then defer to CRSP and the SEC panel is used for gross STRUCTURE only.
+
+(d) stressed vs unstressed medians, ACTIVE funds only:
+    stressed  : rr(SEC-NA) 0.99% | rr(CRSP-TNA) 0.99% | net SEC +0.63% | net imputed -0.62%  (n 88,430)
+    unstressed: rr(SEC-NA) 1.00% | rr(CRSP-TNA) 1.01% | net SEC +0.93% | net imputed -0.43%  (n 51,538)
+  VERDICT LINE: ghosting survives if the stressed and unstressed rr medians remain within ~0.1pp of each other on BOTH denominators in the active-only sample, while the net flow gap persists. If stressed rr now exceeds unstressed on the CRSP-TNA denominator, the original equality was the stale-denominator artifact the audit predicted, and the purchase-margin claim needs restating.
+
+STAGE 35d DONE - aggregates only.

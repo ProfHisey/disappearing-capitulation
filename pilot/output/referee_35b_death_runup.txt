@@ -1,0 +1,15 @@
+DEATH RUN-UP v2, DEATH-DATE CLOCK (stage 35b)
+============================================================
+flow months: 530,397 (7,901 funds)
+death table columns: ['wficn', 'died', 'death_q', 'merged']
+deaths in flows-observable window with flow data: 1,609 funds (vs stage 35's mis-centered 1,647 SPELL rows)
+median monthly gross redemption rate, months to DEATH:
+  all deaths:  t-12 0.00%(n1559)  t-10 0.00%(n1576)  t-8 0.00%(n1592)  t-6 0.06%(n1600)  t-4 0.09%(n1592)  t-2 0.19%(n892)  t+0 0.83%(n228)
+split by merged:
+  merged=False (n 1075):  t-12 0.00%(n1034)  t-10 0.00%(n1050)  t-8 0.00%(n1061)  t-6 0.00%(n1069)  t-4 0.00%(n1061)  t-2 0.00%(n606)  t+0 0.00%(n154)
+  merged=True (n 534):  t-12 1.22%(n525)  t-10 1.08%(n526)  t-8 1.30%(n531)  t-6 1.36%(n531)  t-4 1.27%(n531)  t-2 1.75%(n286)  t+0 2.56%(n74)
+population median rr for comparison: 1.08%
+
+reading: this is the C3-corrected profile. A rising path ENDING ABOVE the population median = clients genuinely drain dying funds; a flat path near population levels = deaths are board decisions and stage 35's original 'doubling' was the spell-end artifact. Liquidations should show the drain more than mergers (merger dates reflect acquirer timing).
+
+STAGE 35b DONE - aggregates only.
