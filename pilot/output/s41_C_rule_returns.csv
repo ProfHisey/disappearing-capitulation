@@ -1,0 +1,10 @@
+rule,horizon_years,mean_net_return_pct,median_net_return_pct,n_obs
+R1_top_decile_trailing_12m,1,10.161,10.473,8373
+R1_top_decile_trailing_12m,3,28.648,26.161,8373
+R1_top_decile_trailing_12m,5,47.144,39.817,8373
+R2_cheapest_decile_fee,1,9.027,9.619,8431
+R2_cheapest_decile_fee,3,27.134,23.985,8431
+R2_cheapest_decile_fee,5,45.939,34.657,8431
+R3_whole_universe,1,8.998,10.049,81440
+R3_whole_universe,3,26.082,23.149,81441
+R3_whole_universe,5,43.801,33.984,81441

@@ -1,0 +1,31 @@
+rule,K,horizon,n,fee_bps,net_bps,gross_bps,pct_hot_wins
+reinvest on death,3,1,48053,50.0,5.9,43.9,50.7
+reinvest on death,3,3,44314,51.0,-24.1,10.2,47.3
+reinvest on death,3,5,40797,53.0,-32.6,5.4,47.1
+reinvest on death,3,10,31752,55.0,-43.0,9.9,46.4
+reinvest on death,3,20,15605,53.0,-173.7,-121.3,43.3
+reinvest on death,5,1,57577,60.0,-3.3,32.8,49.5
+reinvest on death,5,3,53141,61.0,-56.8,-3.5,45.3
+reinvest on death,5,5,48851,63.0,-71.8,-13.9,44.5
+reinvest on death,5,10,38082,66.0,-84.3,-19.1,43.7
+reinvest on death,5,20,18703,65.5,-212.5,-148.2,40.8
+reinvest on death,10,1,63578,67.0,-24.0,12.9,48.3
+reinvest on death,10,3,58565,67.5,-102.8,-39.7,42.9
+reinvest on death,10,5,53853,69.0,-93.2,-31.6,42.8
+reinvest on death,10,10,41819,73.0,-124.8,-47.2,41.4
+reinvest on death,10,20,20187,80.0,-303.6,-228.7,36.8
+survivors only,3,1,47784,50.0,6.1,44.6,50.8
+survivors only,3,3,43140,51.0,-21.8,11.4,47.4
+survivors only,3,5,38858,52.0,-24.7,9.1,47.5
+survivors only,3,10,28046,54.0,-24.7,24.7,47.7
+survivors only,3,20,10288,52.0,-121.0,-61.0,45.4
+survivors only,5,1,57341,60.0,-3.3,33.1,49.5
+survivors only,5,3,52063,61.0,-54.3,-1.2,45.5
+survivors only,5,5,46887,62.0,-63.0,-6.1,45.1
+survivors only,5,10,34122,65.0,-63.5,1.5,45.0
+survivors only,5,20,12716,64.0,-148.5,-88.7,43.5
+survivors only,10,1,63245,67.0,-24.0,12.8,48.3
+survivors only,10,3,57210,67.0,-101.8,-38.8,42.9
+survivors only,10,5,51475,68.5,-80.1,-25.7,43.5
+survivors only,10,10,37265,71.0,-92.6,-24.1,42.6
+survivors only,10,20,13531,75.5,-205.2,-133.6,41.2

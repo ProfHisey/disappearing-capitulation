@@ -1,0 +1,25 @@
+spec,measure,estimate,n_years,n_sleeve_years,t,t_lo,t_hi,wild_lo,wild_hi,t_excl0,wild_excl0
+crsp / all menus [all],ff4,-66.1,32,473,-2.6,-119.1,-13.2,-118.0,-22.8,True,True
+crsp / all menus [all],capm,-87.3,32,473,-2.6,-157.9,-16.8,-171.7,-29.4,True,True
+crsp / all menus [all],rein5,-66.0,30,435,-1.4,-164.8,32.8,-165.9,25.2,False,False
+crsp / all menus [post-2000],ff4,-72.4,23,405,-2.7,-129.6,-15.2,-129.6,-23.6,True,True
+crsp / all menus [post-2000],capm,-90.6,23,405,-2.2,-178.5,-2.6,-185.0,-17.4,True,True
+crsp / all menus [post-2000],rein5,-68.6,21,366,-1.2,-187.9,50.8,-175.5,39.8,False,False
+crsp / index-free [all],ff4,-23.5,32,342,-1.0,-70.7,23.8,-56.0,19.5,False,False
+crsp / index-free [all],capm,-33.4,32,342,-1.4,-83.2,16.4,-67.1,8.8,False,False
+crsp / index-free [all],rein5,60.9,30,320,1.1,-59.9,181.8,-39.6,152.7,False,False
+crsp / index-free [post-2000],ff4,-14.3,23,276,-0.7,-56.2,27.5,-51.4,24.3,False,False
+crsp / index-free [post-2000],capm,-23.5,23,276,-1.0,-71.9,24.9,-61.4,20.3,False,False
+crsp / index-free [post-2000],rein5,79.1,21,254,1.5,-30.6,188.7,-23.7,172.6,False,False
+lipper / all menus [all],ff4,-47.6,24,714,-3.3,-78.3,-16.8,-76.9,-24.1,True,True
+lipper / all menus [all],capm,-59.3,24,714,-3.1,-99.6,-19.0,-106.4,-30.9,True,True
+lipper / all menus [all],rein5,-68.9,22,638,-1.8,-148.9,11.0,-146.6,-1.1,False,True
+lipper / all menus [post-2000],ff4,-49.0,23,694,-3.3,-80.3,-17.6,-77.5,-25.1,True,True
+lipper / all menus [post-2000],capm,-55.6,23,694,-2.9,-96.8,-14.5,-104.3,-28.7,True,True
+lipper / all menus [post-2000],rein5,-65.3,21,618,-1.7,-147.6,17.0,-147.9,3.9,False,False
+lipper / index-free [all],ff4,-37.4,24,560,-3.6,-59.2,-15.6,-57.2,-17.0,True,True
+lipper / index-free [all],capm,-39.7,24,560,-2.7,-70.7,-8.6,-69.1,-11.7,True,True
+lipper / index-free [all],rein5,-65.4,22,502,-2.3,-124.7,-6.1,-121.7,-15.9,True,True
+lipper / index-free [post-2000],ff4,-39.8,23,541,-3.8,-62.1,-17.6,-59.7,-18.2,True,True
+lipper / index-free [post-2000],capm,-41.2,23,541,-2.7,-73.6,-8.8,-71.6,-12.3,True,True
+lipper / index-free [post-2000],rein5,-67.9,21,483,-2.3,-131.3,-4.6,-126.9,-14.5,True,True

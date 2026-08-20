@@ -1,0 +1,21 @@
+reps,seed,measure,gradient_bps,lo,hi,excl_zero
+200,11,4-factor alpha,-27.2,-63.3,-2.7,True
+200,11,CAPM alpha,-43.3,-136.0,15.1,False
+200,22,4-factor alpha,-30.8,-77.2,-9.4,True
+200,22,CAPM alpha,-66.2,-101.5,-2.3,True
+200,33,4-factor alpha,-25.7,-52.0,10.1,False
+200,33,CAPM alpha,-43.9,-89.9,18.9,False
+200,44,4-factor alpha,-25.9,-71.1,6.3,False
+200,44,CAPM alpha,-37.3,-134.0,5.4,False
+200,55,4-factor alpha,-26.0,-76.9,-7.5,True
+200,55,CAPM alpha,-44.9,-96.4,0.4,False
+600,11,4-factor alpha,-27.2,-57.8,6.8,False
+600,11,CAPM alpha,-46.9,-97.2,12.5,False
+600,22,4-factor alpha,-26.9,-58.2,6.8,False
+600,22,CAPM alpha,-56.1,-107.0,11.2,False
+600,33,4-factor alpha,-26.6,-68.1,6.8,False
+600,33,CAPM alpha,-45.1,-136.0,1.0,False
+600,44,4-factor alpha,-27.2,-62.2,-7.3,True
+600,44,CAPM alpha,-42.2,-100.7,10.4,False
+600,55,4-factor alpha,-25.5,-62.1,-7.3,True
+600,55,CAPM alpha,-57.6,-99.6,15.1,False

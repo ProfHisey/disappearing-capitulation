@@ -15,3 +15,9 @@ pilot/cache/
 .vscode/
 Thumbs.db
 .DS_Store
+
+# Word/Office lock files (created when a draft is open)
+~$*
+# journal PDFs - copyright, never commit to a public repo
+literature/
+*.pdf
