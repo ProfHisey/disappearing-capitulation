@@ -6,9 +6,9 @@ spells 25,990: capitulate 496, die 2,238, recover 20,784, censored 2,472
   event          8q  16q  24q  40q   (three-state, recovery competing)
   capitulate   0.014 0.020 0.021 0.022
   (two-state)  0.029 0.068 0.102 0.144
-  die          0.074 0.090 0.094 0.095
+  die          0.074 0.091 0.094 0.095
   (two-state)  0.115 0.231 0.331 0.429
-  recover      0.687 0.842 0.875 0.883
+  recover      0.686 0.842 0.875 0.883
   reading: the two-state Table 1 numbers treated recovery as censoring, which mechanically inflates long-horizon CIFs. The three-state numbers are the bounded, defensible version; if the era and depth CONTRASTS are what the paper claims (and they are estimated in the hazard models, not here), level shifts in the CIFs change exposition, not findings.
 
 (b) MULTINOMIAL DISCRETE-TIME COMPETING RISKS
@@ -17,7 +17,7 @@ spells 25,990: capitulate 496, die 2,238, recover 20,784, censored 2,472
     capitulate: dur_5p 2.83  depth 15.47  era_1023 0.20
     die       : dur_5p 0.96  depth 0.60  era_1023 0.73
     recover   : dur_5p 1.27  depth 10.23  era_1023 0.73
-  binary cloglog headline for comparison: capitulation dur_5p 2.79, depth 28.3, era 0.21; death dur 1.20, depth 0.29, era 0.76.
+  binary cloglog headline for comparison (post-audit, stage 26): capitulation dur_5p 2.71, depth 10.7, era 0.22; death dur 0.92, depth 0.44, era 0.78.
   reading: capitulation branch showing dur>1, depth>1 (shallow folds), era<1 with recovery explicitly in the outcome set = the headline hazards are not artifacts of treating recovery as censoring.
 
 STAGE 22 DONE - aggregates only.

@@ -36,7 +36,7 @@ factors: 1926-07 to 2026-05
     fighting alpha -1.77%/yr
     difference     -0.66%/yr  <- must equal the spread below
     spread alpha   -0.66%/yr (se 0.64%), 95% CI [-1.91%, +0.59%]
-  reading: v7's Table 4 printed FULL-WINDOW group alphas beside a COMMON-MONTH spread; the referee's 10x gap is that misalignment, not a computation error. v8 prints common-month levels. The CI line replaces 'null' rhetoric: the paper should say the matched spread is negative but small (point estimate about a third of the MDE), bounded well inside +/-2%/yr.
+  reading: v7's Table 4 printed FULL-WINDOW group alphas beside a COMMON-MONTH spread; the referee's 10x gap is that misalignment, not a computation error. v8 prints common-month levels. The CI line replaces 'null' rhetoric: the matched point estimate is 37% of the MDE, bounded well inside +/-2%/yr.
 
 (d) N12: POST-FOLD TRAJECTORY
     year 1: own-benchmark net -1.68%/yr (n 1,415 fund-qtrs) | mean AS 0.552

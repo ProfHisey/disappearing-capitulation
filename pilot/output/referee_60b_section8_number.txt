@@ -1,0 +1,77 @@
+SECTION 8 NUMBER + M6 REWRITE (stage 60b)
+================================================================
+capitulation events: 496 across 471 distinct funds (1.05 spells per fund)
+  (if that ratio is above 1, event-level resampling overstates precision; everything below clusters on the fund)
+
+================================================================
+1. WHAT ACTUALLY CHANGED BETWEEN 37b AND 37d (the M6 rewrite)
+================================================================
+  Each row changes ONE thing from the row above it.
+
+  bar 0.70, P(recovered), by era, at 8/16/24q
+  KM  | wall-censored | all  (= 37b)            1995-2009 18.5%/30.1%/40.8%             2010-23 12.8%/20.7%/26.9%           
+  AJ  | wall-censored | all  (estimator only)   1995-2009 18.5%/30.1%/40.7% (-0.0pp)    2010-23 12.6%/20.3%/26.1% (-0.4pp)  
+  AJ  | death-extended| all  (the death clock)  1995-2009 16.5%/25.3%/32.2% (-4.8pp)    2010-23 11.6%/18.0%/22.2% (-2.3pp)  
+  AJ  | death-extended| 1995+ (= 37d)           1995-2009 16.3%/25.2%/32.1% (-0.2pp)    2010-23 11.6%/18.0%/22.2% (+0.0pp)  
+
+  bar 0.75, P(recovered), by era, at 8/16/24q
+  KM  | wall-censored | all  (= 37b)            1995-2009 11.3%/19.7%/26.7%             2010-23  9.4%/16.6%/20.0%           
+  AJ  | wall-censored | all  (estimator only)   1995-2009 11.3%/19.7%/26.6% (+0.0pp)    2010-23  9.2%/16.2%/19.5% (-0.3pp)  
+  AJ  | death-extended| all  (the death clock)  1995-2009 10.0%/16.3%/20.7% (-3.4pp)    2010-23  8.5%/14.3%/16.6% (-1.9pp)  
+  AJ  | death-extended| 1995+ (= 37d)           1995-2009  9.7%/16.1%/20.5% (-0.2pp)    2010-23  8.5%/14.3%/16.6% (+0.0pp)  
+
+  bar 0.80, P(recovered), by era, at 8/16/24q
+  KM  | wall-censored | all  (= 37b)            1995-2009  5.3%/10.8%/14.2%             2010-23  8.0%/13.0%/16.4%           
+  AJ  | wall-censored | all  (estimator only)   1995-2009  5.3%/10.8%/14.2% (-0.0pp)    2010-23  7.9%/12.7%/16.0% (-0.3pp)  
+  AJ  | death-extended| all  (the death clock)  1995-2009  4.7%/ 8.8%/11.0% (-2.0pp)    2010-23  7.3%/11.2%/13.5% (-1.5pp)  
+  AJ  | death-extended| 1995+ (= 37d)           1995-2009  4.4%/ 8.5%/10.7% (-0.3pp)    2010-23  7.3%/11.2%/13.5% (+0.0pp)  
+
+  The (+/-pp) figures are the change in the 16-quarter estimate caused by that one step. The M6 paragraph currently attributes the whole 37b->37d move to competing risks; write it from this table instead.
+
+================================================================
+2. SECTION 8: P(REBUILD FULL CONVICTION), POOLED, WITH AN INTERVAL
+================================================================
+  Draft sentence: 'roughly a fifth of capitulators eventually rebuild full conviction; the modal capitulator never does.'
+  'Eventually' has no horizon in the draft. Here is every horizon.
+  bar 0.70 wall-censored   n  496   8q 16.5% [13.1%,20.0%]   16q 26.9% [22.6%,31.7%]   24q 36.5% [31.1%,41.3%]
+  bar 0.70 death-extended  n  496   8q 14.9% [11.8%,18.0%]   16q 23.0% [19.3%,26.9%]   24q 29.4% [25.1%,33.7%]
+  bar 0.75 wall-censored   n  496   8q 10.6% [7.8%,13.5%]   16q 18.5% [14.6%,22.4%]   24q 24.6% [20.1%,29.0%]
+  bar 0.75 death-extended  n  496   8q  9.5% [7.1%,12.1%]   16q 15.7% [12.5%,19.0%]   24q 19.6% [16.0%,23.5%]
+  bar 0.80 wall-censored   n  496   8q  6.2% [4.0%,8.6%]   16q 11.4% [8.3%,14.8%]   24q 14.8% [11.2%,18.5%]
+  bar 0.80 death-extended  n  496   8q  5.6% [3.7%,7.6%]   16q  9.6% [6.9%,12.2%]   24q 11.8% [8.9%,14.8%]
+
+  Read the bar-0.70 row. 'Full conviction' in the draft is the same 70% bar that defines an active fund, so that is the row Section 8 is about. If 24q sits near a third rather than a fifth, the sentence needs both a horizon and a bigger fraction, and it should say the curve is still rising at the end of the window.
+
+================================================================
+3. ERA DIFFERENCE UNDER WALL-CENSORING (60 reported only the extended)
+================================================================
+  MA-2's differential gap (3.9q in the wave era vs 1.4q modern) penalises the WAVE arm's recovery more, so removing it should make the decline LARGER. If it does, the finding is robust to the convention, which is the sentence a referee wants.
+  bar 0.70 wall-censored    8q: modern minus wave  -5.9%  95% CI [-13.2%, +1.5%]  excludes zero: no
+  bar 0.70 wall-censored   16q: modern minus wave  -9.9%  95% CI [-18.4%, -0.4%]  excludes zero: YES
+  bar 0.70 wall-censored   24q: modern minus wave -14.5%  95% CI [-25.2%, -3.6%]  excludes zero: YES
+  bar 0.70 death-extended   8q: modern minus wave  -4.9%  95% CI [-11.3%, +1.6%]  excludes zero: no
+  bar 0.70 death-extended  16q: modern minus wave  -7.3%  95% CI [-15.0%, +0.6%]  excludes zero: no
+  bar 0.70 death-extended  24q: modern minus wave -10.0%  95% CI [-18.9%, -1.7%]  excludes zero: YES
+  bar 0.75 wall-censored    8q: modern minus wave  -2.1%  95% CI [-7.9%, +4.0%]  excludes zero: no
+  bar 0.75 wall-censored   16q: modern minus wave  -3.5%  95% CI [-11.0%, +4.6%]  excludes zero: no
+  bar 0.75 wall-censored   24q: modern minus wave  -7.1%  95% CI [-16.5%, +3.0%]  excludes zero: no
+  bar 0.75 death-extended   8q: modern minus wave  -1.5%  95% CI [-6.6%, +3.8%]  excludes zero: no
+  bar 0.75 death-extended  16q: modern minus wave  -2.0%  95% CI [-8.8%, +4.8%]  excludes zero: no
+  bar 0.75 death-extended  24q: modern minus wave  -4.1%  95% CI [-11.9%, +3.2%]  excludes zero: no
+  bar 0.80 wall-censored    8q: modern minus wave  +2.6%  95% CI [-2.5%, +7.9%]  excludes zero: no
+  bar 0.80 wall-censored   16q: modern minus wave  +1.9%  95% CI [-4.6%, +9.0%]  excludes zero: no
+  bar 0.80 wall-censored   24q: modern minus wave  +1.8%  95% CI [-6.4%, +10.2%]  excludes zero: no
+  bar 0.80 death-extended   8q: modern minus wave  +2.6%  95% CI [-1.8%, +7.2%]  excludes zero: no
+  bar 0.80 death-extended  16q: modern minus wave  +2.4%  95% CI [-3.1%, +8.4%]  excludes zero: no
+  bar 0.80 death-extended  24q: modern minus wave  +2.6%  95% CI [-4.0%, +9.7%]  excludes zero: no
+
+================================================================
+4. 'ABOUT A THIRD DIE IN BOTH ERAS' -- WITH AN INTERVAL
+================================================================
+  death-extended  1995-2009: P(die within 24q) 28.8% 95% CI [23.9%, 33.7%]  (n 321)
+  death-extended  2010-23: P(die within 24q) 32.2% 95% CI [24.6%, 40.5%]  (n 175)
+  wall-censored   1995-2009: P(die within 24q) 1.4% 95% CI [0.0%, 3.3%]  (n 321)
+  wall-censored   2010-23: P(die within 24q) 5.4% 95% CI [1.2%, 10.3%]  (n 175)
+  The wall-censored figures are NOT a competing estimate of mortality. They are what is OBSERVABLE once you refuse to follow a fund past the end of its Active Share record. The gap between the two conventions is the size of the unobservable window, and the paper should report the extended figure while stating that window explicitly.
+
+STAGE 60b DONE - deterministic, seeded, fund-clustered, aggregates only.

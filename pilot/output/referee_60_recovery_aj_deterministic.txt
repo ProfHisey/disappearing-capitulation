@@ -1,0 +1,80 @@
+RECOVERY: DETERMINISTIC AJ + INFERENCE (stage 60)
+================================================================
+NOTE: 1 death rows with unparseable death_q dropped
+deaths with usable death_q: 7,966
+capitulation events, all: 496
+  of which pre-1995 (mislabelled into the wave arm by 37b/37c): 2
+  1995+: 494
+
+================================================================
+1. SEPARATING THE SAMPLE CHANGE FROM THE ESTIMATOR CHANGE
+================================================================
+  37b = KM on ALL events (pre-1995 mislabelled into the wave)
+  37d = AJ on 1995+ only. Both changed at once. Here is each.
+
+bar 0.70   P(recovered) at 8/16/24q
+  all events  1995-2009  n   321  rec  159  died  138
+      KM  17.5%  28.3%  38.2%   AJ  16.5%  25.3%  32.2%   AJ death  28.8%
+  all events  2010-23  n   175  rec   33  died   47
+      KM  12.6%  20.2%  26.3%   AJ  11.6%  18.0%  22.2%   AJ death  32.2%
+  1995+       1995-2009  n   319  rec  158  died  137
+      KM  17.3%  28.1%  38.1%   AJ  16.3%  25.2%  32.1%   AJ death  29.0%
+  1995+       2010-23  n   175  rec   33  died   47
+      KM  12.6%  20.2%  26.3%   AJ  11.6%  18.0%  22.2%   AJ death  32.2%
+
+bar 0.75   P(recovered) at 8/16/24q
+  all events  1995-2009  n   321  rec  117  died  162
+      KM  10.6%  18.3%  24.7%   AJ  10.0%  16.3%  20.7%   AJ death  31.6%
+  all events  2010-23  n   175  rec   26  died   51
+      KM   9.2%  16.1%  19.4%   AJ   8.5%  14.3%  16.6%   AJ death  32.7%
+  1995+       1995-2009  n   319  rec  116  died  161
+      KM  10.4%  18.1%  24.6%   AJ   9.7%  16.1%  20.5%   AJ death  31.8%
+  1995+       2010-23  n   175  rec   26  died   51
+      KM   9.2%  16.1%  19.4%   AJ   8.5%  14.3%  16.6%   AJ death  32.7%
+
+bar 0.80   P(recovered) at 8/16/24q
+  all events  1995-2009  n   321  rec   75  died  188
+      KM   5.0%  10.0%  13.1%   AJ   4.7%   8.8%  11.0%   AJ death  33.8%
+  all events  2010-23  n   175  rec   20  died   52
+      KM   7.9%  12.7%  16.1%   AJ   7.3%  11.2%  13.5%   AJ death  32.6%
+  1995+       1995-2009  n   319  rec   74  died  187
+      KM   4.7%   9.7%  12.9%   AJ   4.4%   8.5%  10.7%   AJ death  34.0%
+  1995+       2010-23  n   175  rec   20  died   52
+      KM   7.9%  12.7%  16.1%   AJ   7.3%  11.2%  13.5%   AJ death  32.6%
+
+  READ: compare KM->AJ WITHIN a sample row (pure estimator effect) against 'all events'->'1995+' WITHIN an estimator (pure sample effect). 37d's reported attenuation mixed the two.
+
+================================================================
+2. ERA DIFFERENCE WITH A CONFIDENCE INTERVAL (never reported before)
+================================================================
+  bar 0.70 at  8q: modern minus wave -4.7%  95% CI [-10.9%, +1.6%]  excludes zero: no
+  bar 0.70 at 16q: modern minus wave -7.2%  95% CI [-14.9%, +0.5%]  excludes zero: no
+  bar 0.70 at 24q: modern minus wave -9.9%  95% CI [-18.3%, -1.0%]  excludes zero: YES
+  bar 0.75 at  8q: modern minus wave -1.2%  95% CI [-6.4%, +4.3%]  excludes zero: no
+  bar 0.75 at 16q: modern minus wave -1.7%  95% CI [-8.5%, +5.2%]  excludes zero: no
+  bar 0.75 at 24q: modern minus wave -3.9%  95% CI [-11.2%, +3.9%]  excludes zero: no
+  bar 0.80 at  8q: modern minus wave +2.9%  95% CI [-1.5%, +7.4%]  excludes zero: no
+  bar 0.80 at 16q: modern minus wave +2.7%  95% CI [-3.3%, +8.9%]  excludes zero: no
+  bar 0.80 at 24q: modern minus wave +2.8%  95% CI [-3.8%, +9.8%]  excludes zero: no
+
+  The bar-0.80 INVERSION is the F9 claim. If its CI spans zero, the honest sentence is 'recovery at the high bar is no LOWER in the modern era', which still supports all-or-nothing.
+
+================================================================
+3. DEATHS RECORDED AFTER THE ACTIVE SHARE PANEL ENDS (MA-2)
+================================================================
+           count  mean   std  min  25%  50%  75%   max
+era                                                   
+1995-2009  211.0  3.92  7.42  0.0  1.0  1.0  3.0  51.0
+2010-23     55.0  1.44  1.85  0.0  1.0  1.0  1.0   9.0
+  share with death recorded >4q after the last AS obs:
+era
+1995-2009    18.0
+2010-23       5.5
+
+  strict alternative: censor at the last AS observation
+  bar 0.70   1995-2009 rec16 30.0% death24 1.4%   2010-23 rec16 20.3% death24 5.4%
+  bar 0.75   1995-2009 rec16 19.5% death24 1.5%   2010-23 rec16 16.2% death24 5.3%
+  bar 0.80   1995-2009 rec16 10.5% death24 1.9%   2010-23 rec16 12.7% death24 5.3%
+  Compare death24 against block 1. The 'one third die in both eras' fact heading for Paper 2 must survive this.
+
+STAGE 60 DONE - deterministic, seeded, aggregates only.

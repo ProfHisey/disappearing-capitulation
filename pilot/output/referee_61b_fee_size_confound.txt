@@ -1,0 +1,80 @@
+FEE GAP: DECISION OR ARITHMETIC? (stage 61b)
+================================================================
+streaming Fund Summary for tna_latest and mgmt_fee (first run) ...
+  tna_latest: text column, 4 values coerced to missing
+  coverage: exp_ratio 82.1%, mgmt_fee 80.1%, tna_latest 98.3%
+  cached -> output\s61b_size_panel.parquet
+panel: 673,702 wficn-quarters, 13,580 funds
+  mgmt_fee present in 95.5% of fund-quarters; 'other' (er - mgmt) median -5510bps
+
+================================================================
+1. MEASUREMENT FIRST -- how many real observations are in 8 quarters?
+================================================================
+  quarter-to-quarter expense ratio: unchanged in 42.4% of consecutive observed pairs
+  share of all fee CHANGES landing in each calendar quarter:
+    Q1: 25.5%  Q2: 24.4%  Q3: 24.4%  Q4: 25.6%
+  If changes cluster in one calendar quarter, CRSP is carrying an annual number forward and an 8-quarter window holds ~2 independent observations, not 8. Every stage-61 interval is then too narrow and the paper must say the unit is fund-YEARS.
+
+fund-years: 57,759; asset growth observable for post 85.8%, pre 91.2%
+  funds that die inside the window have no end-of-window TNA, so the growth-conditioned blocks below run on survivors. That is a real restriction and it is why block 5 exists.
+
+================================================================
+2. THE MECHANICAL GRADIENT: fee change by ASSET GROWTH, ignoring stress
+================================================================
+  1980-94    P(cut) by asset-growth quintile (G1 = shrank most)
+             G1 15.4%  G2 14.6%  G3 12.9%  G4 16.4%  G5 33.2%
+             median 8q fee change (bps): G1 +5  G2 +0  G3 +0  G4 -1  G5 -2
+             mean growth G1 -0.29 log points, G5 +1.27
+  1995-2009  P(cut) by asset-growth quintile (G1 = shrank most)
+             G1 11.1%  G2 14.9%  G3 19.0%  G4 27.2%  G5 42.1%
+             median 8q fee change (bps): G1 +4  G2 +0  G3 -1  G4 -3  G5 -6
+             mean growth G1 -0.83 log points, G5 +1.20
+  2010-23    P(cut) by asset-growth quintile (G1 = shrank most)
+             G1 10.4%  G2 11.7%  G3 13.5%  G4 16.8%  G5 29.8%
+             median 8q fee change (bps): G1 +0  G2 -1  G3 -2  G4 -3  G5 -5
+             mean growth G1 -0.66 log points, G5 +0.87
+  A steep rise from G1 to G5 IS the confound. Funds that grow cut fees; funds that shrink do not. No decision required.
+
+================================================================
+3. DECOMPOSITION -- the gap if stressed funds had grown like unstressed
+================================================================
+  Reweighting (DiNardo-Fortin-Lemieux): within each asset-growth decile take the stressed-minus-unstressed difference, then average those differences using the UNSTRESSED growth distribution as weights. MEDIATOR CAVEAT: this is a decomposition, not a causal effect.
+  1980-94    raw gap +0.1%   size-standardised gap +2.3%   share explained by asset growth -4475.5%   (8 deciles usable)
+             mean growth: stressed +0.27, unstressed +0.54 log points
+  1995-2009  raw gap -2.8%   size-standardised gap +1.2%   share explained by asset growth 141.4%   (10 deciles usable)
+             mean growth: stressed +0.00, unstressed +0.25 log points
+  2010-23    raw gap +1.4%   size-standardised gap +3.4%   share explained by asset growth -149.3%   (10 deciles usable)
+             mean growth: stressed +0.01, unstressed +0.16 log points
+  If 'share explained' is near 100%, Finding 4 is arithmetic and the paper says so plainly. If a stable remainder survives in both eras, that remainder is the behavioural margin and it is the only number worth reporting.
+
+  same decomposition on PRE-PERIOD growth (a legitimate control, determined before the window opens):
+  1995-2009  raw -3.4%  pre-growth-standardised -3.4%
+  2010-23    raw +0.9%  pre-growth-standardised +0.5%
+
+================================================================
+4. MANAGEMENT FEE vs THE REST -- separating decisions from mechanics
+================================================================
+  A management fee cut needs board approval and a prospectus supplement. A fall in 'other' expenses can be waivers, breakpoints or fixed costs spread over a bigger base. Same detector, three series.
+  era        arm          exp ratio   mgmt fee   other
+  1980-94    stressed        18.2%       nan%     nan%
+  1980-94    unstressed      19.2%       nan%     nan%
+  1980-94    GAP s-u         -1.0%      +nan%    +nan%
+  1995-2009  stressed        19.8%      53.2%    47.8%
+  1995-2009  unstressed      23.6%      55.6%    49.8%
+  1995-2009  GAP s-u         -3.8%      -2.4%    -2.0%
+  2010-23    stressed        15.6%      61.3%    47.6%
+  2010-23    unstressed      14.6%      62.3%    47.4%
+  2010-23    GAP s-u         +1.0%      -1.1%    +0.2%
+  THE DISCRIMINATOR: a gap that lives in 'other' but not in the management fee is arithmetic. A gap in the management fee is a decision, and that is the only version of Finding 4 worth defending.
+
+================================================================
+5. FUND-YEARS WHOSE ASSETS BARELY MOVED (|8q growth| < 10 log pts)
+================================================================
+  n = 8,858 fund-years (15.3%)
+  1980-94    too few (stressed 88, unstressed 55)
+  1995-2009  stressed 18.4%  unstressed 18.0%  gap +0.4%  95% CI [-3.2%, +3.6%]  (n 1,195/867)
+  2010-23    stressed 13.9%  unstressed 11.0%  gap +2.9%  95% CI [+0.8%, +5.0%]  (n 3,433/1,324)
+  Assets held roughly fixed, the size channel is shut off. A gap that survives here is the real thing. A gap that disappears was never about anyone's pricing decision.
+
+STAGE 61b DONE - aggregates only.
+Finding 4 cannot be written until blocks 3, 4 and 5 agree. If they say arithmetic, the honest paper reports the mechanical result, which is itself worth knowing: an expense ratio is a rate, so underperforming funds get MORE expensive without anyone raising a fee.

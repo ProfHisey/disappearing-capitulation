@@ -1,0 +1,73 @@
+spec,component,gradient_bps,n_years,t_iid,t_nw,ac1,n_nonoverlap,t_nonoverlap
+crsp/all menus [all],4-fa A net,-72.69,32,-2.92,-2.53,0.02,7,-1.86
+crsp/all menus [all],4-fa A gross,-46.73,32,-1.84,-1.56,0.03,7,-1.08
+crsp/all menus [all],4-fa D net,-72.09,35,-3.03,-2.78,-0.01,7,-1.7
+crsp/all menus [all],4-fa D gross,-33.26,35,-1.38,-1.27,-0.02,7,-0.72
+crsp/all menus [all],fee-gap D,41.33,35,16.6,10.12,0.69,7,4.29
+crsp/all menus [all],CAPM A net,-88.06,32,-2.62,-2.42,-0.01,7,-1.89
+crsp/all menus [all],CAPM A gross,-62.1,32,-1.82,-1.63,0.01,7,-1.19
+crsp/all menus [all],CAPM D net,-91.78,35,-2.65,-2.55,-0.0,7,-1.71
+crsp/all menus [all],CAPM D gross,-52.94,35,-1.51,-1.43,0.01,7,-0.88
+crsp/all menus [post-2000],4-fa A net,-85.1,23,-3.26,-2.53,0.21,5,-0.95
+crsp/all menus [post-2000],4-fa A gross,-62.52,23,-2.33,-1.77,0.23,5,-0.69
+crsp/all menus [post-2000],4-fa D net,-72.73,26,-2.96,-2.33,0.22,6,-0.91
+crsp/all menus [post-2000],4-fa D gross,-38.55,26,-1.55,-1.22,0.22,6,-0.49
+crsp/all menus [post-2000],fee-gap D,37.61,26,15.62,9.37,0.62,6,9.57
+crsp/all menus [post-2000],CAPM A net,-99.79,23,-2.51,-2.07,0.17,5,-0.59
+crsp/all menus [post-2000],CAPM A gross,-77.21,23,-1.9,-1.53,0.19,5,-0.46
+crsp/all menus [post-2000],CAPM D net,-86.1,26,-2.11,-1.8,0.17,6,-0.54
+crsp/all menus [post-2000],CAPM D gross,-51.92,26,-1.26,-1.05,0.18,6,-0.33
+crsp/index-free [all],4-fa A net,-34.2,32,-1.5,-2.11,-0.14,7,-0.62
+crsp/index-free [all],4-fa A gross,-7.74,32,-0.34,-0.48,-0.13,7,-0.14
+crsp/index-free [all],4-fa D net,-41.91,35,-2.01,-2.81,-0.22,7,-0.74
+crsp/index-free [all],4-fa D gross,-4.51,35,-0.22,-0.32,-0.22,7,-0.08
+crsp/index-free [all],fee-gap D,40.2,35,19.44,15.32,0.42,7,4.93
+crsp/index-free [all],CAPM A net,-39.09,32,-1.6,-2.33,-0.26,7,-0.85
+crsp/index-free [all],CAPM A gross,-12.63,32,-0.52,-0.76,-0.26,7,-0.27
+crsp/index-free [all],CAPM D net,-49.89,35,-2.12,-2.8,-0.28,7,-1.06
+crsp/index-free [all],CAPM D gross,-12.48,35,-0.53,-0.73,-0.28,7,-0.26
+crsp/index-free [post-2000],4-fa A net,-23.43,23,-1.22,-1.69,0.06,5,-0.76
+crsp/index-free [post-2000],4-fa A gross,1.96,23,0.1,0.14,0.09,5,0.07
+crsp/index-free [post-2000],4-fa D net,-27.56,26,-1.64,-2.38,-0.01,6,-1.34
+crsp/index-free [post-2000],4-fa D gross,7.17,26,0.43,0.68,0.01,6,0.33
+crsp/index-free [post-2000],fee-gap D,38.35,26,18.29,15.45,0.21,6,11.38
+crsp/index-free [post-2000],CAPM A net,-25.48,23,-1.14,-1.44,0.02,5,-0.35
+crsp/index-free [post-2000],CAPM A gross,-0.09,23,-0.0,-0.01,0.05,5,-0.0
+crsp/index-free [post-2000],CAPM D net,-25.87,26,-1.23,-1.52,-0.03,6,-0.38
+crsp/index-free [post-2000],CAPM D gross,8.86,26,0.42,0.5,-0.02,6,0.13
+lipper/all menus [all],4-fa A net,-55.7,24,-3.85,-4.36,-0.08,5,-1.51
+lipper/all menus [all],4-fa A gross,-28.33,24,-1.91,-1.85,0.03,5,-0.78
+lipper/all menus [all],4-fa D net,-60.47,27,-4.07,-4.81,-0.11,6,-1.64
+lipper/all menus [all],4-fa D gross,-22.63,27,-1.56,-1.7,-0.07,6,-0.65
+lipper/all menus [all],fee-gap D,41.43,27,17.8,9.47,0.76,6,11.17
+lipper/all menus [all],CAPM A net,-66.12,24,-3.42,-3.02,0.13,5,-1.33
+lipper/all menus [all],CAPM A gross,-38.75,24,-1.92,-1.53,0.24,5,-0.79
+lipper/all menus [all],CAPM D net,-69.77,27,-3.32,-3.11,0.1,6,-1.34
+lipper/all menus [all],CAPM D gross,-31.93,27,-1.49,-1.28,0.16,6,-0.64
+lipper/all menus [post-2000],4-fa A net,-55.91,23,-3.71,-4.54,-0.12,5,-3.38
+lipper/all menus [post-2000],4-fa A gross,-29.0,23,-1.89,-1.95,-0.02,5,-1.42
+lipper/all menus [post-2000],4-fa D net,-58.87,26,-3.82,-4.52,-0.12,6,-3.59
+lipper/all menus [post-2000],4-fa D gross,-21.47,26,-1.43,-1.57,-0.09,6,-1.23
+lipper/all menus [post-2000],fee-gap D,41.16,26,17.4,9.31,0.77,6,8.92
+lipper/all menus [post-2000],CAPM A net,-60.89,23,-3.05,-2.55,0.17,5,-1.09
+lipper/all menus [post-2000],CAPM A gross,-33.98,23,-1.63,-1.24,0.27,5,-0.57
+lipper/all menus [post-2000],CAPM D net,-63.53,26,-3.0,-2.58,0.15,6,-1.14
+lipper/all menus [post-2000],CAPM D gross,-26.13,26,-1.21,-0.96,0.21,6,-0.44
+lipper/index-free [all],4-fa A net,-39.42,24,-3.22,-4.79,-0.05,5,-7.56
+lipper/index-free [all],4-fa A gross,-14.25,24,-1.16,-1.69,-0.06,5,-2.3
+lipper/index-free [all],4-fa D net,-48.87,27,-4.12,-4.9,-0.01,6,-3.13
+lipper/index-free [all],4-fa D gross,-15.4,27,-1.38,-1.97,-0.1,6,-1.24
+lipper/index-free [all],fee-gap D,37.04,27,21.28,11.98,0.64,6,15.26
+lipper/index-free [all],CAPM A net,-39.49,24,-2.3,-2.4,0.06,5,-3.11
+lipper/index-free [all],CAPM A gross,-14.31,24,-0.82,-0.82,0.08,5,-1.07
+lipper/index-free [all],CAPM D net,-48.01,27,-2.79,-2.77,0.06,6,-1.84
+lipper/index-free [all],CAPM D gross,-14.54,27,-0.85,-0.84,0.05,6,-0.64
+lipper/index-free [post-2000],4-fa A net,-40.32,23,-3.15,-4.79,-0.07,5,-1.21
+lipper/index-free [post-2000],4-fa A gross,-15.31,23,-1.19,-1.8,-0.09,5,-0.43
+lipper/index-free [post-2000],4-fa D net,-47.78,26,-3.92,-4.66,-0.01,6,-1.86
+lipper/index-free [post-2000],4-fa D gross,-14.63,26,-1.27,-1.77,-0.09,6,-0.55
+lipper/index-free [post-2000],fee-gap D,36.79,26,20.8,11.85,0.64,6,10.05
+lipper/index-free [post-2000],CAPM A net,-38.42,23,-2.14,-2.13,0.11,5,-0.58
+lipper/index-free [post-2000],CAPM A gross,-13.4,23,-0.73,-0.7,0.12,5,-0.19
+lipper/index-free [post-2000],CAPM D net,-44.71,26,-2.56,-2.33,0.16,6,-0.77
+lipper/index-free [post-2000],CAPM D gross,-11.56,26,-0.66,-0.6,0.15,6,-0.19

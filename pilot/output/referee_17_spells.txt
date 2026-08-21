@@ -51,7 +51,7 @@ V0 BASELINE (identical machinery to stages 14-16)
     capitulation [n=126,851, ev=492]  dur_5p HR 2.63 (z +9.7)  depth HR 12.97 (z +6.2)  era_1023 HR 0.21 (z -15.9)
     death [n=126,851, ev=2,135]  dur_5p HR 0.94 (z -1.3)  depth HR 0.38 (z -5.9)  era_1023 HR 0.78 (z -5.6)
   baseline spell max-depth distribution: p10 -28.8%, p25 -18.3%, p50 -10.1%, p75 -4.5%, p90 -1.7%
-  gap rule (stated for the paper): months failing the return screens leave the fund-quarter with a missing return; a spell hitting a missing-AS quarter ends as 'as_missing' (censored), never bridged.
+  gap rule (stated for the paper, post-25b/25c): quarters absent from the panel are BRIDGED - durations count observed quarters; 'as_missing' fires only on explicit missing-AS rows. The censor-at-gap and calendar-true variants are bracketed in stage 25c and disclosed in Appendix B.
 
 (c) AGE SCREENS + LEFT TRUNCATION (critique 9)
 

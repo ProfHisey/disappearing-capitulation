@@ -1,0 +1,37 @@
+MGMT-FEE UNITS FIX + DECISION TEST (stage 61c)
+================================================================
+loaded 61b cache: 673,702 wficn-quarters
+median mg_bps/er_bps as cached: 69.1
+  -> mgmt_fee was in PERCENT while exp_ratio was a fraction; divided mg_bps by 100.
+  after fix: median er 94bps, mg 56bps, other 30bps  (other should now be a plausible non-advisory cost level, roughly 20-80bps)
+
+================================================================
+1. DECISION TEST, CORRECT UNITS (P(cut >= 10bps within 8q), CIF)
+================================================================
+  era        arm          exp ratio   mgmt fee   other
+  1980-94    stressed        18.2%       nan%     nan%
+  1980-94    unstressed      19.2%       nan%     nan%
+  1980-94    GAP s-u         -1.0%      +nan%    +nan%
+  1995-2009  stressed        19.8%      15.9%    22.0%
+  1995-2009  unstressed      23.6%      13.8%    25.3%
+  1995-2009  GAP s-u         -3.8%      +2.1%    -3.3%
+  2010-23    stressed        15.6%      13.8%    14.4%
+  2010-23    unstressed      14.6%      10.2%    15.6%
+  2010-23    GAP s-u         +1.0%      +3.6%    -1.1%
+  Sanity anchors: mgmt-fee cut rates should now sit BELOW exp-ratio cut rates (boards move rarely; waivers move often).
+
+================================================================
+2. FLAT-ASSETS SUBSAMPLE (|8q growth| < 0.10): where does the modern +2.9pp live?
+================================================================
+  n = 8,858 fund-years
+  1995-2009  exp ratio stressed  18.4%  unstressed  18.0%  gap  +0.4%  95% CI [-3.1%, +3.9%]
+  1995-2009  mgmt fee  stressed  12.3%  unstressed  10.3%  gap  +2.0%  95% CI [-0.9%, +4.9%]
+  1995-2009  other     stressed  21.1%  unstressed  18.9%  gap  +2.1%  95% CI [-1.7%, +5.7%]
+  2010-23    exp ratio stressed  13.9%  unstressed  11.0%  gap  +2.9%  95% CI [+0.8%, +4.9%]
+  2010-23    mgmt fee  stressed  10.2%  unstressed   7.9%  gap  +2.3%  95% CI [+0.5%, +4.3%]
+  2010-23    other     stressed  11.5%  unstressed   8.8%  gap  +2.7%  95% CI [+1.0%, +4.6%]
+  READING: modern-era mgmt-fee gap positive with CI excluding zero = boards of stressed funds genuinely concede on price (the decision margin). Gap only in 'other' = waivers/breakpoints, and Finding 4 reduces to the mechanical story.
+
+  VERIFY BEFORE QUOTING: whether CRSP mgmt_fee nets out waivers (check CRSP MF documentation); if it does, part of 'decision' is still mechanical.
+
+STAGE 61c DONE - aggregates only.

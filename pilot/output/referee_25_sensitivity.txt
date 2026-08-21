@@ -10,7 +10,7 @@ FINAL SENSITIVITY AUDIT (stage 25)
     2010-2023: n 16,061 | cap  0.82% | died  8.09%
     capitulation, strict definition [n=131,091, ev=442]  dur_5p HR 3.01 (z +10.4)  depth HR 15.12 (z +6.2)  era_1023 HR 0.20 (z -15.9)
     death, strict definition [n=131,091, ev=2,238]  dur_5p HR 0.92 (z -1.9)  depth HR 0.44 (z -4.9)  era_1023 HR 0.78 (z -5.7)
-  compare: v4 baseline era caps 6.51/3.14/0.99, era HR 0.21, dur 2.79, depth 28.3.
+  compare: post-audit baseline era caps 6.43/3.07/0.96, era HR 0.22, dur 2.71, depth 10.7.
 
 (b) GAP AUDIT + BREAK-AT-GAP VARIANT
   *** SUPERSEDED: this section's 'break-at-gap variant' is a NO-OP (asfreq on a PeriodIndex inserts nothing; see stage 25b diagnostic). The real variants live in stage 25c. Kept only for the audit trail - the gap-share count below is still valid. ***

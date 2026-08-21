@@ -1,0 +1,9 @@
+spec,tie_pct_K3,tie_pct_K20
+crsp/all menus [all],35.6,5.3
+crsp/all menus [post-2000],35.6,5.4
+crsp/index-free [all],35.6,6.0
+crsp/index-free [post-2000],35.9,6.5
+lipper/all menus [all],35.2,4.5
+lipper/all menus [post-2000],35.1,4.3
+lipper/index-free [all],34.9,5.2
+lipper/index-free [post-2000],34.8,5.1
